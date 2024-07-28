@@ -74,6 +74,7 @@
     <Compile Include="employeeview.Designer.cs">
       <DependentUpon>employeeview.cs</DependentUpon>
     </Compile>
+    <Compile Include="form manager.cs" />
     <Compile Include="ownerlogin.cs">
       <SubType>Form</SubType>
     </Compile>

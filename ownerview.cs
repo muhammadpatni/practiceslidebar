@@ -26,5 +26,22 @@ namespace practiceslidebar
         {
 
         }
+
+        private void btnonwer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            login l = new login();
+            l.Show();
+            this.Hide();
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

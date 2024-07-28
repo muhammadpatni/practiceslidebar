@@ -40,16 +40,14 @@ namespace practiceslidebar
         {
 
             SqlDataAdapter da = new SqlDataAdapter("select * from ownerlogin where password= '" + txtpassword.Text + "'", con);
-            DataTable dt = new DataTable()
-            {
-            };
+            DataTable dt = new DataTable();
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
 
                 ownerview o = new ownerview();
                 o.Show();
-                this.Visible = false;
+                form_manager.MainFormInstance.Hide();
 
             }
             else
