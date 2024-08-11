@@ -77,6 +77,8 @@ namespace practiceslidebar
             btnonwer.Location = new Point(0,0);
             btnonwer.Size = new Size(175, 50);
             btnemployee.Size = new Size(175, 50);
+           
+            
             loadform(new adminlogin());
         }
 

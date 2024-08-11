@@ -112,6 +112,7 @@
             this.btnonwer.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnonwer.BorderColor = System.Drawing.Color.Black;
             this.btnonwer.CausesValidation = false;
+            this.btnonwer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnonwer.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnonwer.FocusedColor = System.Drawing.Color.Empty;
             this.btnonwer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,7 +130,7 @@
             this.btnonwer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnonwer.Size = new System.Drawing.Size(175, 48);
             this.btnonwer.TabIndex = 5;
-            this.btnonwer.Text = "Owner";
+            this.btnonwer.Text = "OWNER";
             this.btnonwer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnonwer.Click += new System.EventHandler(this.btnonwer_Click);
             // 
@@ -141,6 +142,7 @@
             this.btnadmin.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnadmin.BorderColor = System.Drawing.Color.Black;
             this.btnadmin.CausesValidation = false;
+            this.btnadmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnadmin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnadmin.FocusedColor = System.Drawing.Color.Empty;
             this.btnadmin.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -157,7 +159,7 @@
             this.btnadmin.OnPressedColor = System.Drawing.Color.Black;
             this.btnadmin.Size = new System.Drawing.Size(175, 48);
             this.btnadmin.TabIndex = 7;
-            this.btnadmin.Text = "Admin";
+            this.btnadmin.Text = "ADMIN";
             this.btnadmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnadmin.Click += new System.EventHandler(this.btnadmin_Click);
             // 
@@ -169,6 +171,7 @@
             this.btnemployee.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnemployee.BorderColor = System.Drawing.Color.Black;
             this.btnemployee.CausesValidation = false;
+            this.btnemployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnemployee.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnemployee.FocusedColor = System.Drawing.Color.Empty;
             this.btnemployee.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -185,7 +188,7 @@
             this.btnemployee.OnPressedColor = System.Drawing.Color.Black;
             this.btnemployee.Size = new System.Drawing.Size(175, 48);
             this.btnemployee.TabIndex = 6;
-            this.btnemployee.Text = "employee";
+            this.btnemployee.Text = "EMPLOYEE";
             this.btnemployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnemployee.Click += new System.EventHandler(this.employee_Click);
             // 

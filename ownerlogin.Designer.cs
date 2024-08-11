@@ -52,7 +52,7 @@
             // 
             this.txtpassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.txtpassword.BorderRadius = 19;
-            this.txtpassword.BorderThickness = 5;
+            this.txtpassword.BorderThickness = 3;
             this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtpassword.DefaultText = "";
             this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));

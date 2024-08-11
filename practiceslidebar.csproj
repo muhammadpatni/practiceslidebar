@@ -75,6 +75,24 @@
       <DependentUpon>employeeview.cs</DependentUpon>
     </Compile>
     <Compile Include="form manager.cs" />
+    <Compile Include="Owner_Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner_Employees.Designer.cs">
+      <DependentUpon>Owner_Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Owner_Invertorry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner_Invertorry.Designer.cs">
+      <DependentUpon>Owner_Invertorry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Owner.dashbaord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner.dashbaord.Designer.cs">
+      <DependentUpon>Owner.dashbaord.cs</DependentUpon>
+    </Compile>
     <Compile Include="ownerlogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +164,12 @@
     <EmbeddedResource Include="employeeview.resx">
       <DependentUpon>employeeview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Employees.resx">
+      <DependentUpon>Owner_Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Invertorry.resx">
+      <DependentUpon>Owner_Invertorry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="help.resx">
       <DependentUpon>help.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner.dashbaord.resx">
+      <DependentUpon>Owner.dashbaord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ownerlogin.resx">
       <DependentUpon>ownerlogin.cs</DependentUpon>
@@ -176,6 +203,7 @@
     <EmbeddedResource Include="setting.resx">
       <DependentUpon>setting.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="owner.Designer.dashboard" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

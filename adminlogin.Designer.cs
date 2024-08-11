@@ -52,7 +52,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(102, 199);
+            this.label1.Location = new System.Drawing.Point(104, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 26);
             this.label1.TabIndex = 7;
@@ -62,7 +62,7 @@
             // 
             this.txtpassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.txtpassword.BorderRadius = 19;
-            this.txtpassword.BorderThickness = 5;
+            this.txtpassword.BorderThickness = 3;
             this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtpassword.DefaultText = "";
             this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -87,7 +87,7 @@
             this.showpassword.AutoSize = true;
             this.showpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.showpassword.Location = new System.Drawing.Point(243, 269);
+            this.showpassword.Location = new System.Drawing.Point(235, 277);
             this.showpassword.Name = "showpassword";
             this.showpassword.Size = new System.Drawing.Size(136, 24);
             this.showpassword.TabIndex = 11;
