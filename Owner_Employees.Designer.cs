@@ -50,6 +50,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Owner_Employees";
             this.Text = "Owner_Employees";
+            this.Load += new System.EventHandler(this.Owner_Employees_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,5 +16,10 @@ namespace practiceslidebar
         {
             InitializeComponent();
         }
+
+        private void Owner_Employees_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

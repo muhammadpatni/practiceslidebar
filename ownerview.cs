@@ -88,5 +88,22 @@ namespace practiceslidebar
 
             loadform(new Owner_Employees());
         }
+
+        private void btnmaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState==FormWindowState.Normal)
+            {
+                WindowState=FormWindowState.Maximized;
+            }
+            else 
+            {
+                     WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnminimize_Click(object sender, EventArgs e)
+        {
+                WindowState = FormWindowState.Minimized;
+        }
     }
 }
