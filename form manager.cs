@@ -9,6 +9,7 @@ namespace practiceslidebar
 {
     public static class form_manager
     {
-        public static login MainFormInstance { get; set; }
+        public static login mainforminstance { get; set; }
+        public static login2 employeelogin { get; set; }
     }
 }

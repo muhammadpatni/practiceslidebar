@@ -1,6 +1,6 @@
 ﻿namespace practiceslidebar
 {
-    partial class employeelogin
+    partial class login2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employeelogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login2));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnlogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.showpassword = new System.Windows.Forms.CheckBox();
@@ -42,7 +42,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(160, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(153, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,7 +66,7 @@
             this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
             this.btnlogin.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnlogin.Location = new System.Drawing.Point(151, 365);
+            this.btnlogin.Location = new System.Drawing.Point(153, 326);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(150, 40);
             this.btnlogin.TabIndex = 18;
@@ -78,7 +78,7 @@
             this.showpassword.AutoSize = true;
             this.showpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.showpassword.Location = new System.Drawing.Point(235, 307);
+            this.showpassword.Location = new System.Drawing.Point(232, 296);
             this.showpassword.Name = "showpassword";
             this.showpassword.Size = new System.Drawing.Size(136, 24);
             this.showpassword.TabIndex = 17;
@@ -101,7 +101,7 @@
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.txtpassword.ForeColor = System.Drawing.Color.Black;
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtpassword.Location = new System.Drawing.Point(80, 260);
+            this.txtpassword.Location = new System.Drawing.Point(77, 252);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '\0';
@@ -115,7 +115,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(85, 149);
+            this.label2.Location = new System.Drawing.Point(82, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 26);
             this.label2.TabIndex = 15;
@@ -136,7 +136,7 @@
             this.txtusername.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.txtusername.ForeColor = System.Drawing.Color.Black;
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtusername.Location = new System.Drawing.Point(80, 177);
+            this.txtusername.Location = new System.Drawing.Point(77, 164);
             this.txtusername.Margin = new System.Windows.Forms.Padding(4);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
@@ -144,19 +144,20 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(300, 43);
             this.txtusername.TabIndex = 14;
+            this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(85, 233);
+            this.label1.Location = new System.Drawing.Point(82, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 26);
             this.label1.TabIndex = 13;
             this.label1.Text = "Password";
             // 
-            // employeelogin
+            // login2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,7 +171,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "employeelogin";
+            this.Name = "login2";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -182,11 +183,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnlogin;
-        private System.Windows.Forms.CheckBox showpassword;
-        private Guna.UI2.WinForms.Guna2TextBox txtpassword;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2GradientButton btnlogin;
+        public System.Windows.Forms.CheckBox showpassword;
+        public Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        public System.Windows.Forms.Label label2;
+        public Guna.UI2.WinForms.Guna2TextBox txtusername;
+        public System.Windows.Forms.Label label1;
     }
 }

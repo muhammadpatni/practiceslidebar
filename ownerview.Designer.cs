@@ -30,28 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ownerview));
             this.panelside = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnownwe_employee = new Guna.UI.WinForms.GunaButton();
             this.btnownwe_inventory = new Guna.UI.WinForms.GunaButton();
             this.btnonwer_dash = new Guna.UI.WinForms.GunaButton();
-            this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.panellogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltop = new System.Windows.Forms.Panel();
             this.btnminimize = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnmaximize = new Guna.UI.WinForms.GunaButton();
             this.btnclose = new Guna.UI.WinForms.GunaButton();
             this.panelmain = new System.Windows.Forms.Panel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.btnmaximize = new Guna.UI.WinForms.GunaButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelside.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneltop.SuspendLayout();
             this.panelmain.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelside
@@ -67,6 +67,45 @@
             this.panelside.Size = new System.Drawing.Size(196, 590);
             this.panelside.TabIndex = 2;
             this.panelside.Paint += new System.Windows.Forms.PaintEventHandler(this.panelside_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnlogout);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 490);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(196, 100);
+            this.panel2.TabIndex = 10;
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.AnimationHoverSpeed = 0.07F;
+            this.btnlogout.AnimationSpeed = 0.03F;
+            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnlogout.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnlogout.BorderColor = System.Drawing.Color.White;
+            this.btnlogout.BorderSize = 3;
+            this.btnlogout.CausesValidation = false;
+            this.btnlogout.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnlogout.FocusedColor = System.Drawing.Color.Empty;
+            this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnlogout.ForeColor = System.Drawing.Color.White;
+            this.btnlogout.Image = null;
+            this.btnlogout.ImageOffsetX = 6;
+            this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnlogout.Location = new System.Drawing.Point(19, 39);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.OnHoverBaseColor = System.Drawing.Color.DarkGray;
+            this.btnlogout.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btnlogout.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnlogout.OnHoverImage = null;
+            this.btnlogout.OnPressedColor = System.Drawing.Color.Black;
+            this.btnlogout.Size = new System.Drawing.Size(158, 49);
+            this.btnlogout.TabIndex = 9;
+            this.btnlogout.Text = "Logout";
+            this.btnlogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // panel1
             // 
@@ -106,7 +145,7 @@
             this.btnownwe_employee.OnPressedColor = System.Drawing.Color.Black;
             this.btnownwe_employee.Size = new System.Drawing.Size(196, 48);
             this.btnownwe_employee.TabIndex = 6;
-            this.btnownwe_employee.Text = "EMPLOYEES";
+            this.btnownwe_employee.Text = "EMPLOYEES DETAILS";
             this.btnownwe_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnownwe_employee.Click += new System.EventHandler(this.btnownwe_employee_Click);
             // 
@@ -170,36 +209,6 @@
             this.btnonwer_dash.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnonwer_dash.Click += new System.EventHandler(this.btnonwer_dash_Click);
             // 
-            // btnlogout
-            // 
-            this.btnlogout.AnimationHoverSpeed = 0.07F;
-            this.btnlogout.AnimationSpeed = 0.03F;
-            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnlogout.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnlogout.BorderColor = System.Drawing.Color.White;
-            this.btnlogout.BorderSize = 3;
-            this.btnlogout.CausesValidation = false;
-            this.btnlogout.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnlogout.FocusedColor = System.Drawing.Color.Empty;
-            this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.Image = null;
-            this.btnlogout.ImageOffsetX = 6;
-            this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnlogout.Location = new System.Drawing.Point(19, 39);
-            this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.btnlogout.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btnlogout.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnlogout.OnHoverImage = null;
-            this.btnlogout.OnPressedColor = System.Drawing.Color.Black;
-            this.btnlogout.Size = new System.Drawing.Size(158, 49);
-            this.btnlogout.TabIndex = 9;
-            this.btnlogout.Text = "Logout";
-            this.btnlogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
-            // 
             // panellogo
             // 
             this.panellogo.Controls.Add(this.pictureBox1);
@@ -235,6 +244,7 @@
             this.paneltop.Name = "paneltop";
             this.paneltop.Size = new System.Drawing.Size(1020, 58);
             this.paneltop.TabIndex = 3;
+            this.paneltop.Paint += new System.Windows.Forms.PaintEventHandler(this.paneltop_Paint);
             // 
             // btnminimize
             // 
@@ -278,6 +288,36 @@
             this.gunaLabel1.Size = new System.Drawing.Size(410, 44);
             this.gunaLabel1.TabIndex = 2;
             this.gunaLabel1.Text = "patni medical store";
+            // 
+            // btnmaximize
+            // 
+            this.btnmaximize.AnimationHoverSpeed = 0.07F;
+            this.btnmaximize.AnimationSpeed = 0.03F;
+            this.btnmaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnmaximize.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnmaximize.BorderColor = System.Drawing.Color.Black;
+            this.btnmaximize.CausesValidation = false;
+            this.btnmaximize.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnmaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnmaximize.FocusedColor = System.Drawing.Color.Empty;
+            this.btnmaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnmaximize.ForeColor = System.Drawing.Color.White;
+            this.btnmaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximize.Image")));
+            this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnmaximize.ImageOffsetX = 6;
+            this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnmaximize.Location = new System.Drawing.Point(954, 0);
+            this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnmaximize.Name = "btnmaximize";
+            this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnmaximize.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnmaximize.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnmaximize.OnHoverImage = null;
+            this.btnmaximize.OnPressedColor = System.Drawing.Color.Black;
+            this.btnmaximize.Size = new System.Drawing.Size(33, 58);
+            this.btnmaximize.TabIndex = 7;
+            this.btnmaximize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnmaximize.Click += new System.EventHandler(this.btnmaximize_Click);
             // 
             // btnclose
             // 
@@ -332,45 +372,6 @@
             this.gunaLabel2.TabIndex = 0;
             this.gunaLabel2.Text = " Patni Medical Store";
             // 
-            // btnmaximize
-            // 
-            this.btnmaximize.AnimationHoverSpeed = 0.07F;
-            this.btnmaximize.AnimationSpeed = 0.03F;
-            this.btnmaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnmaximize.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnmaximize.BorderColor = System.Drawing.Color.Black;
-            this.btnmaximize.CausesValidation = false;
-            this.btnmaximize.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnmaximize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnmaximize.FocusedColor = System.Drawing.Color.Empty;
-            this.btnmaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnmaximize.ForeColor = System.Drawing.Color.White;
-            this.btnmaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximize.Image")));
-            this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnmaximize.ImageOffsetX = 6;
-            this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnmaximize.Location = new System.Drawing.Point(954, 0);
-            this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnmaximize.Name = "btnmaximize";
-            this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnmaximize.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnmaximize.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnmaximize.OnHoverImage = null;
-            this.btnmaximize.OnPressedColor = System.Drawing.Color.Black;
-            this.btnmaximize.Size = new System.Drawing.Size(33, 58);
-            this.btnmaximize.TabIndex = 7;
-            this.btnmaximize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnmaximize.Click += new System.EventHandler(this.btnmaximize_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnlogout);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 490);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 100);
-            this.panel2.TabIndex = 10;
-            // 
             // ownerview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -387,6 +388,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ownerview";
             this.panelside.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panellogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -394,7 +396,6 @@
             this.paneltop.PerformLayout();
             this.panelmain.ResumeLayout(false);
             this.panelmain.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

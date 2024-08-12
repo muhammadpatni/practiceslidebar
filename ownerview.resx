@@ -8999,29 +8999,29 @@
   <data name="btnminimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAKlJREFUOE/dkzEKwkAQRUOKHMLSc4pgKeJJRDyIZxCLIBYiFkFSrv/N7MKCEWVK
+        wAAADsABataJCQAAAKlJREFUOE/dkzEKwkAQRUOKHMLSc4pgKeJJRDyIZxCLIBYiFkFSrv/N7MKCEWVK
         HzyYJH9/kUyalFIrF/Ikb/Je+ZiQ+2Q501KwlFFWFPQ+h+gpGHwOMVDw9DnESMHoc4h/LGBRzpJFmZJn
         ZApvBfPmC2Q8alhB/RlnOfcRMh41rKBepKM8yH12ly3XPCNTsEW6+BziSsHa5xAbCjq5lfzKvNBfJKsz
         qXsBPqOqgcJbrPcAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnmaximize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vwAADr8BOAVTJAAAAMtJREFUOE/NkzEKwkAQRUOKlFYWIiKewAOJeBIRLCxEPImIB/EMVkEsRCyCpFz/
+        23EhmITIVj54MNmZ/YHNJnHOpXIpL/IuHxWfDbLOLHtSAlYyljUBudVR5AQUVkdREPCy2rORCzmXsy9Z
+        o8dMoCSgtNozSjpgxkY9tYChnMhpi/QGMlALoHmwshF6fx7AGXQFMBPwAdXPyCH1ZL9FemMZ8AHVi3SW
+        J3n8yBsxPNNjJuAv0tXqKG4EbK2OYkdAJveSX5kD/UVmtcdlbw1Lq9OsRyZ4AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnclose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAANBJREFUOE+lksEKgzAQRMWDn+LZb+uxSKH0VEo/sScpHkrpQYr0lM4zJiwhBUkf
+        wAAADsABataJCQAAANBJREFUOE+lksEKgzAQRMWDn+LZb+uxSKH0VEo/sScpHkrpQYr0lM4zJiwhBUkf
         DI6bZHRXK+dcLfXSTXpIT6NXRtTZy5magINUypGAwfsiBgIm74uYCHh7H/lIJ4leA3hqrFlmAmbvI30l
         dO2kMNRurTE4SzZglFoTEg6365olGwB3aQkB/FpL+RkQXxvwEu2kZANszzzZtmMHC9mAvTnMa8d2WJMs
         S0D6GbnfSXZgeGrp3iXg7x8pN92tjAScvS/iQkAjXSU+EwPdIvbqjGu+EHivO7d+FG8AAAAASUVORK5C
         YII=
-</value>
-  </data>
-  <data name="btnmaximize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAMtJREFUOE/NkzEKwkAQRUOKlFYWIiKewAOJeBIRLCxEPImIB/EMVkEsRCyCpFz/
-        23EhmITIVj54MNmZ/YHNJnHOpXIpL/IuHxWfDbLOLHtSAlYyljUBudVR5AQUVkdREPCy2rORCzmXsy9Z
-        o8dMoCSgtNozSjpgxkY9tYChnMhpi/QGMlALoHmwshF6fx7AGXQFMBPwAdXPyCH1ZL9FemMZ8AHVi3SW
-        J3n8yBsxPNNjJuAv0tXqKG4EbK2OYkdAJveSX5kD/UVmtcdlbw1Lq9OsRyZ4AAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

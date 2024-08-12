@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace practiceslidebar
 {
@@ -16,7 +17,7 @@ namespace practiceslidebar
         public login()
         {
             InitializeComponent();
-            form_manager.MainFormInstance = this;
+            form_manager.mainforminstance = this;
         }
 
         public void loadform(object Form)
@@ -41,51 +42,12 @@ namespace practiceslidebar
 
         private void employee_Click(object sender, EventArgs e)
         {
-            btnemployee.Location = new Point(10, 92);
-            btnemployee.Size = new Size(165, 48);
-            btnonwer.Location = new Point(0,0);
-            btnadmin.Location = new Point(0,45);
-            btnadmin.Size = new Size(175, 50);
-            btnonwer.Size = new Size(175, 50);
+           
        
-           
-            loadform(new employeelogin());
-        }
-        private void gunaButton5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnonwer_Click(object sender, EventArgs e)
-        {
-            btnonwer.Location = new Point(10, 0);
-            btnonwer.Size=new Size(165,48);
-            btnadmin.Location = new Point(0,45);
-            btnemployee.Location = new Point(0,92);
-            btnemployee.Size = new Size(175, 50);
-            btnadmin.Size = new Size(175, 50);
           
-          
-            loadform(new ownerlogin());
         }
-
-        private void btnadmin_Click(object sender, EventArgs e)
-        {
-            btnadmin.Location = new Point(10, 45);
-            btnadmin.Size = new Size(165, 48);
-            btnemployee.Location = new Point(0,92);
-            btnonwer.Location = new Point(0,0);
-            btnonwer.Size = new Size(175, 50);
-            btnemployee.Size = new Size(175, 50);
-           
-            
-            loadform(new adminlogin());
-        }
-
-        private void paneltop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
+       
 
         private void btnclose_Click(object sender, EventArgs e)
         {
@@ -109,7 +71,29 @@ namespace practiceslidebar
             WindowState = FormWindowState.Minimized;
         }
 
-        private void gunaLabel1_Click(object sender, EventArgs e)
+
+        private void combouser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+            if (combouser.Text == "owner")
+            {
+                loadform(new login2());
+                form_manager.employeelogin.changeuser("owner");
+            }
+            else if (combouser.Text =="admin")
+            {
+                loadform(new login2());
+                form_manager.employeelogin.changeuser("admin");
+            }
+            else if (combouser.Text == "employee")
+            {
+                loadform(new login2());
+            }
+
+
+        }
+
+        private void panelside_Paint(object sender, PaintEventArgs e)
         {
 
         }

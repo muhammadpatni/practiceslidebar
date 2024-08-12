@@ -93,23 +93,11 @@
     <Compile Include="Owner.dashbaord.Designer.cs">
       <DependentUpon>Owner.dashbaord.cs</DependentUpon>
     </Compile>
-    <Compile Include="ownerlogin.cs">
+    <Compile Include="login2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ownerlogin.Designer.cs">
-      <DependentUpon>ownerlogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="adminlogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="adminlogin.Designer.cs">
-      <DependentUpon>adminlogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="employeelogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="employeelogin.Designer.cs">
-      <DependentUpon>employeelogin.cs</DependentUpon>
+    <Compile Include="login2.Designer.cs">
+      <DependentUpon>login2.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -152,14 +140,11 @@
     <EmbeddedResource Include="about.resx">
       <DependentUpon>about.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adminlogin.resx">
-      <DependentUpon>adminlogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="adminview.resx">
       <DependentUpon>adminview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employeelogin.resx">
-      <DependentUpon>employeelogin.cs</DependentUpon>
+    <EmbeddedResource Include="login2.resx">
+      <DependentUpon>login2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="employeeview.resx">
       <DependentUpon>employeeview.cs</DependentUpon>
@@ -184,9 +169,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Owner.dashbaord.resx">
       <DependentUpon>Owner.dashbaord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ownerlogin.resx">
-      <DependentUpon>ownerlogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ownerview.resx">
       <DependentUpon>ownerview.cs</DependentUpon>
