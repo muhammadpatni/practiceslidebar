@@ -33,23 +33,23 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnownwe_employee = new Guna.UI.WinForms.GunaButton();
             this.btnownwe_inventory = new Guna.UI.WinForms.GunaButton();
+            this.btnownwe_employee = new Guna.UI.WinForms.GunaButton();
             this.btnonwer_dash = new Guna.UI.WinForms.GunaButton();
             this.panellogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.paneltop = new System.Windows.Forms.Panel();
             this.btnminimize = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnmaximize = new Guna.UI.WinForms.GunaButton();
             this.btnclose = new Guna.UI.WinForms.GunaButton();
             this.panelmain = new System.Windows.Forms.Panel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panellogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.paneltop.SuspendLayout();
             this.panelmain.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +66,6 @@
             this.panelside.Name = "panelside";
             this.panelside.Size = new System.Drawing.Size(196, 590);
             this.panelside.TabIndex = 2;
-            this.panelside.Paint += new System.Windows.Forms.PaintEventHandler(this.panelside_Paint);
             // 
             // panel2
             // 
@@ -110,44 +109,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnownwe_employee);
             this.panel1.Controls.Add(this.btnownwe_inventory);
+            this.panel1.Controls.Add(this.btnownwe_employee);
             this.panel1.Controls.Add(this.btnonwer_dash);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 190);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(196, 144);
             this.panel1.TabIndex = 1;
-            // 
-            // btnownwe_employee
-            // 
-            this.btnownwe_employee.AnimationHoverSpeed = 0.07F;
-            this.btnownwe_employee.AnimationSpeed = 0.03F;
-            this.btnownwe_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_employee.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_employee.BorderColor = System.Drawing.Color.Black;
-            this.btnownwe_employee.CausesValidation = false;
-            this.btnownwe_employee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnownwe_employee.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnownwe_employee.FocusedColor = System.Drawing.Color.Empty;
-            this.btnownwe_employee.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnownwe_employee.ForeColor = System.Drawing.Color.White;
-            this.btnownwe_employee.Image = null;
-            this.btnownwe_employee.ImageOffsetX = 6;
-            this.btnownwe_employee.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnownwe_employee.Location = new System.Drawing.Point(0, 96);
-            this.btnownwe_employee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnownwe_employee.Name = "btnownwe_employee";
-            this.btnownwe_employee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_employee.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnownwe_employee.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnownwe_employee.OnHoverImage = null;
-            this.btnownwe_employee.OnPressedColor = System.Drawing.Color.Black;
-            this.btnownwe_employee.Size = new System.Drawing.Size(196, 48);
-            this.btnownwe_employee.TabIndex = 6;
-            this.btnownwe_employee.Text = "EMPLOYEES DETAILS";
-            this.btnownwe_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnownwe_employee.Click += new System.EventHandler(this.btnownwe_employee_Click);
             // 
             // btnownwe_inventory
             // 
@@ -160,7 +129,7 @@
             this.btnownwe_inventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnownwe_inventory.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnownwe_inventory.FocusedColor = System.Drawing.Color.Empty;
-            this.btnownwe_inventory.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnownwe_inventory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnownwe_inventory.ForeColor = System.Drawing.Color.White;
             this.btnownwe_inventory.Image = null;
             this.btnownwe_inventory.ImageOffsetX = 6;
@@ -179,6 +148,36 @@
             this.btnownwe_inventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnownwe_inventory.Click += new System.EventHandler(this.btnownwe_inventory_Click);
             // 
+            // btnownwe_employee
+            // 
+            this.btnownwe_employee.AnimationHoverSpeed = 0.07F;
+            this.btnownwe_employee.AnimationSpeed = 0.03F;
+            this.btnownwe_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnownwe_employee.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnownwe_employee.BorderColor = System.Drawing.Color.Black;
+            this.btnownwe_employee.CausesValidation = false;
+            this.btnownwe_employee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnownwe_employee.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnownwe_employee.FocusedColor = System.Drawing.Color.Empty;
+            this.btnownwe_employee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnownwe_employee.ForeColor = System.Drawing.Color.White;
+            this.btnownwe_employee.Image = null;
+            this.btnownwe_employee.ImageOffsetX = 6;
+            this.btnownwe_employee.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnownwe_employee.Location = new System.Drawing.Point(0, 96);
+            this.btnownwe_employee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnownwe_employee.Name = "btnownwe_employee";
+            this.btnownwe_employee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnownwe_employee.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnownwe_employee.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnownwe_employee.OnHoverImage = null;
+            this.btnownwe_employee.OnPressedColor = System.Drawing.Color.Black;
+            this.btnownwe_employee.Size = new System.Drawing.Size(196, 48);
+            this.btnownwe_employee.TabIndex = 6;
+            this.btnownwe_employee.Text = "EMPLOYEES DETAILS";
+            this.btnownwe_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnownwe_employee.Click += new System.EventHandler(this.btnownwe_employee_Click);
+            // 
             // btnonwer_dash
             // 
             this.btnonwer_dash.AnimationHoverSpeed = 0.07F;
@@ -190,7 +189,7 @@
             this.btnonwer_dash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnonwer_dash.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnonwer_dash.FocusedColor = System.Drawing.Color.Empty;
-            this.btnonwer_dash.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnonwer_dash.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnonwer_dash.ForeColor = System.Drawing.Color.White;
             this.btnonwer_dash.Image = null;
             this.btnonwer_dash.ImageOffsetX = 6;
@@ -211,7 +210,7 @@
             // 
             // panellogo
             // 
-            this.panellogo.Controls.Add(this.pictureBox1);
+            this.panellogo.Controls.Add(this.pictureBox2);
             this.panellogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -219,17 +218,15 @@
             this.panellogo.Size = new System.Drawing.Size(196, 190);
             this.panellogo.TabIndex = 8;
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 148);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(7, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(184, 172);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // paneltop
             // 
@@ -244,7 +241,7 @@
             this.paneltop.Name = "paneltop";
             this.paneltop.Size = new System.Drawing.Size(1020, 58);
             this.paneltop.TabIndex = 3;
-            this.paneltop.Paint += new System.Windows.Forms.PaintEventHandler(this.paneltop_Paint);
+        
             // 
             // btnminimize
             // 
@@ -351,26 +348,26 @@
             // 
             // panelmain
             // 
-            this.panelmain.Controls.Add(this.gunaLabel2);
+            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelmain.Controls.Add(this.label3);
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panelmain.Location = new System.Drawing.Point(196, 58);
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(1020, 532);
             this.panelmain.TabIndex = 4;
+         
             // 
-            // gunaLabel2
+            // label3
             // 
-            this.gunaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Stencil", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(143, 200);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(751, 76);
-            this.gunaLabel2.TabIndex = 0;
-            this.gunaLabel2.Text = " Patni Medical Store";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(123, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(826, 55);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Please Select Any Option From Menu";
             // 
             // ownerview
             // 
@@ -391,7 +388,7 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panellogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.paneltop.ResumeLayout(false);
             this.paneltop.PerformLayout();
             this.panelmain.ResumeLayout(false);
@@ -404,7 +401,6 @@
 
         private System.Windows.Forms.Panel panelside;
         private System.Windows.Forms.Panel panellogo;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaButton btnownwe_employee;
         private Guna.UI.WinForms.GunaButton btnownwe_inventory;
         private Guna.UI.WinForms.GunaButton btnonwer_dash;
@@ -413,10 +409,11 @@
         private Guna.UI.WinForms.GunaButton btnclose;
         private Guna.UI.WinForms.GunaButton btnlogout;
         private System.Windows.Forms.Panel panelmain;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaButton btnminimize;
         private Guna.UI.WinForms.GunaButton btnmaximize;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
     }
 }

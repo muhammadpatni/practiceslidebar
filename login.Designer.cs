@@ -37,17 +37,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panellogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelmain = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.combouser = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.paneltop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panellogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelmain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // paneltop
@@ -151,27 +153,17 @@
             // 
             // panellogo
             // 
-            this.panellogo.Controls.Add(this.pictureBox1);
+            this.panellogo.Controls.Add(this.pictureBox2);
             this.panellogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(175, 159);
+            this.panellogo.Size = new System.Drawing.Size(175, 171);
             this.panellogo.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 125);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // panelmain
             // 
-            this.panelmain.BackColor = System.Drawing.Color.White;
+            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelmain.Controls.Add(this.label3);
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.Location = new System.Drawing.Point(175, 58);
             this.panelmain.Name = "panelmain";
@@ -183,7 +175,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 264);
+            this.label2.Location = new System.Drawing.Point(12, 283);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 25);
             this.label2.TabIndex = 31;
@@ -209,7 +201,7 @@
             this.combouser.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.combouser.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combouser.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combouser.Location = new System.Drawing.Point(5, 289);
+            this.combouser.Location = new System.Drawing.Point(6, 311);
             this.combouser.Name = "combouser";
             this.combouser.Size = new System.Drawing.Size(166, 36);
             this.combouser.TabIndex = 34;
@@ -218,13 +210,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(4, 162);
+            this.label4.Location = new System.Drawing.Point(42, 216);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 67);
+            this.label4.Size = new System.Drawing.Size(112, 45);
             this.label4.TabIndex = 35;
             this.label4.Text = "Login";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(17, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(145, 150);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(73, 216);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(326, 25);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Please select user from user box\r\n";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // login
             // 
@@ -247,7 +262,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panellogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelmain.ResumeLayout(false);
+            this.panelmain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,7 +274,6 @@
         private System.Windows.Forms.Panel paneltop;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.Panel panelside;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panellogo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelmain;
@@ -267,5 +283,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox combouser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
     }
 }

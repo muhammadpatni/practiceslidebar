@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,72 @@ namespace practiceslidebar
 {
     public partial class Owner_Employees : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
         public Owner_Employees()
         {
             InitializeComponent();
         }
 
         private void Owner_Employees_Load(object sender, EventArgs e)
+        {
+            getinventoryrecord();
+        }
+
+        private void getinventoryrecord()
+        {
+            string query = "select id,name,email,contact,position,salary from employee where position !='owner'; ";
+            SqlDataAdapter ad = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            owneremployeeview.DataSource = dt;
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = "select id,name,email,contact,position,salary from employee where cast (id as varchar) like  @id +'%' and  position !='owner'";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@id", txtsearch.Text.Trim());
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            if (dataTable.Rows.Count > 0)
+            {
+                owneremployeeview.DataSource = dataTable;
+
+            }
+            else
+            {
+                MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                owneremployeeview.DataSource = null;
+            }
+        }
+
+        private void combosort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = "select id,name,email,contact,position,salary from employee where position like  @position +'%' and  position !='owner'";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@position", combosort.Text.Trim());
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            if (dataTable.Rows.Count > 0)
+            {
+                owneremployeeview.DataSource = dataTable;
+
+            }
+            else
+            {
+                MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                owneremployeeview.DataSource = null;
+            }
+        }
+
+        private void btnreset_Click(object sender, EventArgs e)
+        {
+            txtsearch.Clear();
+            combosort.SelectedIndex = -1;
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

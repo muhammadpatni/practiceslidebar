@@ -16,6 +16,7 @@ namespace practiceslidebar
         public ownerInventory()
         {
             InitializeComponent();
+            form_manager.ownerInventory = this;
         }
 
         private void getinventoryrecord()
@@ -58,6 +59,7 @@ namespace practiceslidebar
             }
         }
 
+
         private void combosort_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -76,6 +78,16 @@ namespace practiceslidebar
                 MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 ownerinventoryview.DataSource = null;
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ownerinventoryview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

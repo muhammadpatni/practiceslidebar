@@ -46,10 +46,11 @@ namespace practiceslidebar
         {
             txtusername.Visible = false;
             label2.Visible= false;
-            label1.Location = new Point(94, 150);
-            txtpassword.Location = new Point(89, 180);
-            showpassword.Location = new Point(244, 224);
-            btnlogin.Location = new Point(160, 282);
+            pictureBox1.Location=new Point(154, 61);
+            label1.Location = new Point(95, 221);
+            txtpassword.Location = new Point(90, 251);
+            showpassword.Location = new Point(245, 295);
+            btnlogin.Location = new Point(166, 339);
            this.temp = ptemp;
 
 
@@ -108,6 +109,11 @@ namespace practiceslidebar
         }
 
         private void txtusername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

@@ -11,5 +11,6 @@ namespace practiceslidebar
     {
         public static login mainforminstance { get; set; }
         public static login2 employeelogin { get; set; }
+        public static ownerInventory ownerInventory { get; set; }   
     }
 }

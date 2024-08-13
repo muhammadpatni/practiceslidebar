@@ -72,11 +72,6 @@ namespace practiceslidebar
 
 
 
-        private void panelside_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnownwe_employee_Click(object sender, EventArgs e)
         {
             btnownwe_employee.Location = new Point(10, 96);
@@ -94,6 +89,7 @@ namespace practiceslidebar
             if (WindowState==FormWindowState.Normal)
             {
                 WindowState=FormWindowState.Maximized;
+            
             }
             else 
             {
@@ -106,9 +102,6 @@ namespace practiceslidebar
                 WindowState = FormWindowState.Minimized;
         }
 
-        private void paneltop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+    
     }
 }

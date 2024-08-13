@@ -42,12 +42,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(153, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(170, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnlogin
             // 
@@ -66,7 +67,7 @@
             this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
             this.btnlogin.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnlogin.Location = new System.Drawing.Point(153, 326);
+            this.btnlogin.Location = new System.Drawing.Point(170, 378);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(150, 40);
             this.btnlogin.TabIndex = 18;
@@ -78,7 +79,7 @@
             this.showpassword.AutoSize = true;
             this.showpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.showpassword.Location = new System.Drawing.Point(232, 296);
+            this.showpassword.Location = new System.Drawing.Point(249, 334);
             this.showpassword.Name = "showpassword";
             this.showpassword.Size = new System.Drawing.Size(136, 24);
             this.showpassword.TabIndex = 17;
@@ -101,7 +102,7 @@
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.txtpassword.ForeColor = System.Drawing.Color.Black;
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtpassword.Location = new System.Drawing.Point(77, 252);
+            this.txtpassword.Location = new System.Drawing.Point(94, 290);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '\0';
@@ -115,7 +116,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(82, 132);
+            this.label2.Location = new System.Drawing.Point(99, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 26);
             this.label2.TabIndex = 15;
@@ -136,7 +137,7 @@
             this.txtusername.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.txtusername.ForeColor = System.Drawing.Color.Black;
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtusername.Location = new System.Drawing.Point(77, 164);
+            this.txtusername.Location = new System.Drawing.Point(94, 213);
             this.txtusername.Margin = new System.Windows.Forms.Padding(4);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
@@ -151,7 +152,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(82, 222);
+            this.label1.Location = new System.Drawing.Point(99, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 26);
             this.label1.TabIndex = 13;
@@ -162,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(488, 417);
+            this.ClientSize = new System.Drawing.Size(511, 502);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.showpassword);
             this.Controls.Add(this.txtpassword);
