@@ -16,5 +16,37 @@ namespace practiceslidebar
         {
             InitializeComponent();
         }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+
+            login l = new login();
+            l.Show();
+            this.Hide();
+        }
+
+        private void btnmaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnminimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
+        }
     }
 }

@@ -104,6 +104,7 @@
             this.btnlogout.TabIndex = 9;
             this.btnlogout.Text = "Logout";
             this.btnlogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // panel1
             // 
@@ -266,6 +267,7 @@
             this.btnminimize.Size = new System.Drawing.Size(33, 58);
             this.btnminimize.TabIndex = 6;
             this.btnminimize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnminimize.Click += new System.EventHandler(this.btnminimize_Click);
             // 
             // gunaLabel1
             // 
@@ -308,6 +310,7 @@
             this.btnmaximize.Size = new System.Drawing.Size(33, 58);
             this.btnmaximize.TabIndex = 7;
             this.btnmaximize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnmaximize.Click += new System.EventHandler(this.btnmaximize_Click);
             // 
             // btnclose
             // 
@@ -337,6 +340,7 @@
             this.btnclose.Size = new System.Drawing.Size(33, 58);
             this.btnclose.TabIndex = 5;
             this.btnclose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // panelmain
             // 

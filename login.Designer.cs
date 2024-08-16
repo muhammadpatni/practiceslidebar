@@ -34,22 +34,22 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnclose = new Guna.UI.WinForms.GunaButton();
             this.panelside = new System.Windows.Forms.Panel();
+            this.combouser = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panellogo = new System.Windows.Forms.Panel();
-            this.panelmain = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.combouser = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelmain = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.paneltop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panellogo.SuspendLayout();
-            this.panelmain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelmain.SuspendLayout();
             this.SuspendLayout();
             // 
             // paneltop
@@ -132,6 +132,54 @@
             this.panelside.TabIndex = 1;
             this.panelside.Paint += new System.Windows.Forms.PaintEventHandler(this.panelside_Paint);
             // 
+            // combouser
+            // 
+            this.combouser.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
+            this.combouser.BackColor = System.Drawing.Color.White;
+            this.combouser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combouser.BorderThickness = 5;
+            this.combouser.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combouser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combouser.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combouser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combouser.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.combouser.ForeColor = System.Drawing.Color.Black;
+            this.combouser.ItemHeight = 30;
+            this.combouser.Items.AddRange(new object[] {
+            "owner",
+            "admin",
+            "employee"});
+            this.combouser.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.combouser.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combouser.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combouser.Location = new System.Drawing.Point(6, 311);
+            this.combouser.Name = "combouser";
+            this.combouser.Size = new System.Drawing.Size(166, 36);
+            this.combouser.TabIndex = 34;
+            this.combouser.SelectedIndexChanged += new System.EventHandler(this.combouser_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 283);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 25);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "User";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(42, 216);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 45);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Login";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
@@ -160,64 +208,6 @@
             this.panellogo.Size = new System.Drawing.Size(175, 171);
             this.panellogo.TabIndex = 8;
             // 
-            // panelmain
-            // 
-            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Controls.Add(this.label3);
-            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelmain.Location = new System.Drawing.Point(175, 58);
-            this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(457, 444);
-            this.panelmain.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 283);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 25);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "User";
-            // 
-            // combouser
-            // 
-            this.combouser.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
-            this.combouser.BackColor = System.Drawing.Color.White;
-            this.combouser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combouser.BorderThickness = 5;
-            this.combouser.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combouser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combouser.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combouser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combouser.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.combouser.ForeColor = System.Drawing.Color.Black;
-            this.combouser.ItemHeight = 30;
-            this.combouser.Items.AddRange(new object[] {
-            "owner",
-            "admin",
-            "employee"});
-            this.combouser.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.combouser.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combouser.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combouser.Location = new System.Drawing.Point(6, 311);
-            this.combouser.Name = "combouser";
-            this.combouser.Size = new System.Drawing.Size(166, 36);
-            this.combouser.TabIndex = 34;
-            this.combouser.SelectedIndexChanged += new System.EventHandler(this.combouser_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(42, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 45);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Login";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -228,6 +218,16 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panelmain
+            // 
+            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelmain.Controls.Add(this.label3);
+            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelmain.Location = new System.Drawing.Point(175, 58);
+            this.panelmain.Name = "panelmain";
+            this.panelmain.Size = new System.Drawing.Size(457, 444);
+            this.panelmain.TabIndex = 2;
             // 
             // label3
             // 
@@ -262,9 +262,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panellogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelmain.ResumeLayout(false);
             this.panelmain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
