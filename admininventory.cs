@@ -32,5 +32,10 @@ namespace practiceslidebar
         {
             getinventoryrecord();
         }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
