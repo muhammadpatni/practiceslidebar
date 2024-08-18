@@ -45,6 +45,7 @@
             this.btnclose = new Guna.UI.WinForms.GunaButton();
             this.panelmain = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,16 +65,17 @@
             this.panelside.Location = new System.Drawing.Point(0, 0);
             this.panelside.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelside.Name = "panelside";
-            this.panelside.Size = new System.Drawing.Size(196, 590);
+            this.panelside.Size = new System.Drawing.Size(214, 590);
             this.panelside.TabIndex = 2;
+            this.panelside.Paint += new System.Windows.Forms.PaintEventHandler(this.panelside_Paint);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnlogout);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 490);
+            this.panel2.Location = new System.Drawing.Point(0, 521);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 100);
+            this.panel2.Size = new System.Drawing.Size(214, 69);
             this.panel2.TabIndex = 10;
             // 
             // btnlogout
@@ -92,7 +94,7 @@
             this.btnlogout.Image = null;
             this.btnlogout.ImageOffsetX = 6;
             this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnlogout.Location = new System.Drawing.Point(19, 39);
+            this.btnlogout.Location = new System.Drawing.Point(19, 8);
             this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.OnHoverBaseColor = System.Drawing.Color.DarkGray;
@@ -108,14 +110,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.btnownwe_inventory);
             this.panel1.Controls.Add(this.btnownwe_employee);
             this.panel1.Controls.Add(this.btnonwer_dash);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 190);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 144);
+            this.panel1.Size = new System.Drawing.Size(214, 144);
             this.panel1.TabIndex = 1;
             // 
             // btnownwe_inventory
@@ -215,15 +217,15 @@
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(196, 190);
+            this.panellogo.Size = new System.Drawing.Size(214, 190);
             this.panellogo.TabIndex = 8;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(7, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 9);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(184, 172);
+            this.pictureBox2.Size = new System.Drawing.Size(196, 172);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -236,12 +238,11 @@
             this.paneltop.Controls.Add(this.btnmaximize);
             this.paneltop.Controls.Add(this.btnclose);
             this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltop.Location = new System.Drawing.Point(196, 0);
+            this.paneltop.Location = new System.Drawing.Point(221, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(1020, 58);
+            this.paneltop.Size = new System.Drawing.Size(995, 58);
             this.paneltop.TabIndex = 3;
-        
             // 
             // btnminimize
             // 
@@ -260,7 +261,7 @@
             this.btnminimize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.ImageOffsetX = 6;
             this.btnminimize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnminimize.Location = new System.Drawing.Point(921, 0);
+            this.btnminimize.Location = new System.Drawing.Point(896, 0);
             this.btnminimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnminimize.Name = "btnminimize";
             this.btnminimize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -303,7 +304,7 @@
             this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnmaximize.ImageOffsetX = 6;
             this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnmaximize.Location = new System.Drawing.Point(954, 0);
+            this.btnmaximize.Location = new System.Drawing.Point(929, 0);
             this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnmaximize.Name = "btnmaximize";
             this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -333,7 +334,7 @@
             this.btnclose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnclose.ImageOffsetX = 6;
             this.btnclose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnclose.Location = new System.Drawing.Point(987, 0);
+            this.btnclose.Location = new System.Drawing.Point(962, 0);
             this.btnclose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnclose.Name = "btnclose";
             this.btnclose.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -352,11 +353,11 @@
             this.panelmain.Controls.Add(this.label3);
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Location = new System.Drawing.Point(196, 58);
+            this.panelmain.Location = new System.Drawing.Point(221, 58);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(1020, 532);
+            this.panelmain.Size = new System.Drawing.Size(995, 532);
             this.panelmain.TabIndex = 4;
-         
+            this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
             // 
             // label3
             // 
@@ -369,6 +370,15 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Please Select Any Option From Menu";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(214, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(7, 590);
+            this.panel3.TabIndex = 35;
+            // 
             // ownerview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -377,6 +387,7 @@
             this.ClientSize = new System.Drawing.Size(1216, 590);
             this.Controls.Add(this.panelmain);
             this.Controls.Add(this.paneltop);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelside);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -415,5 +426,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel3;
     }
 }

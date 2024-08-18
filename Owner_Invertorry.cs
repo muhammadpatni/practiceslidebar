@@ -21,7 +21,7 @@ namespace practiceslidebar
 
         private void getinventoryrecord()
         {
-            string query = "select * from Inventory2 ";
+            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2";
             SqlDataAdapter ad = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             ad.Fill(dt);

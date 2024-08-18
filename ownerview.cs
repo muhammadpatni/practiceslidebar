@@ -102,6 +102,14 @@ namespace practiceslidebar
                 WindowState = FormWindowState.Minimized;
         }
 
-    
+        private void panelmain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelside_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

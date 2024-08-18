@@ -17,6 +17,21 @@ namespace practiceslidebar
             InitializeComponent();
         }
 
+        public void loadform(object Form)
+        {
+
+
+            if (this.panelmain.Controls.Count > 0)
+            {
+                this.panelmain.Controls.RemoveAt(0);
+            }
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.panelmain.Controls.Add(f);
+            this.panelmain.Tag = f;
+            f.Show();
+        }
         private void btnlogout_Click(object sender, EventArgs e)
         {
 
@@ -47,6 +62,16 @@ namespace practiceslidebar
         {
 
             Application.Exit();
+        }
+
+        private void panelmain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnownwe_inventory_Click(object sender, EventArgs e)
+        {
+            loadform(new admininventory());
         }
     }
 }
