@@ -83,7 +83,7 @@ namespace practiceslidebar
                 else
                 { MessageBox.Show("productID not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
-            catch (Exception ex)
+            catch
             { MessageBox.Show("ProductID is required ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             finally { con.Close(); }
             if (test)
@@ -163,6 +163,11 @@ namespace practiceslidebar
         }
 
         private void expirydate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ownerinventoryview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -33,9 +33,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnownwe_inventory = new Guna.UI.WinForms.GunaButton();
-            this.btnownwe_employee = new Guna.UI.WinForms.GunaButton();
-            this.btnonwer_dash = new Guna.UI.WinForms.GunaButton();
+            this.btnadmin_stock = new Guna.UI.WinForms.GunaButton();
+            this.btnadmin_employee = new Guna.UI.WinForms.GunaButton();
+            this.btnadmin_inventory = new Guna.UI.WinForms.GunaButton();
             this.panellogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelmain = new System.Windows.Forms.Panel();
@@ -65,7 +65,7 @@
             this.panelside.Location = new System.Drawing.Point(0, 0);
             this.panelside.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelside.Name = "panelside";
-            this.panelside.Size = new System.Drawing.Size(211, 590);
+            this.panelside.Size = new System.Drawing.Size(214, 590);
             this.panelside.TabIndex = 3;
             // 
             // panel2
@@ -74,7 +74,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 490);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(211, 100);
+            this.panel2.Size = new System.Drawing.Size(214, 100);
             this.panel2.TabIndex = 10;
             // 
             // btnlogout
@@ -109,103 +109,105 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.btnownwe_inventory);
-            this.panel1.Controls.Add(this.btnownwe_employee);
-            this.panel1.Controls.Add(this.btnonwer_dash);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnadmin_stock);
+            this.panel1.Controls.Add(this.btnadmin_employee);
+            this.panel1.Controls.Add(this.btnadmin_inventory);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 190);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(211, 144);
+            this.panel1.Size = new System.Drawing.Size(214, 144);
             this.panel1.TabIndex = 1;
             // 
-            // btnownwe_inventory
+            // btnadmin_stock
             // 
-            this.btnownwe_inventory.AnimationHoverSpeed = 0.07F;
-            this.btnownwe_inventory.AnimationSpeed = 0.03F;
-            this.btnownwe_inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_inventory.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_inventory.BorderColor = System.Drawing.Color.Black;
-            this.btnownwe_inventory.CausesValidation = false;
-            this.btnownwe_inventory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnownwe_inventory.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnownwe_inventory.FocusedColor = System.Drawing.Color.Empty;
-            this.btnownwe_inventory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnownwe_inventory.ForeColor = System.Drawing.Color.White;
-            this.btnownwe_inventory.Image = null;
-            this.btnownwe_inventory.ImageOffsetX = 6;
-            this.btnownwe_inventory.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnownwe_inventory.Location = new System.Drawing.Point(0, 48);
-            this.btnownwe_inventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnownwe_inventory.Name = "btnownwe_inventory";
-            this.btnownwe_inventory.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_inventory.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnownwe_inventory.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnownwe_inventory.OnHoverImage = null;
-            this.btnownwe_inventory.OnPressedColor = System.Drawing.Color.Black;
-            this.btnownwe_inventory.Size = new System.Drawing.Size(209, 48);
-            this.btnownwe_inventory.TabIndex = 7;
-            this.btnownwe_inventory.Text = "PRODUCT OUT OF STOCK";
-            this.btnownwe_inventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnownwe_inventory.Click += new System.EventHandler(this.btnownwe_inventory_Click);
+            this.btnadmin_stock.AnimationHoverSpeed = 0.07F;
+            this.btnadmin_stock.AnimationSpeed = 0.03F;
+            this.btnadmin_stock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_stock.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_stock.BorderColor = System.Drawing.Color.Black;
+            this.btnadmin_stock.CausesValidation = false;
+            this.btnadmin_stock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadmin_stock.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnadmin_stock.FocusedColor = System.Drawing.Color.Empty;
+            this.btnadmin_stock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadmin_stock.ForeColor = System.Drawing.Color.White;
+            this.btnadmin_stock.Image = null;
+            this.btnadmin_stock.ImageOffsetX = 6;
+            this.btnadmin_stock.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnadmin_stock.Location = new System.Drawing.Point(0, 48);
+            this.btnadmin_stock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnadmin_stock.Name = "btnadmin_stock";
+            this.btnadmin_stock.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_stock.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnadmin_stock.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnadmin_stock.OnHoverImage = null;
+            this.btnadmin_stock.OnPressedColor = System.Drawing.Color.Black;
+            this.btnadmin_stock.Size = new System.Drawing.Size(214, 48);
+            this.btnadmin_stock.TabIndex = 7;
+            this.btnadmin_stock.Text = "PRODUCT OUT OF STOCK";
+            this.btnadmin_stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnadmin_stock.Click += new System.EventHandler(this.btnadmin_stock_Click);
             // 
-            // btnownwe_employee
+            // btnadmin_employee
             // 
-            this.btnownwe_employee.AnimationHoverSpeed = 0.07F;
-            this.btnownwe_employee.AnimationSpeed = 0.03F;
-            this.btnownwe_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_employee.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_employee.BorderColor = System.Drawing.Color.Black;
-            this.btnownwe_employee.CausesValidation = false;
-            this.btnownwe_employee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnownwe_employee.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnownwe_employee.FocusedColor = System.Drawing.Color.Empty;
-            this.btnownwe_employee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnownwe_employee.ForeColor = System.Drawing.Color.White;
-            this.btnownwe_employee.Image = null;
-            this.btnownwe_employee.ImageOffsetX = 6;
-            this.btnownwe_employee.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnownwe_employee.Location = new System.Drawing.Point(0, 96);
-            this.btnownwe_employee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnownwe_employee.Name = "btnownwe_employee";
-            this.btnownwe_employee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_employee.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnownwe_employee.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnownwe_employee.OnHoverImage = null;
-            this.btnownwe_employee.OnPressedColor = System.Drawing.Color.Black;
-            this.btnownwe_employee.Size = new System.Drawing.Size(209, 48);
-            this.btnownwe_employee.TabIndex = 6;
-            this.btnownwe_employee.Text = "EMPLOYEES DETAILS";
-            this.btnownwe_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnadmin_employee.AnimationHoverSpeed = 0.07F;
+            this.btnadmin_employee.AnimationSpeed = 0.03F;
+            this.btnadmin_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_employee.BorderColor = System.Drawing.Color.Black;
+            this.btnadmin_employee.CausesValidation = false;
+            this.btnadmin_employee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadmin_employee.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnadmin_employee.FocusedColor = System.Drawing.Color.Empty;
+            this.btnadmin_employee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadmin_employee.ForeColor = System.Drawing.Color.White;
+            this.btnadmin_employee.Image = null;
+            this.btnadmin_employee.ImageOffsetX = 6;
+            this.btnadmin_employee.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnadmin_employee.Location = new System.Drawing.Point(0, 96);
+            this.btnadmin_employee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnadmin_employee.Name = "btnadmin_employee";
+            this.btnadmin_employee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_employee.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnadmin_employee.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnadmin_employee.OnHoverImage = null;
+            this.btnadmin_employee.OnPressedColor = System.Drawing.Color.Black;
+            this.btnadmin_employee.Size = new System.Drawing.Size(214, 48);
+            this.btnadmin_employee.TabIndex = 6;
+            this.btnadmin_employee.Text = "EMPLOYEES DETAILS";
+            this.btnadmin_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnadmin_employee.Click += new System.EventHandler(this.btnadmin_employee_Click);
             // 
-            // btnonwer_dash
+            // btnadmin_inventory
             // 
-            this.btnonwer_dash.AnimationHoverSpeed = 0.07F;
-            this.btnonwer_dash.AnimationSpeed = 0.03F;
-            this.btnonwer_dash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnonwer_dash.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnonwer_dash.BorderColor = System.Drawing.Color.Black;
-            this.btnonwer_dash.CausesValidation = false;
-            this.btnonwer_dash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnonwer_dash.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnonwer_dash.FocusedColor = System.Drawing.Color.Empty;
-            this.btnonwer_dash.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnonwer_dash.ForeColor = System.Drawing.Color.White;
-            this.btnonwer_dash.Image = null;
-            this.btnonwer_dash.ImageOffsetX = 6;
-            this.btnonwer_dash.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnonwer_dash.Location = new System.Drawing.Point(0, 0);
-            this.btnonwer_dash.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnonwer_dash.Name = "btnonwer_dash";
-            this.btnonwer_dash.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnonwer_dash.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnonwer_dash.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnonwer_dash.OnHoverImage = null;
-            this.btnonwer_dash.OnPressedColor = System.Drawing.Color.Black;
-            this.btnonwer_dash.Size = new System.Drawing.Size(209, 48);
-            this.btnonwer_dash.TabIndex = 5;
-            this.btnonwer_dash.Text = "INVENTORY";
-            this.btnonwer_dash.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnadmin_inventory.AnimationHoverSpeed = 0.07F;
+            this.btnadmin_inventory.AnimationSpeed = 0.03F;
+            this.btnadmin_inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_inventory.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_inventory.BorderColor = System.Drawing.Color.Black;
+            this.btnadmin_inventory.CausesValidation = false;
+            this.btnadmin_inventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadmin_inventory.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnadmin_inventory.FocusedColor = System.Drawing.Color.Empty;
+            this.btnadmin_inventory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadmin_inventory.ForeColor = System.Drawing.Color.White;
+            this.btnadmin_inventory.Image = null;
+            this.btnadmin_inventory.ImageOffsetX = 6;
+            this.btnadmin_inventory.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnadmin_inventory.Location = new System.Drawing.Point(0, 0);
+            this.btnadmin_inventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnadmin_inventory.Name = "btnadmin_inventory";
+            this.btnadmin_inventory.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_inventory.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnadmin_inventory.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnadmin_inventory.OnHoverImage = null;
+            this.btnadmin_inventory.OnPressedColor = System.Drawing.Color.Black;
+            this.btnadmin_inventory.Size = new System.Drawing.Size(214, 48);
+            this.btnadmin_inventory.TabIndex = 5;
+            this.btnadmin_inventory.Text = "INVENTORY";
+            this.btnadmin_inventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnadmin_inventory.Click += new System.EventHandler(this.btnadmin_inventory_Click);
             // 
             // panellogo
             // 
@@ -214,7 +216,7 @@
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(211, 190);
+            this.panellogo.Size = new System.Drawing.Size(214, 190);
             this.panellogo.TabIndex = 8;
             // 
             // pictureBox2
@@ -233,11 +235,10 @@
             this.panelmain.Controls.Add(this.label3);
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Location = new System.Drawing.Point(218, 67);
+            this.panelmain.Location = new System.Drawing.Point(221, 67);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(998, 523);
+            this.panelmain.Size = new System.Drawing.Size(995, 523);
             this.panelmain.TabIndex = 5;
-            this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
             // 
             // label3
             // 
@@ -253,7 +254,7 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(211, 0);
+            this.panel3.Location = new System.Drawing.Point(214, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(7, 590);
             this.panel3.TabIndex = 6;
@@ -275,7 +276,7 @@
             this.btnclose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnclose.ImageOffsetX = 6;
             this.btnclose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnclose.Location = new System.Drawing.Point(965, 0);
+            this.btnclose.Location = new System.Drawing.Point(962, 0);
             this.btnclose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnclose.Name = "btnclose";
             this.btnclose.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -305,7 +306,7 @@
             this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnmaximize.ImageOffsetX = 6;
             this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnmaximize.Location = new System.Drawing.Point(932, 0);
+            this.btnmaximize.Location = new System.Drawing.Point(929, 0);
             this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnmaximize.Name = "btnmaximize";
             this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -348,7 +349,7 @@
             this.btnminimize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.ImageOffsetX = 6;
             this.btnminimize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnminimize.Location = new System.Drawing.Point(899, 0);
+            this.btnminimize.Location = new System.Drawing.Point(896, 0);
             this.btnminimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnminimize.Name = "btnminimize";
             this.btnminimize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -369,10 +370,10 @@
             this.paneltop.Controls.Add(this.btnmaximize);
             this.paneltop.Controls.Add(this.btnclose);
             this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltop.Location = new System.Drawing.Point(218, 0);
+            this.paneltop.Location = new System.Drawing.Point(221, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(998, 67);
+            this.paneltop.Size = new System.Drawing.Size(995, 67);
             this.paneltop.TabIndex = 4;
             // 
             // adminview
@@ -407,9 +408,9 @@
         private System.Windows.Forms.Panel panel2;
         private Guna.UI.WinForms.GunaButton btnlogout;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaButton btnownwe_inventory;
-        private Guna.UI.WinForms.GunaButton btnownwe_employee;
-        private Guna.UI.WinForms.GunaButton btnonwer_dash;
+        private Guna.UI.WinForms.GunaButton btnadmin_stock;
+        private Guna.UI.WinForms.GunaButton btnadmin_employee;
+        private Guna.UI.WinForms.GunaButton btnadmin_inventory;
         private System.Windows.Forms.Panel panellogo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelmain;

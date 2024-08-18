@@ -64,13 +64,40 @@ namespace practiceslidebar
             Application.Exit();
         }
 
-        private void panelmain_Paint(object sender, PaintEventArgs e)
-        {
+       
+
+        
+
+        private void btnadmin_stock_Click(object sender, EventArgs e)
+        {   
+            btnadmin_stock.Location = new Point(10, 48);
+            btnadmin_stock.Size = new Size(204, 48);
+            btnadmin_inventory.Location = new Point(0, 0);
+            btnadmin_employee.Location = new Point(0, 96);
+            btnadmin_employee.Size = new Size(214, 48);
+            btnadmin_inventory.Size = new Size(214, 48);
 
         }
 
-        private void btnownwe_inventory_Click(object sender, EventArgs e)
+        private void btnadmin_employee_Click(object sender, EventArgs e)
         {
+            btnadmin_employee.Location = new Point(10, 96);
+            btnadmin_employee.Size = new Size(204, 48);
+            btnadmin_inventory.Location = new Point(0, 0);
+            btnadmin_stock.Location = new Point(0, 48);
+            btnadmin_stock.Size = new Size(214, 48);
+            btnadmin_inventory.Size = new Size(214, 48);
+        }
+
+        private void btnadmin_inventory_Click(object sender, EventArgs e)
+        {
+            btnadmin_inventory.Location = new Point(10, 0);
+            btnadmin_inventory.Size = new Size(204, 48);
+            btnadmin_employee.Location = new Point(0, 96);
+            btnadmin_stock.Location = new Point(0, 48);
+            btnadmin_employee.Size = new Size(214, 48);
+            btnadmin_stock.Size = new Size(214, 48);
+
             loadform(new admininventory());
         }
     }

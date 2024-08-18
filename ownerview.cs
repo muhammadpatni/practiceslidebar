@@ -49,11 +49,11 @@ namespace practiceslidebar
         private void btnonwer_dash_Click(object sender, EventArgs e)
         {
             btnonwer_dash.Location = new Point(10, 0);
-            btnonwer_dash.Size = new Size(186, 48);
+            btnonwer_dash.Size = new Size(204, 48);
             btnownwe_employee.Location = new Point(0, 96);
             btnownwe_inventory.Location = new Point(0,48);
-            btnownwe_employee.Size = new Size(196, 48);
-            btnownwe_inventory.Size = new Size(196, 48);
+            btnownwe_employee.Size = new Size(214, 48);
+            btnownwe_inventory.Size = new Size(214, 48);
 
             loadform(new Ownerdash());
         }
@@ -61,11 +61,11 @@ namespace practiceslidebar
         private void btnownwe_inventory_Click(object sender, EventArgs e)
         {
             btnownwe_inventory.Location = new Point(10, 48);
-            btnownwe_inventory.Size = new Size(186, 48);
+            btnownwe_inventory.Size = new Size(204, 48);
             btnonwer_dash.Location = new Point(0, 0);
             btnownwe_employee.Location = new Point(0, 96);
-            btnownwe_employee.Size = new Size(196, 48);
-            btnonwer_dash.Size = new Size(196, 48);
+            btnownwe_employee.Size = new Size(214, 48);
+            btnonwer_dash.Size = new Size(214, 48);
 
             loadform(new ownerInventory());
         }
@@ -75,11 +75,11 @@ namespace practiceslidebar
         private void btnownwe_employee_Click(object sender, EventArgs e)
         {
             btnownwe_employee.Location = new Point(10, 96);
-            btnownwe_employee.Size = new Size(186, 48);
+            btnownwe_employee.Size = new Size(204, 48);
             btnownwe_inventory.Location = new Point(0, 48);
             btnonwer_dash.Location = new Point(0, 0);
-            btnonwer_dash.Size = new Size(196, 48);
-            btnownwe_inventory.Size = new Size(196, 48);
+            btnonwer_dash.Size = new Size(214, 48);
+            btnownwe_inventory.Size = new Size(214, 48);
 
             loadform(new Owner_Employees());
         }

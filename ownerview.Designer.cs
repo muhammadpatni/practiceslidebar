@@ -110,7 +110,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnownwe_inventory);
             this.panel1.Controls.Add(this.btnownwe_employee);
             this.panel1.Controls.Add(this.btnonwer_dash);
@@ -144,7 +144,7 @@
             this.btnownwe_inventory.OnHoverForeColor = System.Drawing.Color.White;
             this.btnownwe_inventory.OnHoverImage = null;
             this.btnownwe_inventory.OnPressedColor = System.Drawing.Color.Black;
-            this.btnownwe_inventory.Size = new System.Drawing.Size(196, 48);
+            this.btnownwe_inventory.Size = new System.Drawing.Size(214, 48);
             this.btnownwe_inventory.TabIndex = 7;
             this.btnownwe_inventory.Text = "INVENTORY";
             this.btnownwe_inventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -174,7 +174,7 @@
             this.btnownwe_employee.OnHoverForeColor = System.Drawing.Color.White;
             this.btnownwe_employee.OnHoverImage = null;
             this.btnownwe_employee.OnPressedColor = System.Drawing.Color.Black;
-            this.btnownwe_employee.Size = new System.Drawing.Size(196, 48);
+            this.btnownwe_employee.Size = new System.Drawing.Size(214, 48);
             this.btnownwe_employee.TabIndex = 6;
             this.btnownwe_employee.Text = "EMPLOYEES DETAILS";
             this.btnownwe_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -204,7 +204,7 @@
             this.btnonwer_dash.OnHoverForeColor = System.Drawing.Color.White;
             this.btnonwer_dash.OnHoverImage = null;
             this.btnonwer_dash.OnPressedColor = System.Drawing.Color.Black;
-            this.btnonwer_dash.Size = new System.Drawing.Size(196, 48);
+            this.btnonwer_dash.Size = new System.Drawing.Size(214, 48);
             this.btnonwer_dash.TabIndex = 5;
             this.btnonwer_dash.Text = "DASHBOARD";
             this.btnonwer_dash.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
