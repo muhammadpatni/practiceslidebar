@@ -65,7 +65,7 @@
             this.panelside.Location = new System.Drawing.Point(0, 0);
             this.panelside.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelside.Name = "panelside";
-            this.panelside.Size = new System.Drawing.Size(214, 590);
+            this.panelside.Size = new System.Drawing.Size(214, 647);
             this.panelside.TabIndex = 2;
             this.panelside.Paint += new System.Windows.Forms.PaintEventHandler(this.panelside_Paint);
             // 
@@ -73,7 +73,7 @@
             // 
             this.panel2.Controls.Add(this.btnlogout);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 521);
+            this.panel2.Location = new System.Drawing.Point(0, 578);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(214, 69);
             this.panel2.TabIndex = 10;
@@ -94,7 +94,7 @@
             this.btnlogout.Image = null;
             this.btnlogout.ImageOffsetX = 6;
             this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnlogout.Location = new System.Drawing.Point(19, 8);
+            this.btnlogout.Location = new System.Drawing.Point(33, 8);
             this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.OnHoverBaseColor = System.Drawing.Color.DarkGray;
@@ -184,7 +184,7 @@
             // 
             this.btnonwer_dash.AnimationHoverSpeed = 0.07F;
             this.btnonwer_dash.AnimationSpeed = 0.03F;
-            this.btnonwer_dash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnonwer_dash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
             this.btnonwer_dash.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnonwer_dash.BorderColor = System.Drawing.Color.Black;
             this.btnonwer_dash.CausesValidation = false;
@@ -241,14 +241,14 @@
             this.paneltop.Location = new System.Drawing.Point(221, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(995, 58);
+            this.paneltop.Size = new System.Drawing.Size(1063, 58);
             this.paneltop.TabIndex = 3;
             // 
             // btnminimize
             // 
             this.btnminimize.AnimationHoverSpeed = 0.07F;
             this.btnminimize.AnimationSpeed = 0.03F;
-            this.btnminimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnminimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
             this.btnminimize.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnminimize.BorderColor = System.Drawing.Color.Black;
             this.btnminimize.CausesValidation = false;
@@ -261,7 +261,7 @@
             this.btnminimize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.ImageOffsetX = 6;
             this.btnminimize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnminimize.Location = new System.Drawing.Point(896, 0);
+            this.btnminimize.Location = new System.Drawing.Point(964, 0);
             this.btnminimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnminimize.Name = "btnminimize";
             this.btnminimize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -304,7 +304,7 @@
             this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnmaximize.ImageOffsetX = 6;
             this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnmaximize.Location = new System.Drawing.Point(929, 0);
+            this.btnmaximize.Location = new System.Drawing.Point(997, 0);
             this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnmaximize.Name = "btnmaximize";
             this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -334,7 +334,7 @@
             this.btnclose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnclose.ImageOffsetX = 6;
             this.btnclose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnclose.Location = new System.Drawing.Point(962, 0);
+            this.btnclose.Location = new System.Drawing.Point(1030, 0);
             this.btnclose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnclose.Name = "btnclose";
             this.btnclose.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -355,20 +355,21 @@
             this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panelmain.Location = new System.Drawing.Point(221, 58);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(995, 532);
+            this.panelmain.Size = new System.Drawing.Size(1063, 589);
             this.panelmain.TabIndex = 4;
             this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(123, 228);
+            this.label3.Location = new System.Drawing.Point(187, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(826, 55);
+            this.label3.Size = new System.Drawing.Size(775, 65);
             this.label3.TabIndex = 33;
             this.label3.Text = "Please Select Any Option From Menu";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -376,7 +377,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(214, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 590);
+            this.panel3.Size = new System.Drawing.Size(7, 647);
             this.panel3.TabIndex = 35;
             // 
             // ownerview
@@ -384,7 +385,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1216, 590);
+            this.ClientSize = new System.Drawing.Size(1284, 647);
             this.Controls.Add(this.panelmain);
             this.Controls.Add(this.paneltop);
             this.Controls.Add(this.panel3);

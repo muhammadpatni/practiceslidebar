@@ -65,14 +65,14 @@
             this.panelside.Location = new System.Drawing.Point(0, 0);
             this.panelside.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelside.Name = "panelside";
-            this.panelside.Size = new System.Drawing.Size(214, 590);
+            this.panelside.Size = new System.Drawing.Size(214, 647);
             this.panelside.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnlogout);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 490);
+            this.panel2.Location = new System.Drawing.Point(0, 547);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(214, 100);
             this.panel2.TabIndex = 10;
@@ -237,7 +237,7 @@
             this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panelmain.Location = new System.Drawing.Point(221, 67);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(995, 523);
+            this.panelmain.Size = new System.Drawing.Size(1063, 580);
             this.panelmain.TabIndex = 5;
             // 
             // label3
@@ -256,7 +256,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(214, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 590);
+            this.panel3.Size = new System.Drawing.Size(7, 647);
             this.panel3.TabIndex = 6;
             // 
             // btnclose
@@ -276,7 +276,7 @@
             this.btnclose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnclose.ImageOffsetX = 6;
             this.btnclose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnclose.Location = new System.Drawing.Point(962, 0);
+            this.btnclose.Location = new System.Drawing.Point(1030, 0);
             this.btnclose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnclose.Name = "btnclose";
             this.btnclose.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -306,7 +306,7 @@
             this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnmaximize.ImageOffsetX = 6;
             this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnmaximize.Location = new System.Drawing.Point(929, 0);
+            this.btnmaximize.Location = new System.Drawing.Point(997, 0);
             this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnmaximize.Name = "btnmaximize";
             this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -349,7 +349,7 @@
             this.btnminimize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.ImageOffsetX = 6;
             this.btnminimize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnminimize.Location = new System.Drawing.Point(896, 0);
+            this.btnminimize.Location = new System.Drawing.Point(964, 0);
             this.btnminimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnminimize.Name = "btnminimize";
             this.btnminimize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -373,7 +373,7 @@
             this.paneltop.Location = new System.Drawing.Point(221, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(995, 67);
+            this.paneltop.Size = new System.Drawing.Size(1063, 67);
             this.paneltop.TabIndex = 4;
             // 
             // adminview
@@ -381,7 +381,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1216, 590);
+            this.ClientSize = new System.Drawing.Size(1284, 647);
             this.Controls.Add(this.panelmain);
             this.Controls.Add(this.paneltop);
             this.Controls.Add(this.panel3);

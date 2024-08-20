@@ -89,7 +89,6 @@ namespace practiceslidebar
             if (WindowState==FormWindowState.Normal)
             {
                 WindowState=FormWindowState.Maximized;
-            
             }
             else 
             {
@@ -108,6 +107,11 @@ namespace practiceslidebar
         }
 
         private void panelside_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
