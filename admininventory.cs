@@ -376,5 +376,11 @@ namespace practiceslidebar
                 ownerinventoryview.DataSource = null;
             }
         }
+
+        private void fullinventoryreset_Click(object sender, EventArgs e)
+        {
+            fullinventorysearch.Clear();
+            fullinventorycombosort.SelectedIndex = -1;
+        }
     }
 }
