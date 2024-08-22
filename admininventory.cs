@@ -305,12 +305,20 @@ namespace practiceslidebar
         public void changes()
         {
             if (form_manager.adminview.isvalid1)
-            { if (btneditoroperator.Text == "Delete" || btneditoroperator.Text == "Update" || btneditoroperator.Text == "Add")
+            {
+                if (btneditoroperator.Text == "Delete" || btneditoroperator.Text == "Update" || btneditoroperator.Text == "Add")
                 { panel5.Size = new Size(1063, 215); }
-                else
-                { panel5.Size = new Size(1063, 300); }
+                else 
+                { panel5.Size = new Size(1063, 400); }
             }
-            else { panel5.Size = new Size(1063, 550); }
+            else
+            {
+                if (btneditoroperator.Text == "Delete" || btneditoroperator.Text == "Update" || btneditoroperator.Text == "Add")
+                { panel5.Size = new Size(1063, 300); }
+                else { panel5.Size = new Size(1063,550); }
+
+
+            }
         }
 
         private void txtquantity_TextChanged(object sender, EventArgs e)
