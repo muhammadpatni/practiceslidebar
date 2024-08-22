@@ -108,6 +108,10 @@ namespace practiceslidebar
 
         }
 
+        private void panelmain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

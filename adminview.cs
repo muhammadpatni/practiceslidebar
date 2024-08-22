@@ -12,9 +12,11 @@ namespace practiceslidebar
 {
     public partial class adminview : Form
     {
+        public bool isvalid =false,isvalid1=true;
         public adminview()
         {
             InitializeComponent();
+            form_manager.adminview=this;
         }
 
         public void loadform(object Form)
@@ -44,13 +46,18 @@ namespace practiceslidebar
         {
             if (WindowState == FormWindowState.Normal)
             {
-                WindowState = FormWindowState.Maximized;
-
+                isvalid = true;
+                isvalid1 = false;
+                WindowState = FormWindowState.Maximized; 
             }
             else
             {
+                isvalid = false;
+                isvalid1 = true;
                 WindowState = FormWindowState.Normal;
             }
+            if (form_manager.adminInventory != null)
+            { form_manager.adminInventory.changes(); }
         }
 
         private void btnminimize_Click(object sender, EventArgs e)
@@ -99,6 +106,11 @@ namespace practiceslidebar
             btnadmin_stock.Size = new Size(214, 48);
 
             loadform(new admininventory());
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

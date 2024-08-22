@@ -250,6 +250,7 @@
             this.label3.Size = new System.Drawing.Size(826, 55);
             this.label3.TabIndex = 33;
             this.label3.Text = "Please Select Any Option From Menu";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 

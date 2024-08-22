@@ -18,9 +18,10 @@ namespace practiceslidebar
         public admininventory()
         {
             InitializeComponent();
+            form_manager.adminInventory = this;
         }
-        
-    
+
+
         void reset()
         {
 
@@ -46,10 +47,21 @@ namespace practiceslidebar
 
         private void admininventory_Load(object sender, EventArgs e)
         {
+            if (form_manager.adminview.isvalid1)
+            {
+                panel5.Size = new Size(1063, 400);
+            }
+
+            if (form_manager.adminview.isvalid)
+            {
+                panel5.Size = new Size(1063, 550);
+            }
+
+            ppp.Visible = false;
             getinventoryrecord();
             reset();
             paneleditor.Visible = false;
-            panelfullinventory.Visible=false;
+            panelfullinventory.Visible = false;
         }
         private void btnreset_Click(object sender, EventArgs e)
         {
@@ -58,8 +70,8 @@ namespace practiceslidebar
 
         }
         private void txtunitprice_TextChanged(object sender, EventArgs e)
-        { 
-            if (!float.TryParse(txtunitprice.Text, out _ ))
+        {
+            if (!float.TryParse(txtunitprice.Text, out _))
             {
                 label12.Text = "Numeric value only";
             }
@@ -75,7 +87,7 @@ namespace practiceslidebar
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-            string query = "select * from Inventory2 where name like @name +'%'";
+            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where name like @name +'%'";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
             dataAdapter.SelectCommand.Parameters.AddWithValue("@name", txtsearch.Text.Trim());
             DataTable dataTable = new DataTable();
@@ -94,7 +106,7 @@ namespace practiceslidebar
 
         private void combosort_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string query = "select * from Inventory2 where category like @category +'%'";
+            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where category like @category +'%'";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
             dataAdapter.SelectCommand.Parameters.AddWithValue("@category", combosort.Text.Trim());
             DataTable dataTable = new DataTable();
@@ -113,11 +125,14 @@ namespace practiceslidebar
 
         private void btndelete_Click(object sender, EventArgs e)
         {
+            panel5.Size = new Size(1063, 215);
+            ppp.Visible = true;
+            label16.Visible = false;
             paneleditor.Visible = true;
-            label11.Location = new Point(406, 139);
-            txtid.Location = new Point(293, 93);
-            label8.Location = new Point(323, 71);
-            txtid.Size = new Size(439, 39);
+            label11.Location = new Point(406, 160 );
+            txtid.Location = new Point(395, 112);
+            label8.Location = new Point(406, 90);
+            txtid.Size = new Size(195, 39);
             txtmanufacturer.Visible = false;
             txtname.Visible = false;
             txtquantity.Visible = false;
@@ -133,12 +148,18 @@ namespace practiceslidebar
             label9.Visible = false;
             label10.Visible = false;
             panel4.Visible = false;
-            btneditoroperator.Text = "Delete";   
+            txtid.Enabled = true;
+            if (form_manager.adminview.isvalid)
+            {
+                panel5.Height = 300;
+            }
+            btneditoroperator.Text = "Delete";
+            txtid.Clear();
         }
 
-       
 
-  
+
+
 
         private void btneditoroperator_Click(object sender, EventArgs e)
         {
@@ -198,6 +219,12 @@ namespace practiceslidebar
                     cmd3.ExecuteNonQuery();
                     con.Close();
                 }
+                if(btneditoroperator.Text == "Update")
+                {
+                    
+
+
+                }
                 getinventoryrecord();
             }
 
@@ -215,13 +242,26 @@ namespace practiceslidebar
             {
                 txtid.Clear();
             }
+            if (btneditoroperator.Text == "Update")
+            {
+                txtid.Enabled = true;
+                txtid.Clear();
+                txtid.Enabled = false;
+
+            }
             reset();
         }
 
         private void btneditorcancel_Click(object sender, EventArgs e)
         {
             paneleditor.Visible = false;
+            panel5.Size = new Size(1063, 400);
             panel4.Visible = true;
+            ppp.Visible = false;
+            if (form_manager.adminview.isvalid && panel5.Height == 400)
+            {
+                panel5.Height = 550;
+            }
         }
 
         private void txtid_TextChanged(object sender, EventArgs e)
@@ -253,7 +293,24 @@ namespace practiceslidebar
             if (string.IsNullOrEmpty(txtunitprice.Text))
             {
                 label12.Text = "";
+                if (btneditoroperator.Text == "Update")
+                {label16.Visible = true; }
+
             }
+            else { 
+            label16.Visible=false;
+                }
+
+        }
+        public void changes()
+        {
+            if (form_manager.adminview.isvalid1)
+            { if (btneditoroperator.Text == "Delete" || btneditoroperator.Text == "Update" || btneditoroperator.Text == "Add")
+                { panel5.Size = new Size(1063, 215); }
+                else
+                { panel5.Size = new Size(1063, 300); }
+            }
+            else { panel5.Size = new Size(1063, 550); }
         }
 
         private void txtquantity_TextChanged(object sender, EventArgs e)
@@ -274,8 +331,10 @@ namespace practiceslidebar
 
         private void btnedit_Click(object sender, EventArgs e)
         {
+            panel5.Size = new Size(1063, 215);
+            ppp.Visible = true;
             paneleditor.Visible = true;
-            label11.Location = new Point(229,55);
+            label11.Location = new Point(229, 55);
             txtid.Location = new Point(22, 45);
             label8.Location = new Point(36, 25);
             txtid.Size = new Size(195, 39);
@@ -292,17 +351,29 @@ namespace practiceslidebar
             label6.Visible = true;
             label7.Visible = true;
             label9.Visible = true;
-           label10.Visible = true;
+            label10.Visible = true;
             panel4.Visible = false;
+            if (form_manager.adminview.isvalid)
+            {
+                panel5.Height = 300;
+            }
             btneditoroperator.Text = "Update";
+            reset();
+            txtid.Clear();
+            label16.Visible = true;
+            txtid.Enabled=false;
         }
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+           
+            panel5.Size = new Size(1063, 215);
+            ppp.Visible = true;
+            label16.Visible=false;
             paneleditor.Visible = true;
             label11.Location = new Point(229, 55);
             txtid.Location = new Point(22, 45);
-            label8.Location = new Point(36,25);
+            label8.Location = new Point(36, 25);
             txtid.Size = new Size(195, 39);
             txtmanufacturer.Visible = true;
             txtname.Visible = true;
@@ -319,16 +390,43 @@ namespace practiceslidebar
             label9.Visible = true;
             label10.Visible = true;
             panel4.Visible = false;
+            if (form_manager.adminview.isvalid)
+            {
+                panel5.Height = 300;
+            }
             btneditoroperator.Text = "Add";
+            reset();
+            SqlCommand cmd = new SqlCommand("select max(id) as id from Inventory2", con);
+            con.Open();
+            SqlDataReader sdr=cmd.ExecuteReader();
+         if (sdr.Read())
+                { int i;
+                if (sdr["id"] == DBNull.Value)
+                { 
+                    i = 1;
+                    txtid.Text = i.ToString();
+                }
+                else
+                {
+                    i = Convert.ToInt32(sdr["id"]) + 1;
+                    txtid.Text = i.ToString();
+                }
+                }
+            con.Close();
+            txtid.Enabled = false;
+
+
         }
 
         private void btnfullinventory_Click(object sender, EventArgs e)
         {
+            ppp.Visible = false;
             panel1.Visible = false;
             panel5.Visible = false;
-            panel4.Visible=false;
+            panel4.Visible = false;
             panelfullinventory.Visible = true;
             panelfullinventory.Dock = DockStyle.Fill;
+            reset();
 
         }
         private void btnfullinventorycancel_Click(object sender, EventArgs e)
@@ -337,50 +435,124 @@ namespace practiceslidebar
             panel1.Visible = true;
             panel5.Visible = true;
             panel4.Visible = true;
+            ppp.Visible = false;
         }
 
-        private void fullinventorysearch_TextChanged(object sender, EventArgs e)
+        private void fireset_Click(object sender, EventArgs e)
         {
-            string query = "select * from Inventory2 where name like @name +'%'";
+            fisearch.Clear();
+            ficombosort.SelectedIndex = -1;
+        }
+
+        private void fisearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where name like @name +'%'";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
-            dataAdapter.SelectCommand.Parameters.AddWithValue("@name", txtsearch.Text.Trim());
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@name", fisearch.Text.Trim());
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
             if (dataTable.Rows.Count > 0)
             {
-                ownerinventoryview.DataSource = dataTable;
+                fullinventoryview.DataSource = dataTable;
 
             }
             else
             {
                 MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                ownerinventoryview.DataSource = null;
+                fullinventoryview.DataSource = null;
             }
         }
 
-        private void fullinventorycombosort_SelectedIndexChanged(object sender, EventArgs e)
+        private void ficombosort_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string query = "select * from Inventory2 where category like @category +'%'";
+            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where category like @category +'%'";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
-            dataAdapter.SelectCommand.Parameters.AddWithValue("@category", combosort.Text.Trim());
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@category", ficombosort.Text.Trim());
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
             if (dataTable.Rows.Count > 0)
             {
-                ownerinventoryview.DataSource = dataTable;
+                fullinventoryview.DataSource = dataTable;
 
             }
             else
             {
                 MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                ownerinventoryview.DataSource = null;
+                fullinventoryview.DataSource = null;
             }
         }
 
-        private void fullinventoryreset_Click(object sender, EventArgs e)
+        private bool is_valid()
         {
-            fullinventorysearch.Clear();
-            fullinventorycombosort.SelectedIndex = -1;
+            if (txtid.Text == string.Empty)
+            {
+                MessageBox.Show("please select a recorf ", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (txtname.Text == string.Empty)
+            {
+                MessageBox.Show("product name  is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (combocategory.Text == string.Empty)
+            {
+                MessageBox.Show("category  is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (txtmanufacturer.Text == string.Empty)
+            {
+                MessageBox.Show("company  is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (txtunitprice.Text == string.Empty)
+            {
+                MessageBox.Show("price  is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (txtquantity.Text == string.Empty)
+            {
+                MessageBox.Show("quantity is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        private void ownerinventoryview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = ownerinventoryview.Rows[e.RowIndex];
+
+                if (btneditoroperator.Text != "Add")
+                { txtid.Text = selectedRow.Cells[0].Value.ToString(); }
+                txtname.Text = selectedRow.Cells[1].Value.ToString();
+                txtquantity.Text = selectedRow.Cells[2].Value.ToString();
+                combocategory.SelectedItem = selectedRow.Cells[3].Value.ToString();
+                txtunitprice.Text = selectedRow.Cells[4].Value.ToString();
+                txtmanufacturer.Text = selectedRow.Cells[5].Value.ToString();
+                string dateRecieved = selectedRow.Cells[6].Value.ToString();
+                string ExpiryDate = selectedRow.Cells[7].Value.ToString();
+                if (DateTime.TryParse(ExpiryDate, out DateTime expiryDate))
+                {
+                    expirydate.Value = expiryDate;
+                }
+                if (DateTime.TryParse(dateRecieved, out DateTime Daterecieved))
+                {
+                    daterecieved.Value = Daterecieved;
+                }
+
+            }
+        }
+
+        private void ownerinventoryview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void paneleditor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
+ 
