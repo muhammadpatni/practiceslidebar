@@ -254,13 +254,17 @@ namespace practiceslidebar
 
         private void btneditorcancel_Click(object sender, EventArgs e)
         {
+            btneditoroperator.Text = "";
             paneleditor.Visible = false;
-            panel5.Size = new Size(1063, 400);
             panel4.Visible = true;
             ppp.Visible = false;
-            if (form_manager.adminview.isvalid && panel5.Height == 400)
+            if (form_manager.adminview.isvalid1)
             {
-                panel5.Height = 550;
+               panel5.Size = new Size(1063, 400);
+            }
+            else
+            {
+                panel5.Size = new Size(1063, 550);
             }
         }
 
@@ -316,8 +320,6 @@ namespace practiceslidebar
                 if (btneditoroperator.Text == "Delete" || btneditoroperator.Text == "Update" || btneditoroperator.Text == "Add")
                 { panel5.Size = new Size(1063, 300); }
                 else { panel5.Size = new Size(1063,550); }
-
-
             }
         }
 

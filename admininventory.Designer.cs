@@ -39,6 +39,8 @@
             this.panelfullinventory = new Guna.UI2.WinForms.Guna2Panel();
             this.fullinventoryview = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.btnfullinventorycancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fireset = new Guna.UI2.WinForms.Guna2GradientButton();
             this.ficombosort = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -71,6 +73,7 @@
             this.txtunitprice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtmanufacturer = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnreset = new Guna.UI2.WinForms.Guna2GradientButton();
             this.combosort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -82,7 +85,6 @@
             this.btndelete = new Guna.UI.WinForms.GunaButton();
             this.btnadd = new Guna.UI.WinForms.GunaButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.ownerinventoryview = new System.Windows.Forms.DataGridView();
             this.guna2Panel2.SuspendLayout();
             this.panelfullinventory.SuspendLayout();
@@ -175,6 +177,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.btnfullinventorycancel);
             this.panel2.Controls.Add(this.fireset);
             this.panel2.Controls.Add(this.ficombosort);
@@ -182,10 +186,28 @@
             this.panel2.Controls.Add(this.fisearch);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, -53);
+            this.panel2.Location = new System.Drawing.Point(0, -70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1063, 53);
+            this.panel2.Size = new System.Drawing.Size(1063, 70);
             this.panel2.TabIndex = 59;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1063, 7);
+            this.panel3.TabIndex = 61;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 63);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1063, 7);
+            this.panel6.TabIndex = 62;
             // 
             // btnfullinventorycancel
             // 
@@ -205,7 +227,7 @@
             this.btnfullinventorycancel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnfullinventorycancel.ForeColor = System.Drawing.Color.White;
             this.btnfullinventorycancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnfullinventorycancel.Location = new System.Drawing.Point(909, 6);
+            this.btnfullinventorycancel.Location = new System.Drawing.Point(909, 12);
             this.btnfullinventorycancel.Name = "btnfullinventorycancel";
             this.btnfullinventorycancel.Size = new System.Drawing.Size(115, 40);
             this.btnfullinventorycancel.TabIndex = 56;
@@ -229,7 +251,7 @@
             this.fireset.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.fireset.ForeColor = System.Drawing.Color.White;
             this.fireset.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.fireset.Location = new System.Drawing.Point(776, 6);
+            this.fireset.Location = new System.Drawing.Point(776, 12);
             this.fireset.Name = "fireset";
             this.fireset.Size = new System.Drawing.Size(115, 40);
             this.fireset.TabIndex = 55;
@@ -269,7 +291,7 @@
             this.ficombosort.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ficombosort.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ficombosort.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.ficombosort.Location = new System.Drawing.Point(529, 9);
+            this.ficombosort.Location = new System.Drawing.Point(529, 15);
             this.ficombosort.Name = "ficombosort";
             this.ficombosort.Size = new System.Drawing.Size(220, 36);
             this.ficombosort.TabIndex = 36;
@@ -281,7 +303,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label14.Location = new System.Drawing.Point(414, 13);
+            this.label14.Location = new System.Drawing.Point(414, 19);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 26);
             this.label14.TabIndex = 35;
@@ -302,7 +324,7 @@
             this.fisearch.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.fisearch.ForeColor = System.Drawing.Color.Black;
             this.fisearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.fisearch.Location = new System.Drawing.Point(105, 8);
+            this.fisearch.Location = new System.Drawing.Point(105, 14);
             this.fisearch.Margin = new System.Windows.Forms.Padding(4);
             this.fisearch.Name = "fisearch";
             this.fisearch.PasswordChar = '\0';
@@ -317,7 +339,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label15.Location = new System.Drawing.Point(19, 13);
+            this.label15.Location = new System.Drawing.Point(19, 19);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(87, 26);
             this.label15.TabIndex = 33;
@@ -765,6 +787,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.guna2Panel3);
             this.panel1.Controls.Add(this.btnreset);
             this.panel1.Controls.Add(this.combosort);
             this.panel1.Controls.Add(this.label2);
@@ -775,6 +798,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1063, 56);
             this.panel1.TabIndex = 58;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1063, 4);
+            this.guna2Panel3.TabIndex = 57;
             // 
             // btnreset
             // 
@@ -1022,22 +1054,12 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.guna2Panel3);
             this.panel5.Controls.Add(this.ownerinventoryview);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1063, 166);
             this.panel5.TabIndex = 46;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 162);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1063, 4);
-            this.guna2Panel3.TabIndex = 28;
             // 
             // ownerinventoryview
             // 
@@ -1160,7 +1182,9 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnfullinventorycancel;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2Panel ppp;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         public System.Windows.Forms.Panel panel5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel6;
     }
 }
