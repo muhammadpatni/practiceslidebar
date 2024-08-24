@@ -14,6 +14,7 @@ namespace practiceslidebar
 {
     public partial class admininventory : Form
     {
+
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
         public admininventory()
         {
@@ -99,7 +100,12 @@ namespace practiceslidebar
             }
             else
             {
-                MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
                 ownerinventoryview.DataSource = null;
             }
         }
@@ -118,7 +124,11 @@ namespace practiceslidebar
             }
             else
             {
-                MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
                 ownerinventoryview.DataSource = null;
             }
         }
@@ -199,16 +209,30 @@ namespace practiceslidebar
                     int i = cmd2.ExecuteNonQuery();
                     if (i > 0)
                     {
-                        MessageBox.Show("data deleted succesfully");
+                        messagebox m = new messagebox();
+                        m.Show();
+                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.tittle.Text = "";
+                        form_manager.messagebox.message.Text = "data deleted successfully";
                         reset();
                         test = true;
                         txtid.Clear();
                     }
                     else
-                    { MessageBox.Show("productID not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    {
+                        messagebox m = new messagebox();
+                        m.Show();
+                        form_manager.messagebox.tittle.Text = "Error";
+                        form_manager.messagebox.message.Text = "ID not found";       
+                    }
                 }
                 catch
-                { MessageBox.Show("ProductID is required ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                {     
+                    messagebox m = new messagebox();
+                    m.Show();
+                    form_manager.messagebox.tittle.Text = "Error";
+                    form_manager.messagebox.message.Text = "ID is required";
+                }
                 finally { con.Close(); }
                 if (test)
                 {
@@ -219,15 +243,68 @@ namespace practiceslidebar
                     cmd3.ExecuteNonQuery();
                     con.Close();
                 }
-                if(btneditoroperator.Text == "Update")
-                {
-                    
-
-
-                }
-                getinventoryrecord();
             }
 
+            if (btneditoroperator.Text == "Update")
+            {
+
+                con.Open();
+                if (is_valid())
+                {
+                        string query = "update Inventory2 set name=@name,category=@category,manufacturer=@manufacturer,unitprice=@unitprice,quantity=@quantity,daterecieved=@daterecieved,expirydate=@expirydate where id=@id";
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@id", int.Parse(txtid.Text));
+                        cmd.Parameters.AddWithValue("@name", txtname.Text);
+                        cmd.Parameters.AddWithValue("@category", combocategory.Text);
+                        cmd.Parameters.AddWithValue("@manufacturer", txtmanufacturer.Text);
+                        cmd.Parameters.AddWithValue("@daterecieved", daterecieved.Text);
+                        cmd.Parameters.AddWithValue("@expirydate", expirydate.Text);
+                        cmd.Parameters.AddWithValue("@unitprice", float.Parse(txtunitprice.Text));
+                        cmd.Parameters.AddWithValue("@quantity", int.Parse(txtquantity.Text));
+                        int i = cmd.ExecuteNonQuery();
+                        if (i > 0)
+                        {
+                        messagebox m = new messagebox();
+                        m.Show();
+                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.tittle.Text = "";
+                        form_manager.messagebox.message.Text = "data updated successfully";
+
+                        reset();
+                        }
+                    } 
+                    con.Close();
+            }
+            if (btneditoroperator.Text == "Add")
+            {
+                if (is_valid())
+                {
+                    con.Open();
+                    string query = "insert into Inventory2 (id,name,category,quantity,unitprice,mansufacturer,daterecieved,expirydate) values (@id,@name,@category,@quantity,@unitprice,@manufacturer,@daterecieved,@expirydate)";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", int.Parse(txtid.Text));
+                    cmd.Parameters.AddWithValue("@name", txtname.Text);
+                    cmd.Parameters.AddWithValue("@category", combocategory.Text);
+                    cmd.Parameters.AddWithValue("@manufacturer", txtmanufacturer.Text);
+                    cmd.Parameters.AddWithValue("@daterecieved", daterecieved.Text);
+                    cmd.Parameters.AddWithValue("@expirydate", expirydate.Text);
+                    cmd.Parameters.AddWithValue("@unitprice", float.Parse(txtunitprice.Text));
+                    cmd.Parameters.AddWithValue("@quantity", int.Parse(txtquantity.Text));
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        messagebox m = new messagebox();
+                        m.Show();
+                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.tittle.Text = "";
+                        form_manager.messagebox.message.Text = "data inserted successfully";
+
+                        reset();
+                    }
+                }
+                con.Close();
+             }
+                getinventoryrecord();   
         }
 
         private void btnreset_Click_1(object sender, EventArgs e)
@@ -468,7 +545,11 @@ namespace practiceslidebar
             }
             else
             {
-                MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
                 fullinventoryview.DataSource = null;
             }
         }
@@ -487,7 +568,11 @@ namespace practiceslidebar
             }
             else
             {
-                MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
                 fullinventoryview.DataSource = null;
             }
         }
@@ -496,34 +581,54 @@ namespace practiceslidebar
         {
             if (txtid.Text == string.Empty)
             {
-                MessageBox.Show("please select a recorf ", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "please select a record";
                 return false;
             }
             if (txtname.Text == string.Empty)
             {
-                MessageBox.Show("product name  is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "name is required"; 
                 return false;
             }
             if (combocategory.Text == string.Empty)
             {
-                MessageBox.Show("category  is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "category is required";
                 return false;
             }
-            if (txtmanufacturer.Text == string.Empty)
+           
+            if (txtquantity.Text == string.Empty)
             {
-                MessageBox.Show("company  is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "quantity is required";
                 return false;
             }
             if (txtunitprice.Text == string.Empty)
             {
-                MessageBox.Show("price  is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "unitprice is required";
                 return false;
             }
-            if (txtquantity.Text == string.Empty)
+            if (txtmanufacturer.Text == string.Empty)
             {
-                MessageBox.Show("quantity is required", "failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "manufacturer is required";
                 return false;
             }
+
             return true;
         }
 

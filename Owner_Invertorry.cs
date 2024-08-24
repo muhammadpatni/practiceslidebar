@@ -54,7 +54,11 @@ namespace practiceslidebar
             }
             else
             {
-                MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
                 ownerinventoryview.DataSource = null;
             }
         }
@@ -75,7 +79,11 @@ namespace practiceslidebar
             }
             else
             {
-                MessageBox.Show("!!! no record found", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
                 ownerinventoryview.DataSource = null;
             }
         }

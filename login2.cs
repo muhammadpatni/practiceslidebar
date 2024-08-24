@@ -73,7 +73,12 @@ namespace practiceslidebar
 
                 }
                 else
-                { MessageBox.Show("Invalid Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                {
+                    messagebox m = new messagebox();
+                    m.Show();
+                    form_manager.messagebox.tittle.Text = "Error";
+                    form_manager.messagebox.message.Text = "invalid password";
+                }
             }
         else if (temp == "admin")
             {
@@ -88,7 +93,12 @@ namespace practiceslidebar
 
                 }
                 else
-                { MessageBox.Show("Invalid Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                {
+                    messagebox m = new messagebox();
+                    m.Show();
+                    form_manager.messagebox.tittle.Text = "Error";
+                    form_manager.messagebox.message.Text = "invalid password";
+                }
             }
           else
             {
@@ -104,7 +114,12 @@ namespace practiceslidebar
 
                 }
                 else
-                { MessageBox.Show("Invalid Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                {
+                    messagebox m = new messagebox();
+                    m.Show();
+                    form_manager.messagebox.tittle.Text = "Error";
+                    form_manager.messagebox.message.Text = "invalid login details";
+                }
             }
         }
 
