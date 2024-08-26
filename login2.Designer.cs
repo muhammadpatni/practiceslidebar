@@ -48,7 +48,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnlogin
             // 
@@ -105,11 +104,13 @@
             this.txtpassword.Location = new System.Drawing.Point(94, 290);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.PasswordChar = '●';
             this.txtpassword.PlaceholderText = "";
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(300, 43);
             this.txtpassword.TabIndex = 16;
+            this.txtpassword.UseSystemPasswordChar = true;
+            this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             // 
             // label2
             // 
@@ -145,7 +146,7 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(300, 43);
             this.txtusername.TabIndex = 14;
-            this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
+            this.txtusername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtusername_KeyDown);
             // 
             // label1
             // 

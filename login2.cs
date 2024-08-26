@@ -26,7 +26,7 @@ namespace practiceslidebar
 
         private void employee_Load(object sender, EventArgs e)
         {
-            txtpassword.UseSystemPasswordChar = true;
+
         }
 
         private void showpassword_CheckedChanged(object sender, EventArgs e)
@@ -56,9 +56,8 @@ namespace practiceslidebar
 
 
         }
-        private void btnlogin_Click(object sender, EventArgs e)
+        void Btnlogin()
         {
-
             if (temp == "owner")
             {
                 SqlDataAdapter da = new SqlDataAdapter("select * from employee where password = '" + txtpassword.Text + "' and position = '" + temp + "'", con);
@@ -80,7 +79,7 @@ namespace practiceslidebar
                     form_manager.messagebox.message.Text = "invalid password";
                 }
             }
-        else if (temp == "admin")
+            else if (temp == "admin")
             {
                 SqlDataAdapter da = new SqlDataAdapter("select * from employee where password = '" + txtpassword.Text + "' and position = '" + temp + "'", con);
                 DataTable dt = new DataTable();
@@ -100,9 +99,9 @@ namespace practiceslidebar
                     form_manager.messagebox.message.Text = "invalid password";
                 }
             }
-          else
+            else
             {
-                SqlDataAdapter da = new SqlDataAdapter("select * from employee where password = '" + txtpassword.Text + "' and username = '" + txtusername.Text+ "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select * from employee where password = '" + txtpassword.Text + "' and username = '" + txtusername.Text + "'", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
@@ -121,16 +120,29 @@ namespace practiceslidebar
                     form_manager.messagebox.message.Text = "invalid login details";
                 }
             }
-        }
-
-        private void txtusername_TextChanged(object sender, EventArgs e)
-        {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnlogin_Click(object sender, EventArgs e)
         {
+            Btnlogin();
+        }
+        
 
+        private void txtusername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                txtpassword.Focus();
+            }
+
+        }
+
+        private void txtpassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Btnlogin();
+            }
         }
     }
 }

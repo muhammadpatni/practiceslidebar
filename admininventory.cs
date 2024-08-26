@@ -88,7 +88,7 @@ namespace practiceslidebar
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where name like @name +'%'";
+            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where  name like @name +'%'";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
             dataAdapter.SelectCommand.Parameters.AddWithValue("@name", txtsearch.Text.Trim());
             DataTable dataTable = new DataTable();
@@ -665,6 +665,11 @@ namespace practiceslidebar
         }
 
         private void paneleditor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

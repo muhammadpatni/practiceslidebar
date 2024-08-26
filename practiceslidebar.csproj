@@ -62,11 +62,23 @@
     <Compile Include="about.Designer.cs">
       <DependentUpon>about.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminempolyee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminempolyee.Designer.cs">
+      <DependentUpon>adminempolyee.cs</DependentUpon>
+    </Compile>
     <Compile Include="admininventory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="admininventory.Designer.cs">
       <DependentUpon>admininventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminoutofstock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminoutofstock.Designer.cs">
+      <DependentUpon>adminoutofstock.cs</DependentUpon>
     </Compile>
     <Compile Include="adminview.cs">
       <SubType>Form</SubType>
@@ -152,8 +164,14 @@
     <EmbeddedResource Include="about.resx">
       <DependentUpon>about.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adminempolyee.resx">
+      <DependentUpon>adminempolyee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admininventory.resx">
       <DependentUpon>admininventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminoutofstock.resx">
+      <DependentUpon>adminoutofstock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminview.resx">
       <DependentUpon>adminview.cs</DependentUpon>

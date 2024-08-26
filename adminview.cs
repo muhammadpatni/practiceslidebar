@@ -84,6 +84,7 @@ namespace practiceslidebar
             btnadmin_employee.Size = new Size(214, 48);
             btnadmin_inventory.Size = new Size(214, 48);
 
+            loadform(new adminoutofstock());
         }
 
         private void btnadmin_employee_Click(object sender, EventArgs e)
@@ -94,6 +95,8 @@ namespace practiceslidebar
             btnadmin_stock.Location = new Point(0, 48);
             btnadmin_stock.Size = new Size(214, 48);
             btnadmin_inventory.Size = new Size(214, 48);
+
+            loadform(new adminempolyee());
         }
 
         private void btnadmin_inventory_Click(object sender, EventArgs e)
