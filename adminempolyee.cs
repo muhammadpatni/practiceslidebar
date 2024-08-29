@@ -18,70 +18,45 @@ namespace practiceslidebar
         public adminempolyee()
         {
             InitializeComponent();
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
+            form_manager.adminempolyee=this;
 
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         void reset()
         {
-
-            adminemployeeview.ClearSelection();
+            ownerinventoryview.ClearSelection();
             txtname.Clear();
             txtmanufacturer.Clear();
             combocategory.SelectedIndex = -1;
             txtquantity.Clear();
             txtunitprice.Clear();
-            daterecieved.Value = DateTime.Now;
-            expirydate.Value = DateTime.Now;
         }
-        private void btneditorclear_Click(object sender, EventArgs e)
+        private void getinventoryrecord()
         {
-            if (btneditoroperator.Text == "Delete")
-            {
-                txtid.Clear();
-            }
-            if (btneditoroperator.Text == "Update")
-            {
-                txtid.Enabled = true;
-                txtid.Clear();
-                txtid.Enabled = false;
-
-            }
-            reset();
+            string query = "select id,name,email,contact,position,salary,username,password from employee where position!='owner'; ";
+            SqlDataAdapter ad = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            ownerinventoryview.DataSource = dt;
+            fullinventoryview.DataSource = dt;
         }
-
-        private void btneset_Click(object sender, EventArgs e)
+        private void adminempolyee_Load(object sender, EventArgs e)
         {
-            txtsearch.Clear();
-            combosort.SelectedIndex = -1;
-        }
-
-        private void paneleditor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btneditorcancel_Click(object sender, EventArgs e)
-        {
-            btneditoroperator.Text = "";
-            paneleditor.Visible = false;
-            panel4.Visible = true;
-            ppp.Visible = false;
             if (form_manager.adminview.isvalid1)
             {
                 panel5.Size = new Size(1063, 400);
             }
-            else
+
+            if (form_manager.adminview.isvalid)
             {
                 panel5.Size = new Size(1063, 550);
             }
+
+            ppp.Visible = false;
+            getinventoryrecord();
+            reset();
+            paneleditor.Visible = false;
+            panelfullinventory.Visible = false;
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -95,12 +70,12 @@ namespace practiceslidebar
             label8.Location = new Point(36, 25);
             txtid.Size = new Size(195, 39);
             txtmanufacturer.Visible = true;
+            txtusername.Visible = true;
+            txtpassword.Visible = true;
             txtname.Visible = true;
             txtquantity.Visible = true;
             txtunitprice.Visible = true;
-            daterecieved.Visible = true;
             label3.Visible = true;
-            expirydate.Visible = true;
             combocategory.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
@@ -115,7 +90,7 @@ namespace practiceslidebar
             }
             btneditoroperator.Text = "Add";
             reset();
-            SqlCommand cmd = new SqlCommand("select max(id) as id from Inventory2", con);
+            SqlCommand cmd = new SqlCommand("select max(id) as id from employee", con);
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
             if (sdr.Read())
@@ -134,7 +109,6 @@ namespace practiceslidebar
             }
             con.Close();
             txtid.Enabled = false;
-
         }
 
         private void btnedit_Click(object sender, EventArgs e)
@@ -150,9 +124,9 @@ namespace practiceslidebar
             txtname.Visible = true;
             txtquantity.Visible = true;
             txtunitprice.Visible = true;
-            daterecieved.Visible = true;
+            txtusername.Visible = true;
+            txtpassword.Visible = true;
             label3.Visible = true;
-            expirydate.Visible = true;
             combocategory.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
@@ -186,13 +160,13 @@ namespace practiceslidebar
             txtname.Visible = false;
             txtquantity.Visible = false;
             txtunitprice.Visible = false;
-            daterecieved.Visible = false;
-            expirydate.Visible = false;
             combocategory.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             label5.Visible = false;
             label6.Visible = false;
+            txtusername.Visible = false;
+            txtpassword.Visible = false;
             label7.Visible = false;
             label9.Visible = false;
             label10.Visible = false;
@@ -206,46 +180,185 @@ namespace practiceslidebar
             txtid.Clear();
         }
 
-        private void txtid_TextChanged(object sender, EventArgs e)
+        private void btnfullinventory_Click(object sender, EventArgs e)
         {
-
-            if (!int.TryParse(txtid.Text, out _))
-            {
-                label11.Text = "Numeric value only";
-            }
-            else
-            {
-                label11.Text = "";
-            }
-            if (string.IsNullOrEmpty(txtid.Text))
-            {
-                label11.Text = "";
-            }
+            ppp.Visible = false;
+            panel1.Visible = false;
+            panel5.Visible = false;
+            panel4.Visible = false;
+            panelfullinventory.Visible = true;
+            panelfullinventory.Dock = DockStyle.Fill;
+            reset();
         }
 
-        private void adminempolyee_Load(object sender, EventArgs e)
+        private void btneditorclear_Click(object sender, EventArgs e)
         {
+            if (btneditoroperator.Text == "Delete")
+            {
+                txtid.Clear();
+            }
+            if (btneditoroperator.Text == "Update")
+            {
+                txtid.Enabled = true;
+                txtid.Clear();
+                txtid.Enabled = false;
+
+            }
+            reset();
+        }
+
+        private void btneditorcancel_Click(object sender, EventArgs e)
+        {
+            btneditoroperator.Text = "";
+            paneleditor.Visible = false;
+            panel4.Visible = true;
+            ppp.Visible = false;
             if (form_manager.adminview.isvalid1)
             {
                 panel5.Size = new Size(1063, 400);
             }
-
-            if (form_manager.adminview.isvalid)
+            else
             {
                 panel5.Size = new Size(1063, 550);
             }
-
-            ppp.Visible = false;
-           // getinventoryrecord();
-            reset();
-            paneleditor.Visible = false;
-          // panelfullinventory.Visible = false;
         }
 
-        private void adminemployeeview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnfullinventorycancel_Click(object sender, EventArgs e)
+        {
+            panelfullinventory.Visible = false;
+            panel1.Visible = true;
+            panel5.Visible = true;
+            panel4.Visible = true;
+            ppp.Visible = false;
+        }
+
+        private void btnreset_Click(object sender, EventArgs e)
+
+        {
+            txtsearch.Clear();
+            combosort.SelectedIndex = -1;
+        }
+        public void changes()
+        {
+            if (form_manager.adminview.isvalid1)
+            {
+                if (btneditoroperator.Text == "Delete" || btneditoroperator.Text == "Update" || btneditoroperator.Text == "Add")
+                { panel5.Size = new Size(1063, 215); }
+                else
+                { panel5.Size = new Size(1063, 400); }
+            }
+            else
+            {
+                if (btneditoroperator.Text == "Delete" || btneditoroperator.Text == "Update" || btneditoroperator.Text == "Add")
+                { panel5.Size = new Size(1063, 300); }
+                else { panel5.Size = new Size(1063, 550); }
+            }
+        }
+        private void paneleditor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = "select * from employee where cast (id as varchar) like  @id +'%' and  position !='owner'";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@id", txtsearch.Text.Trim());
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            if (dataTable.Rows.Count > 0)
+            {
+                ownerinventoryview.DataSource = dataTable;
+            }
+            else
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
+                ownerinventoryview.DataSource = null;
+            }
+        }
+
+        private void combosort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = "select * from employee where position like  @position +'%' and  position !='owner'";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@position", combosort.Text.Trim());
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            if (dataTable.Rows.Count > 0)
+            {
+                ownerinventoryview.DataSource = dataTable;
+
+            }
+            else
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
+                ownerinventoryview.DataSource = null;
+            }
+        }
+
+        private void fireset_Click(object sender, EventArgs e)
+        {
+            fisearch.Clear();
+            ficombosort.SelectedIndex = -1;
+        }
+
+        private void fisearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = "select * from employee where cast (id as varchar) like  @id +'%' and  position !='owner'";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@id", fisearch.Text.Trim());
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            if (dataTable.Rows.Count > 0)
+            {
+                fullinventoryview.DataSource = dataTable;
+
+            }
+            else
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
+                fullinventoryview.DataSource = null;
+            }
+        }
+
+        private void ficombosort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = "select * from employee where position like  @position +'%' and  position !='owner'";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@position", ficombosort.Text.Trim());
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            if (dataTable.Rows.Count > 0)
+            {
+                fullinventoryview.DataSource = dataTable;
+
+            }
+            else
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
+                fullinventoryview.DataSource = null;
+            }
+        }
+
+        private void ownerinventoryview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
     }
-    }
-
+}

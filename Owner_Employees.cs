@@ -66,7 +66,6 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 owneremployeeview.DataSource = dataTable;
-
             }
             else
             {

@@ -37,6 +37,7 @@
             this.btnownwe_employee = new Guna.UI.WinForms.GunaButton();
             this.btnonwer_dash = new Guna.UI.WinForms.GunaButton();
             this.panellogo = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.paneltop = new System.Windows.Forms.Panel();
             this.btnminimize = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
@@ -45,14 +46,13 @@
             this.panelmain = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panellogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.paneltop.SuspendLayout();
             this.panelmain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelside
@@ -145,7 +145,7 @@
             this.btnownwe_inventory.OnHoverImage = null;
             this.btnownwe_inventory.OnPressedColor = System.Drawing.Color.Black;
             this.btnownwe_inventory.Size = new System.Drawing.Size(214, 48);
-            this.btnownwe_inventory.TabIndex = 7;
+            this.btnownwe_inventory.TabIndex = 1;
             this.btnownwe_inventory.Text = "INVENTORY";
             this.btnownwe_inventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnownwe_inventory.Click += new System.EventHandler(this.btnownwe_inventory_Click);
@@ -175,7 +175,7 @@
             this.btnownwe_employee.OnHoverImage = null;
             this.btnownwe_employee.OnPressedColor = System.Drawing.Color.Black;
             this.btnownwe_employee.Size = new System.Drawing.Size(214, 48);
-            this.btnownwe_employee.TabIndex = 6;
+            this.btnownwe_employee.TabIndex = 2;
             this.btnownwe_employee.Text = "EMPLOYEES DETAILS";
             this.btnownwe_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnownwe_employee.Click += new System.EventHandler(this.btnownwe_employee_Click);
@@ -205,7 +205,7 @@
             this.btnonwer_dash.OnHoverImage = null;
             this.btnonwer_dash.OnPressedColor = System.Drawing.Color.Black;
             this.btnonwer_dash.Size = new System.Drawing.Size(214, 48);
-            this.btnonwer_dash.TabIndex = 5;
+            this.btnonwer_dash.TabIndex = 0;
             this.btnonwer_dash.Text = "DASHBOARD";
             this.btnonwer_dash.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnonwer_dash.Click += new System.EventHandler(this.btnonwer_dash_Click);
@@ -219,6 +219,18 @@
             this.panellogo.Name = "panellogo";
             this.panellogo.Size = new System.Drawing.Size(214, 190);
             this.panellogo.TabIndex = 8;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(9, 8);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(196, 175);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 1;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // paneltop
             // 
@@ -370,18 +382,6 @@
             this.panel3.Size = new System.Drawing.Size(7, 647);
             this.panel3.TabIndex = 35;
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(9, 8);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(196, 175);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // ownerview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -402,11 +402,11 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panellogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.paneltop.ResumeLayout(false);
             this.paneltop.PerformLayout();
             this.panelmain.ResumeLayout(false);
             this.panelmain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

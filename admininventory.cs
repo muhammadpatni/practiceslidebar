@@ -25,7 +25,6 @@ namespace practiceslidebar
 
         void reset()
         {
-
             ownerinventoryview.ClearSelection();
             txtname.Clear();
             txtmanufacturer.Clear();
@@ -100,7 +99,6 @@ namespace practiceslidebar
             }
             else
             {
-
                 messagebox m = new messagebox();
                 m.Show();
                 form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
@@ -453,7 +451,6 @@ namespace practiceslidebar
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-           
             panel5.Size = new Size(1063, 215);
             ppp.Visible = true;
             label16.Visible=false;

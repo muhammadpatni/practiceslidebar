@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panellll = new Guna.UI2.WinForms.Guna2Panel();
             this.ppp = new Guna.UI2.WinForms.Guna2Panel();
             this.panelfullinventory = new Guna.UI2.WinForms.Guna2Panel();
             this.fullinventoryview = new System.Windows.Forms.DataGridView();
@@ -73,12 +73,12 @@
             this.txtunitprice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtmanufacturer = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnreset = new Guna.UI2.WinForms.Guna2GradientButton();
             this.combosort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtsearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnfullinventory = new Guna.UI.WinForms.GunaButton();
             this.btnedit = new Guna.UI.WinForms.GunaButton();
@@ -86,7 +86,7 @@
             this.btnadd = new Guna.UI.WinForms.GunaButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ownerinventoryview = new System.Windows.Forms.DataGridView();
-            this.guna2Panel2.SuspendLayout();
+            this.panellll.SuspendLayout();
             this.panelfullinventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullinventoryview)).BeginInit();
             this.panel2.SuspendLayout();
@@ -97,21 +97,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.ownerinventoryview)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel2
+            // panellll
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.Controls.Add(this.ppp);
-            this.guna2Panel2.Controls.Add(this.panelfullinventory);
-            this.guna2Panel2.Controls.Add(this.guna2Panel1);
-            this.guna2Panel2.Controls.Add(this.paneleditor);
-            this.guna2Panel2.Controls.Add(this.panel1);
-            this.guna2Panel2.Controls.Add(this.panel4);
-            this.guna2Panel2.Controls.Add(this.panel5);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1063, 580);
-            this.guna2Panel2.TabIndex = 27;
+            this.panellll.BackColor = System.Drawing.Color.White;
+            this.panellll.Controls.Add(this.ppp);
+            this.panellll.Controls.Add(this.panelfullinventory);
+            this.panellll.Controls.Add(this.guna2Panel1);
+            this.panellll.Controls.Add(this.paneleditor);
+            this.panellll.Controls.Add(this.panel1);
+            this.panellll.Controls.Add(this.panel4);
+            this.panellll.Controls.Add(this.panel5);
+            this.panellll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panellll.Location = new System.Drawing.Point(0, 0);
+            this.panellll.Name = "panellll";
+            this.panellll.Size = new System.Drawing.Size(1063, 580);
+            this.panellll.TabIndex = 27;
             // 
             // ppp
             // 
@@ -140,37 +140,37 @@
             this.fullinventoryview.BackgroundColor = System.Drawing.Color.White;
             this.fullinventoryview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fullinventoryview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.fullinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fullinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.fullinventoryview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.fullinventoryview.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.fullinventoryview.DefaultCellStyle = dataGridViewCellStyle2;
             this.fullinventoryview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fullinventoryview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.fullinventoryview.Location = new System.Drawing.Point(0, 0);
             this.fullinventoryview.Margin = new System.Windows.Forms.Padding(10);
             this.fullinventoryview.Name = "fullinventoryview";
             this.fullinventoryview.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.fullinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fullinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.fullinventoryview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.fullinventoryview.Size = new System.Drawing.Size(1063, 0);
             this.fullinventoryview.TabIndex = 60;
@@ -274,20 +274,8 @@
             this.ficombosort.ForeColor = System.Drawing.Color.Black;
             this.ficombosort.ItemHeight = 30;
             this.ficombosort.Items.AddRange(new object[] {
-            "tablet",
-            "capsule",
-            "syrup",
-            "injections",
-            "creams",
-            "lotions",
-            "suspension",
-            "gels",
-            "powders",
-            "drops",
-            "nebulizers",
-            "Suppositories",
-            "Transdermal Patches",
-            "Lozenges"});
+            "admin",
+            "employee"});
             this.ficombosort.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ficombosort.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ficombosort.ItemsAppearance.ForeColor = System.Drawing.Color.White;
@@ -787,18 +775,29 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2Panel3);
             this.panel1.Controls.Add(this.btnreset);
             this.panel1.Controls.Add(this.combosort);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtsearch);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 166);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1063, 56);
             this.panel1.TabIndex = 58;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(19, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 26);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Search";
             // 
             // guna2Panel3
             // 
@@ -878,7 +877,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(429, 16);
+            this.label2.Location = new System.Drawing.Point(414, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 26);
             this.label2.TabIndex = 35;
@@ -899,7 +898,7 @@
             this.txtsearch.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.txtsearch.ForeColor = System.Drawing.Color.Black;
             this.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtsearch.Location = new System.Drawing.Point(117, 11);
+            this.txtsearch.Location = new System.Drawing.Point(105, 12);
             this.txtsearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.PasswordChar = '\0';
@@ -908,17 +907,6 @@
             this.txtsearch.Size = new System.Drawing.Size(277, 39);
             this.txtsearch.TabIndex = 34;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(31, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 26);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Search";
             // 
             // panel4
             // 
@@ -1069,37 +1057,37 @@
             this.ownerinventoryview.BackgroundColor = System.Drawing.Color.White;
             this.ownerinventoryview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ownerinventoryview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ownerinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ownerinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ownerinventoryview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ownerinventoryview.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ownerinventoryview.DefaultCellStyle = dataGridViewCellStyle5;
             this.ownerinventoryview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ownerinventoryview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ownerinventoryview.Location = new System.Drawing.Point(0, 0);
             this.ownerinventoryview.Margin = new System.Windows.Forms.Padding(10);
             this.ownerinventoryview.Name = "ownerinventoryview";
             this.ownerinventoryview.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ownerinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ownerinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ownerinventoryview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ownerinventoryview.Size = new System.Drawing.Size(1063, 166);
             this.ownerinventoryview.TabIndex = 26;
@@ -1112,12 +1100,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1063, 580);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.panellll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "admininventory";
             this.Text = "admininventory";
             this.Load += new System.EventHandler(this.admininventory_Load);
-            this.guna2Panel2.ResumeLayout(false);
+            this.panellll.ResumeLayout(false);
             this.panelfullinventory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fullinventoryview)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -1135,7 +1123,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel panellll;
         private System.Windows.Forms.DataGridView ownerinventoryview;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI.WinForms.GunaButton btnedit;
@@ -1146,7 +1134,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox combosort;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtsearch;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel paneleditor;
         private Guna.UI2.WinForms.Guna2TextBox txtid;
         private System.Windows.Forms.Label label13;
@@ -1187,5 +1174,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label1;
     }
 }

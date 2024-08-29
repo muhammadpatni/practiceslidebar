@@ -58,6 +58,8 @@ namespace practiceslidebar
             }
             if (form_manager.adminInventory != null)
             { form_manager.adminInventory.changes(); }
+            if (form_manager.adminempolyee != null)
+            { form_manager.adminempolyee.changes(); }
         }
 
         private void btnminimize_Click(object sender, EventArgs e)

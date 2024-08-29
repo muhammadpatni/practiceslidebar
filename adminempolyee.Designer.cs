@@ -30,24 +30,27 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panellll = new Guna.UI2.WinForms.Guna2Panel();
+            this.ppp = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelfullinventory = new Guna.UI2.WinForms.Guna2Panel();
+            this.fullinventoryview = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btneset = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.combosort = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnfullinventorycancel = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.fireset = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.ficombosort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtsearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.fisearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.adminemployeeview = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnfullinventory = new Guna.UI.WinForms.GunaButton();
-            this.btnedit = new Guna.UI.WinForms.GunaButton();
-            this.btndelete = new Guna.UI.WinForms.GunaButton();
-            this.btnadd = new Guna.UI.WinForms.GunaButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.paneleditor = new System.Windows.Forms.Panel();
+            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btneditorcancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btneditorclear = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -56,8 +59,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.daterecieved = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.expirydate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.combocategory = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -71,361 +72,280 @@
             this.txtquantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtunitprice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtmanufacturer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ppp = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnreset = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.combosort = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtsearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnfullinventory = new Guna.UI.WinForms.GunaButton();
+            this.btnedit = new Guna.UI.WinForms.GunaButton();
+            this.btndelete = new Guna.UI.WinForms.GunaButton();
+            this.btnadd = new Guna.UI.WinForms.GunaButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.ownerinventoryview = new System.Windows.Forms.DataGridView();
+            this.panellll.SuspendLayout();
+            this.panelfullinventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fullinventoryview)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminemployeeview)).BeginInit();
-            this.panel7.SuspendLayout();
             this.paneleditor.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ownerinventoryview)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panellll
             // 
-            this.panel1.Controls.Add(this.adminemployeeview);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1047, 192);
-            this.panel1.TabIndex = 0;
+            this.panellll.BackColor = System.Drawing.Color.White;
+            this.panellll.Controls.Add(this.ppp);
+            this.panellll.Controls.Add(this.panelfullinventory);
+            this.panellll.Controls.Add(this.guna2Panel1);
+            this.panellll.Controls.Add(this.paneleditor);
+            this.panellll.Controls.Add(this.panel1);
+            this.panellll.Controls.Add(this.panel4);
+            this.panellll.Controls.Add(this.panel5);
+            this.panellll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panellll.Location = new System.Drawing.Point(0, 0);
+            this.panellll.Name = "panellll";
+            this.panellll.Size = new System.Drawing.Size(1047, 541);
+            this.panellll.TabIndex = 28;
+            // 
+            // ppp
+            // 
+            this.ppp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ppp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ppp.Location = new System.Drawing.Point(0, 478);
+            this.ppp.Name = "ppp";
+            this.ppp.Size = new System.Drawing.Size(1047, 10);
+            this.ppp.TabIndex = 60;
+            // 
+            // panelfullinventory
+            // 
+            this.panelfullinventory.BackColor = System.Drawing.Color.White;
+            this.panelfullinventory.Controls.Add(this.fullinventoryview);
+            this.panelfullinventory.Controls.Add(this.panel2);
+            this.panelfullinventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelfullinventory.Location = new System.Drawing.Point(0, 226);
+            this.panelfullinventory.Name = "panelfullinventory";
+            this.panelfullinventory.Size = new System.Drawing.Size(1047, 0);
+            this.panelfullinventory.TabIndex = 27;
+            // 
+            // fullinventoryview
+            // 
+            this.fullinventoryview.AllowUserToAddRows = false;
+            this.fullinventoryview.AllowUserToDeleteRows = false;
+            this.fullinventoryview.BackgroundColor = System.Drawing.Color.White;
+            this.fullinventoryview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fullinventoryview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fullinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.fullinventoryview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.fullinventoryview.DefaultCellStyle = dataGridViewCellStyle2;
+            this.fullinventoryview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fullinventoryview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.fullinventoryview.Location = new System.Drawing.Point(0, 0);
+            this.fullinventoryview.Margin = new System.Windows.Forms.Padding(10);
+            this.fullinventoryview.Name = "fullinventoryview";
+            this.fullinventoryview.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fullinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.fullinventoryview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.fullinventoryview.Size = new System.Drawing.Size(1047, 0);
+            this.fullinventoryview.TabIndex = 60;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.paneleditor);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 192);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.btnfullinventorycancel);
+            this.panel2.Controls.Add(this.fireset);
+            this.panel2.Controls.Add(this.ficombosort);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.fisearch);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, -70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1047, 349);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(1047, 70);
+            this.panel2.TabIndex = 59;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1047, 541);
-            this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.btneset);
-            this.panel4.Controls.Add(this.combosort);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.txtsearch);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 123);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1047, 69);
-            this.panel4.TabIndex = 60;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1047, 7);
-            this.panel5.TabIndex = 61;
+            this.panel3.Size = new System.Drawing.Size(1047, 7);
+            this.panel3.TabIndex = 61;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 62);
+            this.panel6.Location = new System.Drawing.Point(0, 63);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1047, 7);
             this.panel6.TabIndex = 62;
             // 
-            // btneset
+            // btnfullinventorycancel
             // 
-            this.btneset.AutoRoundedCorners = true;
-            this.btneset.BackColor = System.Drawing.Color.Transparent;
-            this.btneset.BorderRadius = 19;
-            this.btneset.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.btneset.CustomBorderColor = System.Drawing.Color.Black;
-            this.btneset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btneset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btneset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btneset.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btneset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btneset.FillColor = System.Drawing.Color.Black;
-            this.btneset.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btneset.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btneset.ForeColor = System.Drawing.Color.White;
-            this.btneset.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btneset.Location = new System.Drawing.Point(841, 12);
-            this.btneset.Name = "btneset";
-            this.btneset.Size = new System.Drawing.Size(115, 40);
-            this.btneset.TabIndex = 55;
-            this.btneset.Text = "Reset";
-            this.btneset.Click += new System.EventHandler(this.btneset_Click);
+            this.btnfullinventorycancel.AutoRoundedCorners = true;
+            this.btnfullinventorycancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnfullinventorycancel.BorderRadius = 19;
+            this.btnfullinventorycancel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.btnfullinventorycancel.CausesValidation = false;
+            this.btnfullinventorycancel.CustomBorderColor = System.Drawing.Color.Black;
+            this.btnfullinventorycancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnfullinventorycancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnfullinventorycancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnfullinventorycancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnfullinventorycancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnfullinventorycancel.FillColor = System.Drawing.Color.Black;
+            this.btnfullinventorycancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnfullinventorycancel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnfullinventorycancel.ForeColor = System.Drawing.Color.White;
+            this.btnfullinventorycancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnfullinventorycancel.Location = new System.Drawing.Point(909, 12);
+            this.btnfullinventorycancel.Name = "btnfullinventorycancel";
+            this.btnfullinventorycancel.Size = new System.Drawing.Size(115, 40);
+            this.btnfullinventorycancel.TabIndex = 56;
+            this.btnfullinventorycancel.Text = "Cancel";
+            this.btnfullinventorycancel.Click += new System.EventHandler(this.btnfullinventorycancel_Click);
             // 
-            // combosort
+            // fireset
             // 
-            this.combosort.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
-            this.combosort.BackColor = System.Drawing.Color.White;
-            this.combosort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combosort.BorderRadius = 15;
-            this.combosort.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.combosort.BorderThickness = 3;
-            this.combosort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combosort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combosort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combosort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combosort.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.combosort.ForeColor = System.Drawing.Color.Black;
-            this.combosort.ItemHeight = 30;
-            this.combosort.Items.AddRange(new object[] {
-            "tablet",
-            "capsule",
-            "syrup",
-            "injections",
-            "creams",
-            "lotions",
-            "suspension",
-            "gels",
-            "powders",
-            "drops",
-            "nebulizers",
-            "Suppositories",
-            "Transdermal Patches",
-            "Lozenges"});
-            this.combosort.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.combosort.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combosort.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.combosort.Location = new System.Drawing.Point(594, 15);
-            this.combosort.Name = "combosort";
-            this.combosort.Size = new System.Drawing.Size(220, 36);
-            this.combosort.TabIndex = 36;
-            this.combosort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fireset.AutoRoundedCorners = true;
+            this.fireset.BackColor = System.Drawing.Color.Transparent;
+            this.fireset.BorderRadius = 19;
+            this.fireset.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.fireset.CustomBorderColor = System.Drawing.Color.Black;
+            this.fireset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.fireset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.fireset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fireset.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fireset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.fireset.FillColor = System.Drawing.Color.Black;
+            this.fireset.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.fireset.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.fireset.ForeColor = System.Drawing.Color.White;
+            this.fireset.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.fireset.Location = new System.Drawing.Point(776, 12);
+            this.fireset.Name = "fireset";
+            this.fireset.Size = new System.Drawing.Size(115, 40);
+            this.fireset.TabIndex = 55;
+            this.fireset.Text = "Reset";
+            this.fireset.Click += new System.EventHandler(this.fireset_Click);
+            // 
+            // ficombosort
+            // 
+            this.ficombosort.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
+            this.ficombosort.BackColor = System.Drawing.Color.White;
+            this.ficombosort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ficombosort.BorderRadius = 15;
+            this.ficombosort.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.ficombosort.BorderThickness = 3;
+            this.ficombosort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ficombosort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ficombosort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ficombosort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ficombosort.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.ficombosort.ForeColor = System.Drawing.Color.Black;
+            this.ficombosort.ItemHeight = 30;
+            this.ficombosort.Items.AddRange(new object[] {
+            "admin ",
+            "employee"});
+            this.ficombosort.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ficombosort.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ficombosort.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.ficombosort.Location = new System.Drawing.Point(529, 15);
+            this.ficombosort.Name = "ficombosort";
+            this.ficombosort.Size = new System.Drawing.Size(220, 36);
+            this.ficombosort.TabIndex = 36;
+            this.ficombosort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ficombosort.SelectedIndexChanged += new System.EventHandler(this.ficombosort_SelectedIndexChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label14.Location = new System.Drawing.Point(479, 19);
+            this.label14.Location = new System.Drawing.Point(414, 19);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 26);
             this.label14.TabIndex = 35;
             this.label14.Text = "Category";
             // 
-            // txtsearch
+            // fisearch
             // 
-            this.txtsearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtsearch.BorderRadius = 16;
-            this.txtsearch.BorderThickness = 3;
-            this.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsearch.DefaultText = "";
-            this.txtsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtsearch.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.txtsearch.ForeColor = System.Drawing.Color.Black;
-            this.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtsearch.Location = new System.Drawing.Point(170, 14);
-            this.txtsearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtsearch.Name = "txtsearch";
-            this.txtsearch.PasswordChar = '\0';
-            this.txtsearch.PlaceholderText = "";
-            this.txtsearch.SelectedText = "";
-            this.txtsearch.Size = new System.Drawing.Size(277, 39);
-            this.txtsearch.TabIndex = 34;
+            this.fisearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.fisearch.BorderRadius = 16;
+            this.fisearch.BorderThickness = 3;
+            this.fisearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fisearch.DefaultText = "";
+            this.fisearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.fisearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.fisearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.fisearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.fisearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.fisearch.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.fisearch.ForeColor = System.Drawing.Color.Black;
+            this.fisearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.fisearch.Location = new System.Drawing.Point(105, 14);
+            this.fisearch.Margin = new System.Windows.Forms.Padding(4);
+            this.fisearch.Name = "fisearch";
+            this.fisearch.PasswordChar = '\0';
+            this.fisearch.PlaceholderText = "";
+            this.fisearch.SelectedText = "";
+            this.fisearch.Size = new System.Drawing.Size(277, 39);
+            this.fisearch.TabIndex = 34;
+            this.fisearch.TextChanged += new System.EventHandler(this.fisearch_TextChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label15.Location = new System.Drawing.Point(84, 19);
+            this.label15.Location = new System.Drawing.Point(19, 19);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(87, 26);
             this.label15.TabIndex = 33;
             this.label15.Text = "Search";
             // 
-            // adminemployeeview
+            // guna2Panel1
             // 
-            this.adminemployeeview.AllowUserToAddRows = false;
-            this.adminemployeeview.AllowUserToDeleteRows = false;
-            this.adminemployeeview.BackgroundColor = System.Drawing.Color.White;
-            this.adminemployeeview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adminemployeeview.CausesValidation = false;
-            this.adminemployeeview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.adminemployeeview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.adminemployeeview.DefaultCellStyle = dataGridViewCellStyle1;
-            this.adminemployeeview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminemployeeview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.adminemployeeview.Location = new System.Drawing.Point(0, 0);
-            this.adminemployeeview.Margin = new System.Windows.Forms.Padding(10);
-            this.adminemployeeview.Name = "adminemployeeview";
-            this.adminemployeeview.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.adminemployeeview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.adminemployeeview.ShowRowErrors = false;
-            this.adminemployeeview.Size = new System.Drawing.Size(1047, 123);
-            this.adminemployeeview.TabIndex = 26;
-            this.adminemployeeview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.adminemployeeview_CellContentClick);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.btnfullinventory);
-            this.panel7.Controls.Add(this.btnedit);
-            this.panel7.Controls.Add(this.btndelete);
-            this.panel7.Controls.Add(this.btnadd);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 304);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1047, 45);
-            this.panel7.TabIndex = 58;
-            // 
-            // btnfullinventory
-            // 
-            this.btnfullinventory.AnimationHoverSpeed = 0.07F;
-            this.btnfullinventory.AnimationSpeed = 0.03F;
-            this.btnfullinventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnfullinventory.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnfullinventory.BorderColor = System.Drawing.Color.White;
-            this.btnfullinventory.BorderSize = 3;
-            this.btnfullinventory.CausesValidation = false;
-            this.btnfullinventory.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnfullinventory.FocusedColor = System.Drawing.Color.Empty;
-            this.btnfullinventory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnfullinventory.ForeColor = System.Drawing.Color.White;
-            this.btnfullinventory.Image = null;
-            this.btnfullinventory.ImageOffsetX = 6;
-            this.btnfullinventory.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnfullinventory.Location = new System.Drawing.Point(829, 2);
-            this.btnfullinventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnfullinventory.Name = "btnfullinventory";
-            this.btnfullinventory.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnfullinventory.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btnfullinventory.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnfullinventory.OnHoverImage = null;
-            this.btnfullinventory.OnPressedColor = System.Drawing.Color.Black;
-            this.btnfullinventory.Size = new System.Drawing.Size(195, 42);
-            this.btnfullinventory.TabIndex = 17;
-            this.btnfullinventory.Text = "full inventory";
-            this.btnfullinventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnedit
-            // 
-            this.btnedit.AnimationHoverSpeed = 0.07F;
-            this.btnedit.AnimationSpeed = 0.03F;
-            this.btnedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnedit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnedit.BorderColor = System.Drawing.Color.White;
-            this.btnedit.BorderSize = 3;
-            this.btnedit.CausesValidation = false;
-            this.btnedit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnedit.FocusedColor = System.Drawing.Color.Empty;
-            this.btnedit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnedit.ForeColor = System.Drawing.Color.White;
-            this.btnedit.Image = null;
-            this.btnedit.ImageOffsetX = 6;
-            this.btnedit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnedit.Location = new System.Drawing.Point(281, 2);
-            this.btnedit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnedit.Name = "btnedit";
-            this.btnedit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnedit.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btnedit.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnedit.OnHoverImage = null;
-            this.btnedit.OnPressedColor = System.Drawing.Color.Black;
-            this.btnedit.Size = new System.Drawing.Size(195, 42);
-            this.btnedit.TabIndex = 16;
-            this.btnedit.Text = "edit item";
-            this.btnedit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
-            // 
-            // btndelete
-            // 
-            this.btndelete.AnimationHoverSpeed = 0.07F;
-            this.btndelete.AnimationSpeed = 0.03F;
-            this.btndelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btndelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btndelete.BorderColor = System.Drawing.Color.White;
-            this.btndelete.BorderSize = 3;
-            this.btndelete.CausesValidation = false;
-            this.btndelete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btndelete.FocusedColor = System.Drawing.Color.Empty;
-            this.btndelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btndelete.ForeColor = System.Drawing.Color.White;
-            this.btndelete.Image = null;
-            this.btndelete.ImageOffsetX = 6;
-            this.btndelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btndelete.Location = new System.Drawing.Point(562, 2);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btndelete.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btndelete.OnHoverForeColor = System.Drawing.Color.White;
-            this.btndelete.OnHoverImage = null;
-            this.btndelete.OnPressedColor = System.Drawing.Color.Black;
-            this.btndelete.Size = new System.Drawing.Size(195, 42);
-            this.btndelete.TabIndex = 14;
-            this.btndelete.Text = "delete item";
-            this.btndelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
-            // btnadd
-            // 
-            this.btnadd.AnimationHoverSpeed = 0.07F;
-            this.btnadd.AnimationSpeed = 0.03F;
-            this.btnadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnadd.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnadd.BorderColor = System.Drawing.Color.White;
-            this.btnadd.BorderSize = 3;
-            this.btnadd.CausesValidation = false;
-            this.btnadd.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnadd.FocusedColor = System.Drawing.Color.Empty;
-            this.btnadd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnadd.ForeColor = System.Drawing.Color.White;
-            this.btnadd.Image = null;
-            this.btnadd.ImageOffsetX = 6;
-            this.btnadd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnadd.Location = new System.Drawing.Point(13, 2);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnadd.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btnadd.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnadd.OnHoverImage = null;
-            this.btnadd.OnPressedColor = System.Drawing.Color.Black;
-            this.btnadd.Size = new System.Drawing.Size(195, 42);
-            this.btnadd.TabIndex = 13;
-            this.btnadd.Text = "new item";
-            this.btnadd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 222);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1047, 4);
+            this.guna2Panel1.TabIndex = 27;
             // 
             // paneleditor
             // 
-            this.paneleditor.Controls.Add(this.ppp);
+            this.paneleditor.Controls.Add(this.txtpassword);
+            this.paneleditor.Controls.Add(this.txtusername);
             this.paneleditor.Controls.Add(this.label16);
             this.paneleditor.Controls.Add(this.btneditorcancel);
             this.paneleditor.Controls.Add(this.btneditorclear);
@@ -434,8 +354,6 @@
             this.paneleditor.Controls.Add(this.label13);
             this.paneleditor.Controls.Add(this.label12);
             this.paneleditor.Controls.Add(this.label11);
-            this.paneleditor.Controls.Add(this.daterecieved);
-            this.paneleditor.Controls.Add(this.expirydate);
             this.paneleditor.Controls.Add(this.label10);
             this.paneleditor.Controls.Add(this.label9);
             this.paneleditor.Controls.Add(this.combocategory);
@@ -450,11 +368,59 @@
             this.paneleditor.Controls.Add(this.txtunitprice);
             this.paneleditor.Controls.Add(this.txtmanufacturer);
             this.paneleditor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneleditor.Location = new System.Drawing.Point(0, 0);
+            this.paneleditor.Location = new System.Drawing.Point(0, 222);
             this.paneleditor.Name = "paneleditor";
-            this.paneleditor.Size = new System.Drawing.Size(1047, 304);
-            this.paneleditor.TabIndex = 60;
+            this.paneleditor.Size = new System.Drawing.Size(1047, 266);
+            this.paneleditor.TabIndex = 59;
             this.paneleditor.Paint += new System.Windows.Forms.PaintEventHandler(this.paneleditor_Paint);
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtpassword.BorderRadius = 16;
+            this.txtpassword.BorderThickness = 3;
+            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpassword.DefaultText = "";
+            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtpassword.ForeColor = System.Drawing.Color.Black;
+            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtpassword.Location = new System.Drawing.Point(398, 184);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.PlaceholderText = "";
+            this.txtpassword.SelectedText = "";
+            this.txtpassword.Size = new System.Drawing.Size(195, 39);
+            this.txtpassword.TabIndex = 64;
+            // 
+            // txtusername
+            // 
+            this.txtusername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtusername.BorderRadius = 16;
+            this.txtusername.BorderThickness = 3;
+            this.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtusername.DefaultText = "";
+            this.txtusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtusername.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtusername.ForeColor = System.Drawing.Color.Black;
+            this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtusername.Location = new System.Drawing.Point(20, 184);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.PasswordChar = '\0';
+            this.txtusername.PlaceholderText = "";
+            this.txtusername.SelectedText = "";
+            this.txtusername.Size = new System.Drawing.Size(195, 39);
+            this.txtusername.TabIndex = 63;
             // 
             // label16
             // 
@@ -559,7 +525,6 @@
             this.txtid.SelectedText = "";
             this.txtid.Size = new System.Drawing.Size(195, 39);
             this.txtid.TabIndex = 58;
-            this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
             // label13
             // 
@@ -591,45 +556,6 @@
             this.label11.Size = new System.Drawing.Size(0, 17);
             this.label11.TabIndex = 55;
             // 
-            // daterecieved
-            // 
-            this.daterecieved.BorderColor = System.Drawing.Color.White;
-            this.daterecieved.BorderRadius = 15;
-            this.daterecieved.BorderThickness = 5;
-            this.daterecieved.Checked = true;
-            this.daterecieved.CustomFormat = "";
-            this.daterecieved.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.daterecieved.FocusedColor = System.Drawing.Color.White;
-            this.daterecieved.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.daterecieved.ForeColor = System.Drawing.Color.White;
-            this.daterecieved.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.daterecieved.Location = new System.Drawing.Point(22, 182);
-            this.daterecieved.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.daterecieved.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.daterecieved.Name = "daterecieved";
-            this.daterecieved.Size = new System.Drawing.Size(195, 36);
-            this.daterecieved.TabIndex = 54;
-            this.daterecieved.Value = new System.DateTime(2024, 8, 16, 19, 48, 20, 0);
-            // 
-            // expirydate
-            // 
-            this.expirydate.BorderColor = System.Drawing.Color.White;
-            this.expirydate.BorderRadius = 15;
-            this.expirydate.BorderThickness = 5;
-            this.expirydate.Checked = true;
-            this.expirydate.CustomFormat = "";
-            this.expirydate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.expirydate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.expirydate.ForeColor = System.Drawing.Color.White;
-            this.expirydate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.expirydate.Location = new System.Drawing.Point(395, 182);
-            this.expirydate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.expirydate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.expirydate.Name = "expirydate";
-            this.expirydate.Size = new System.Drawing.Size(195, 36);
-            this.expirydate.TabIndex = 53;
-            this.expirydate.Value = new System.DateTime(2024, 8, 16, 19, 48, 20, 0);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -637,9 +563,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.label10.Location = new System.Drawing.Point(36, 157);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 18);
+            this.label10.Size = new System.Drawing.Size(77, 18);
             this.label10.TabIndex = 52;
-            this.label10.Text = "Daterecieved";
+            this.label10.Text = "Username";
             // 
             // label9
             // 
@@ -648,9 +574,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.label9.Location = new System.Drawing.Point(403, 157);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 18);
+            this.label9.Size = new System.Drawing.Size(75, 18);
             this.label9.TabIndex = 51;
-            this.label9.Text = "Expirydate";
+            this.label9.Text = "Password";
             // 
             // combocategory
             // 
@@ -684,7 +610,7 @@
             this.combocategory.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.combocategory.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combocategory.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.combocategory.Location = new System.Drawing.Point(797, 52);
+            this.combocategory.Location = new System.Drawing.Point(398, 115);
             this.combocategory.Name = "combocategory";
             this.combocategory.Size = new System.Drawing.Size(195, 36);
             this.combocategory.TabIndex = 47;
@@ -708,9 +634,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.label7.Location = new System.Drawing.Point(813, 93);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 18);
+            this.label7.Size = new System.Drawing.Size(49, 18);
             this.label7.TabIndex = 45;
-            this.label7.Text = "Manufacturer";
+            this.label7.Text = "Salary";
             // 
             // label6
             // 
@@ -719,9 +645,9 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.label6.Location = new System.Drawing.Point(813, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 18);
+            this.label6.Size = new System.Drawing.Size(45, 18);
             this.label6.TabIndex = 44;
-            this.label6.Text = "Category";
+            this.label6.Text = "Email";
             // 
             // label5
             // 
@@ -741,9 +667,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.label4.Location = new System.Drawing.Point(406, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 18);
+            this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 42;
-            this.label4.Text = "Unit price";
+            this.label4.Text = "Position";
             // 
             // label3
             // 
@@ -752,9 +678,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.label3.Location = new System.Drawing.Point(36, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 18);
+            this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 34;
-            this.label3.Text = "Quantity";
+            this.label3.Text = "Contact";
             // 
             // txtname
             // 
@@ -795,7 +721,7 @@
             this.txtquantity.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtquantity.Location = new System.Drawing.Point(20, 112);
+            this.txtquantity.Location = new System.Drawing.Point(797, 47);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
@@ -819,7 +745,7 @@
             this.txtunitprice.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.txtunitprice.ForeColor = System.Drawing.Color.Black;
             this.txtunitprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtunitprice.Location = new System.Drawing.Point(395, 112);
+            this.txtunitprice.Location = new System.Drawing.Point(20, 112);
             this.txtunitprice.Margin = new System.Windows.Forms.Padding(4);
             this.txtunitprice.Name = "txtunitprice";
             this.txtunitprice.PasswordChar = '\0';
@@ -852,14 +778,312 @@
             this.txtmanufacturer.Size = new System.Drawing.Size(195, 39);
             this.txtmanufacturer.TabIndex = 37;
             // 
-            // ppp
+            // panel1
             // 
-            this.ppp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ppp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ppp.Location = new System.Drawing.Point(0, 294);
-            this.ppp.Name = "ppp";
-            this.ppp.Size = new System.Drawing.Size(1047, 10);
-            this.ppp.TabIndex = 63;
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.guna2Panel3);
+            this.panel1.Controls.Add(this.btnreset);
+            this.panel1.Controls.Add(this.combosort);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtsearch);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 166);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1047, 56);
+            this.panel1.TabIndex = 58;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.label17.Location = new System.Drawing.Point(8, 16);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 26);
+            this.label17.TabIndex = 58;
+            this.label17.Text = "Search ID";
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1047, 4);
+            this.guna2Panel3.TabIndex = 57;
+            // 
+            // btnreset
+            // 
+            this.btnreset.AutoRoundedCorners = true;
+            this.btnreset.BackColor = System.Drawing.Color.Transparent;
+            this.btnreset.BorderRadius = 19;
+            this.btnreset.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.btnreset.CustomBorderColor = System.Drawing.Color.Black;
+            this.btnreset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnreset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnreset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnreset.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnreset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnreset.FillColor = System.Drawing.Color.Black;
+            this.btnreset.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnreset.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnreset.ForeColor = System.Drawing.Color.White;
+            this.btnreset.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnreset.Location = new System.Drawing.Point(788, 9);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(150, 40);
+            this.btnreset.TabIndex = 55;
+            this.btnreset.Text = "Reset";
+            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
+            // 
+            // combosort
+            // 
+            this.combosort.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
+            this.combosort.BackColor = System.Drawing.Color.White;
+            this.combosort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combosort.BorderRadius = 15;
+            this.combosort.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.combosort.BorderThickness = 3;
+            this.combosort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combosort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combosort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combosort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combosort.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.combosort.ForeColor = System.Drawing.Color.Black;
+            this.combosort.ItemHeight = 30;
+            this.combosort.Items.AddRange(new object[] {
+            "admin",
+            "employee"});
+            this.combosort.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combosort.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combosort.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.combosort.Location = new System.Drawing.Point(541, 12);
+            this.combosort.Name = "combosort";
+            this.combosort.Size = new System.Drawing.Size(220, 36);
+            this.combosort.TabIndex = 36;
+            this.combosort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.combosort.SelectedIndexChanged += new System.EventHandler(this.combosort_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.label2.Location = new System.Drawing.Point(429, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 26);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Position";
+            // 
+            // txtsearch
+            // 
+            this.txtsearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtsearch.BorderRadius = 16;
+            this.txtsearch.BorderThickness = 3;
+            this.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtsearch.DefaultText = "";
+            this.txtsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtsearch.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtsearch.ForeColor = System.Drawing.Color.Black;
+            this.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtsearch.Location = new System.Drawing.Point(133, 11);
+            this.txtsearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.PasswordChar = '\0';
+            this.txtsearch.PlaceholderText = "";
+            this.txtsearch.SelectedText = "";
+            this.txtsearch.Size = new System.Drawing.Size(277, 39);
+            this.txtsearch.TabIndex = 34;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.btnfullinventory);
+            this.panel4.Controls.Add(this.btnedit);
+            this.panel4.Controls.Add(this.btndelete);
+            this.panel4.Controls.Add(this.btnadd);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 488);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1047, 53);
+            this.panel4.TabIndex = 57;
+            // 
+            // btnfullinventory
+            // 
+            this.btnfullinventory.AnimationHoverSpeed = 0.07F;
+            this.btnfullinventory.AnimationSpeed = 0.03F;
+            this.btnfullinventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnfullinventory.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnfullinventory.BorderColor = System.Drawing.Color.White;
+            this.btnfullinventory.BorderSize = 3;
+            this.btnfullinventory.CausesValidation = false;
+            this.btnfullinventory.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnfullinventory.FocusedColor = System.Drawing.Color.Empty;
+            this.btnfullinventory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnfullinventory.ForeColor = System.Drawing.Color.White;
+            this.btnfullinventory.Image = null;
+            this.btnfullinventory.ImageOffsetX = 6;
+            this.btnfullinventory.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnfullinventory.Location = new System.Drawing.Point(829, 8);
+            this.btnfullinventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnfullinventory.Name = "btnfullinventory";
+            this.btnfullinventory.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnfullinventory.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btnfullinventory.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnfullinventory.OnHoverImage = null;
+            this.btnfullinventory.OnPressedColor = System.Drawing.Color.Black;
+            this.btnfullinventory.Size = new System.Drawing.Size(195, 42);
+            this.btnfullinventory.TabIndex = 17;
+            this.btnfullinventory.Text = "full inventory";
+            this.btnfullinventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnfullinventory.Click += new System.EventHandler(this.btnfullinventory_Click);
+            // 
+            // btnedit
+            // 
+            this.btnedit.AnimationHoverSpeed = 0.07F;
+            this.btnedit.AnimationSpeed = 0.03F;
+            this.btnedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnedit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnedit.BorderColor = System.Drawing.Color.White;
+            this.btnedit.BorderSize = 3;
+            this.btnedit.CausesValidation = false;
+            this.btnedit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnedit.FocusedColor = System.Drawing.Color.Empty;
+            this.btnedit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnedit.ForeColor = System.Drawing.Color.White;
+            this.btnedit.Image = null;
+            this.btnedit.ImageOffsetX = 6;
+            this.btnedit.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnedit.Location = new System.Drawing.Point(281, 8);
+            this.btnedit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnedit.Name = "btnedit";
+            this.btnedit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnedit.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btnedit.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnedit.OnHoverImage = null;
+            this.btnedit.OnPressedColor = System.Drawing.Color.Black;
+            this.btnedit.Size = new System.Drawing.Size(195, 42);
+            this.btnedit.TabIndex = 16;
+            this.btnedit.Text = "edit item";
+            this.btnedit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.AnimationHoverSpeed = 0.07F;
+            this.btndelete.AnimationSpeed = 0.03F;
+            this.btndelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btndelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btndelete.BorderColor = System.Drawing.Color.White;
+            this.btndelete.BorderSize = 3;
+            this.btndelete.CausesValidation = false;
+            this.btndelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btndelete.FocusedColor = System.Drawing.Color.Empty;
+            this.btndelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btndelete.ForeColor = System.Drawing.Color.White;
+            this.btndelete.Image = null;
+            this.btndelete.ImageOffsetX = 6;
+            this.btndelete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btndelete.Location = new System.Drawing.Point(562, 8);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btndelete.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btndelete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btndelete.OnHoverImage = null;
+            this.btndelete.OnPressedColor = System.Drawing.Color.Black;
+            this.btndelete.Size = new System.Drawing.Size(195, 42);
+            this.btndelete.TabIndex = 14;
+            this.btndelete.Text = "delete item";
+            this.btndelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
+            // btnadd
+            // 
+            this.btnadd.AnimationHoverSpeed = 0.07F;
+            this.btnadd.AnimationSpeed = 0.03F;
+            this.btnadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadd.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadd.BorderColor = System.Drawing.Color.White;
+            this.btnadd.BorderSize = 3;
+            this.btnadd.CausesValidation = false;
+            this.btnadd.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnadd.FocusedColor = System.Drawing.Color.Empty;
+            this.btnadd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnadd.ForeColor = System.Drawing.Color.White;
+            this.btnadd.Image = null;
+            this.btnadd.ImageOffsetX = 6;
+            this.btnadd.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnadd.Location = new System.Drawing.Point(13, 8);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadd.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btnadd.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnadd.OnHoverImage = null;
+            this.btnadd.OnPressedColor = System.Drawing.Color.Black;
+            this.btnadd.Size = new System.Drawing.Size(195, 42);
+            this.btnadd.TabIndex = 13;
+            this.btnadd.Text = "new item";
+            this.btnadd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.ownerinventoryview);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1047, 166);
+            this.panel5.TabIndex = 46;
+            // 
+            // ownerinventoryview
+            // 
+            this.ownerinventoryview.AllowUserToAddRows = false;
+            this.ownerinventoryview.AllowUserToDeleteRows = false;
+            this.ownerinventoryview.BackgroundColor = System.Drawing.Color.White;
+            this.ownerinventoryview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ownerinventoryview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ownerinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.ownerinventoryview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ownerinventoryview.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ownerinventoryview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ownerinventoryview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ownerinventoryview.Location = new System.Drawing.Point(0, 0);
+            this.ownerinventoryview.Margin = new System.Windows.Forms.Padding(10);
+            this.ownerinventoryview.Name = "ownerinventoryview";
+            this.ownerinventoryview.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ownerinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.ownerinventoryview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ownerinventoryview.Size = new System.Drawing.Size(1047, 166);
+            this.ownerinventoryview.TabIndex = 26;
+            this.ownerinventoryview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ownerinventoryview_CellContentClick);
             // 
             // adminempolyee
             // 
@@ -867,44 +1091,43 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1047, 541);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panellll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "adminempolyee";
             this.Text = "adminempolyee";
             this.Load += new System.EventHandler(this.adminempolyee_Load);
-            this.panel1.ResumeLayout(false);
+            this.panellll.ResumeLayout(false);
+            this.panelfullinventory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fullinventoryview)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminemployeeview)).EndInit();
-            this.panel7.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.paneleditor.ResumeLayout(false);
             this.paneleditor.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ownerinventoryview)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
+        private Guna.UI2.WinForms.Guna2Panel panellll;
+        private Guna.UI2.WinForms.Guna2Panel ppp;
+        private Guna.UI2.WinForms.Guna2Panel panelfullinventory;
+        private System.Windows.Forms.DataGridView fullinventoryview;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2GradientButton btneset;
-        private Guna.UI2.WinForms.Guna2ComboBox combosort;
+        private Guna.UI2.WinForms.Guna2GradientButton btnfullinventorycancel;
+        private Guna.UI2.WinForms.Guna2GradientButton fireset;
+        private Guna.UI2.WinForms.Guna2ComboBox ficombosort;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2TextBox txtsearch;
+        private Guna.UI2.WinForms.Guna2TextBox fisearch;
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
-        private System.Windows.Forms.DataGridView adminemployeeview;
-        private System.Windows.Forms.Panel panel7;
-        private Guna.UI.WinForms.GunaButton btnfullinventory;
-        private Guna.UI.WinForms.GunaButton btnedit;
-        private Guna.UI.WinForms.GunaButton btndelete;
-        private Guna.UI.WinForms.GunaButton btnadd;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel paneleditor;
         private System.Windows.Forms.Label label16;
         public Guna.UI2.WinForms.Guna2GradientButton btneditorcancel;
@@ -914,8 +1137,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2DateTimePicker daterecieved;
-        private Guna.UI2.WinForms.Guna2DateTimePicker expirydate;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2ComboBox combocategory;
@@ -929,6 +1150,21 @@
         private Guna.UI2.WinForms.Guna2TextBox txtquantity;
         private Guna.UI2.WinForms.Guna2TextBox txtunitprice;
         private Guna.UI2.WinForms.Guna2TextBox txtmanufacturer;
-        private Guna.UI2.WinForms.Guna2Panel ppp;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2GradientButton btnreset;
+        private Guna.UI2.WinForms.Guna2ComboBox combosort;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2TextBox txtsearch;
+        private System.Windows.Forms.Panel panel4;
+        private Guna.UI.WinForms.GunaButton btnfullinventory;
+        private Guna.UI.WinForms.GunaButton btnedit;
+        private Guna.UI.WinForms.GunaButton btndelete;
+        private Guna.UI.WinForms.GunaButton btnadd;
+        public System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridView ownerinventoryview;
+        private Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtusername;
+        private System.Windows.Forms.Label label17;
     }
 }

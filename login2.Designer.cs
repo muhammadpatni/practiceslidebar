@@ -110,7 +110,6 @@
             this.txtpassword.Size = new System.Drawing.Size(300, 43);
             this.txtpassword.TabIndex = 16;
             this.txtpassword.UseSystemPasswordChar = true;
-            this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             // 
             // label2
             // 
@@ -146,7 +145,6 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(300, 43);
             this.txtusername.TabIndex = 14;
-            this.txtusername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtusername_KeyDown);
             // 
             // label1
             // 
@@ -174,8 +172,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login2";
-            this.Text = "Form3";
-            this.Load += new System.EventHandler(this.employee_Load);
+            this.Text = "Form3";  
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

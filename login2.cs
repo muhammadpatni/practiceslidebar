@@ -13,7 +13,6 @@ using System.Windows.Forms;
 
 namespace practiceslidebar
 {
-   
     public partial class login2 : Form
     {
         string temp;
@@ -23,12 +22,6 @@ namespace practiceslidebar
             form_manager.employeelogin = this;
         }
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
-
-        private void employee_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void showpassword_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -52,11 +45,9 @@ namespace practiceslidebar
             showpassword.Location = new Point(245, 295);
             btnlogin.Location = new Point(166, 339);
            this.temp = ptemp;
-
-
-
         }
-        void Btnlogin()
+
+        private void btnlogin_Click(object sender, EventArgs e)
         {
             if (temp == "owner")
             {
@@ -65,11 +56,9 @@ namespace practiceslidebar
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-
                     ownerview o = new ownerview();
                     o.Show();
                     form_manager.mainforminstance.Hide();
-
                 }
                 else
                 {
@@ -89,7 +78,6 @@ namespace practiceslidebar
                     adminview o = new adminview();
                     o.Show();
                     form_manager.mainforminstance.Hide();
-
                 }
                 else
                 {
@@ -106,11 +94,9 @@ namespace practiceslidebar
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-
                     employeeview o = new employeeview();
                     o.Show();
                     form_manager.mainforminstance.Hide();
-
                 }
                 else
                 {
@@ -119,29 +105,6 @@ namespace practiceslidebar
                     form_manager.messagebox.tittle.Text = "Error";
                     form_manager.messagebox.message.Text = "invalid login details";
                 }
-            }
-
-        }
-        private void btnlogin_Click(object sender, EventArgs e)
-        {
-            Btnlogin();
-        }
-        
-
-        private void txtusername_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode==Keys.Enter)
-            {
-                txtpassword.Focus();
-            }
-
-        }
-
-        private void txtpassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Btnlogin();
             }
         }
     }

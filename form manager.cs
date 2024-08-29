@@ -15,6 +15,8 @@ namespace practiceslidebar
         public static admininventory adminInventory { get; set; }
         public static adminview adminview { get; set; }
         public static messagebox messagebox { get; set; }   
+        public static adminempolyee adminempolyee { get; set; }
+
 
 
     }
