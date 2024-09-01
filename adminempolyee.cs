@@ -13,23 +13,22 @@ namespace practiceslidebar
 {
     public partial class adminempolyee : Form
     {
-
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
         public adminempolyee()
         {
             InitializeComponent();
-            form_manager.adminempolyee=this;
-
+            form_manager.adminempolyee = this;
         }
-
         void reset()
         {
             ownerinventoryview.ClearSelection();
             txtname.Clear();
-            txtmanufacturer.Clear();
+            txtsalary.Clear();
             combocategory.SelectedIndex = -1;
-            txtquantity.Clear();
-            txtunitprice.Clear();
+            txtemail.Clear();
+            txtcontact.Clear();
+            txtusername.Clear();
+            txtpassword.Clear();
         }
         private void getinventoryrecord()
         {
@@ -58,7 +57,6 @@ namespace practiceslidebar
             paneleditor.Visible = false;
             panelfullinventory.Visible = false;
         }
-
         private void btnadd_Click(object sender, EventArgs e)
         {
             panel5.Size = new Size(1063, 215);
@@ -69,12 +67,12 @@ namespace practiceslidebar
             txtid.Location = new Point(22, 45);
             label8.Location = new Point(36, 25);
             txtid.Size = new Size(195, 39);
-            txtmanufacturer.Visible = true;
+            txtsalary.Visible = true;
             txtusername.Visible = true;
             txtpassword.Visible = true;
             txtname.Visible = true;
-            txtquantity.Visible = true;
-            txtunitprice.Visible = true;
+            txtemail.Visible = true;
+            txtcontact.Visible = true;
             label3.Visible = true;
             combocategory.Visible = true;
             label4.Visible = true;
@@ -110,7 +108,6 @@ namespace practiceslidebar
             con.Close();
             txtid.Enabled = false;
         }
-
         private void btnedit_Click(object sender, EventArgs e)
         {
             panel5.Size = new Size(1063, 215);
@@ -120,10 +117,10 @@ namespace practiceslidebar
             txtid.Location = new Point(22, 45);
             label8.Location = new Point(36, 25);
             txtid.Size = new Size(195, 39);
-            txtmanufacturer.Visible = true;
+            txtsalary.Visible = true;
             txtname.Visible = true;
-            txtquantity.Visible = true;
-            txtunitprice.Visible = true;
+            txtemail.Visible = true;
+            txtcontact.Visible = true;
             txtusername.Visible = true;
             txtpassword.Visible = true;
             label3.Visible = true;
@@ -145,7 +142,6 @@ namespace practiceslidebar
             label16.Visible = true;
             txtid.Enabled = false;
         }
-
         private void btndelete_Click(object sender, EventArgs e)
         {
             panel5.Size = new Size(1063, 215);
@@ -156,10 +152,10 @@ namespace practiceslidebar
             txtid.Location = new Point(395, 112);
             label8.Location = new Point(406, 90);
             txtid.Size = new Size(195, 39);
-            txtmanufacturer.Visible = false;
+            txtsalary.Visible = false;
             txtname.Visible = false;
-            txtquantity.Visible = false;
-            txtunitprice.Visible = false;
+            txtemail.Visible = false;
+            txtcontact.Visible = false;
             combocategory.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
@@ -179,7 +175,6 @@ namespace practiceslidebar
             btneditoroperator.Text = "Delete";
             txtid.Clear();
         }
-
         private void btnfullinventory_Click(object sender, EventArgs e)
         {
             ppp.Visible = false;
@@ -190,7 +185,6 @@ namespace practiceslidebar
             panelfullinventory.Dock = DockStyle.Fill;
             reset();
         }
-
         private void btneditorclear_Click(object sender, EventArgs e)
         {
             if (btneditoroperator.Text == "Delete")
@@ -202,11 +196,9 @@ namespace practiceslidebar
                 txtid.Enabled = true;
                 txtid.Clear();
                 txtid.Enabled = false;
-
             }
             reset();
         }
-
         private void btneditorcancel_Click(object sender, EventArgs e)
         {
             btneditoroperator.Text = "";
@@ -221,8 +213,8 @@ namespace practiceslidebar
             {
                 panel5.Size = new Size(1063, 550);
             }
+            reset();
         }
-
         private void btnfullinventorycancel_Click(object sender, EventArgs e)
         {
             panelfullinventory.Visible = false;
@@ -231,7 +223,6 @@ namespace practiceslidebar
             panel4.Visible = true;
             ppp.Visible = false;
         }
-
         private void btnreset_Click(object sender, EventArgs e)
 
         {
@@ -258,7 +249,6 @@ namespace practiceslidebar
         {
 
         }
-
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
             string query = "select * from employee where cast (id as varchar) like  @id +'%' and  position !='owner'";
@@ -280,7 +270,6 @@ namespace practiceslidebar
                 ownerinventoryview.DataSource = null;
             }
         }
-
         private void combosort_SelectedIndexChanged(object sender, EventArgs e)
         {
             string query = "select * from employee where position like  @position +'%' and  position !='owner'";
@@ -303,13 +292,11 @@ namespace practiceslidebar
                 ownerinventoryview.DataSource = null;
             }
         }
-
         private void fireset_Click(object sender, EventArgs e)
         {
             fisearch.Clear();
             ficombosort.SelectedIndex = -1;
         }
-
         private void fisearch_TextChanged(object sender, EventArgs e)
         {
             string query = "select * from employee where cast (id as varchar) like  @id +'%' and  position !='owner'";
@@ -332,7 +319,6 @@ namespace practiceslidebar
                 fullinventoryview.DataSource = null;
             }
         }
-
         private void ficombosort_SelectedIndexChanged(object sender, EventArgs e)
         {
             string query = "select * from employee where position like  @position +'%' and  position !='owner'";
@@ -356,8 +342,68 @@ namespace practiceslidebar
             }
         }
 
-        private void ownerinventoryview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ownerinventoryview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = ownerinventoryview.Rows[e.RowIndex];
+                if (btneditoroperator.Text != "Add")
+                { txtid.Text = selectedRow.Cells[0].Value.ToString(); }
+                txtname.Text = selectedRow.Cells[1].Value.ToString();
+                txtemail.Text = selectedRow.Cells[2].Value.ToString();
+                txtcontact.Text = selectedRow.Cells[3].Value.ToString();
+                combocategory.SelectedItem = selectedRow.Cells[4].Value.ToString();
+                txtsalary.Text = selectedRow.Cells[5].Value.ToString();
+                txtusername.Text = selectedRow.Cells[6].Value.ToString();
+                txtpassword.Text = selectedRow.Cells[7].Value.ToString();
+            }
+        }
+
+        private void combocategory_TextChanged(object sender, EventArgs e)
+        {
+            if (btneditoroperator.Text != "Delete")
+            {
+                if (combocategory.Text == "admin")
+                {
+                    txtusername.Visible = false;
+                    label10.Visible = false;
+                }
+                else
+                {
+                    txtusername.Visible = true;
+                    label10.Visible = true;
+                }
+            }
+        }
+
+        private void combocategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (btneditoroperator.Text!="Delete")
+            {
+                if (combocategory.Text == "admin")
+                {
+                    txtusername.Visible = false;
+                    label10.Visible = false;
+                }
+                else
+                {
+                    txtusername.Visible = true;
+                    label10.Visible = true;
+                }
+            }
+        }
+
+        private void txtid_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtid.Text))
+            {
+                if (btneditoroperator.Text == "Update")
+                { label16.Visible = true; }
+            }
+            else
+            {
+               label16.Visible=false;
+            }
 
         }
     }

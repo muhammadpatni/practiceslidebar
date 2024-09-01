@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panellll = new Guna.UI2.WinForms.Guna2Panel();
             this.ppp = new Guna.UI2.WinForms.Guna2Panel();
             this.panelfullinventory = new Guna.UI2.WinForms.Guna2Panel();
@@ -69,9 +69,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtquantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtunitprice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtmanufacturer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtemail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtcontact = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtsalary = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -140,37 +140,37 @@
             this.fullinventoryview.BackgroundColor = System.Drawing.Color.White;
             this.fullinventoryview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fullinventoryview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.fullinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fullinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.fullinventoryview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.fullinventoryview.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.fullinventoryview.DefaultCellStyle = dataGridViewCellStyle14;
             this.fullinventoryview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fullinventoryview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.fullinventoryview.Location = new System.Drawing.Point(0, 0);
             this.fullinventoryview.Margin = new System.Windows.Forms.Padding(10);
             this.fullinventoryview.Name = "fullinventoryview";
             this.fullinventoryview.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.fullinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fullinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.fullinventoryview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.fullinventoryview.Size = new System.Drawing.Size(1047, 0);
             this.fullinventoryview.TabIndex = 60;
@@ -364,9 +364,9 @@
             this.paneleditor.Controls.Add(this.label4);
             this.paneleditor.Controls.Add(this.label3);
             this.paneleditor.Controls.Add(this.txtname);
-            this.paneleditor.Controls.Add(this.txtquantity);
-            this.paneleditor.Controls.Add(this.txtunitprice);
-            this.paneleditor.Controls.Add(this.txtmanufacturer);
+            this.paneleditor.Controls.Add(this.txtemail);
+            this.paneleditor.Controls.Add(this.txtcontact);
+            this.paneleditor.Controls.Add(this.txtsalary);
             this.paneleditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneleditor.Location = new System.Drawing.Point(0, 222);
             this.paneleditor.Name = "paneleditor";
@@ -525,6 +525,7 @@
             this.txtid.SelectedText = "";
             this.txtid.Size = new System.Drawing.Size(195, 39);
             this.txtid.TabIndex = 58;
+            this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
             // label13
             // 
@@ -593,20 +594,8 @@
             this.combocategory.ForeColor = System.Drawing.Color.Black;
             this.combocategory.ItemHeight = 30;
             this.combocategory.Items.AddRange(new object[] {
-            "tablet",
-            "capsule",
-            "syrup",
-            "injections",
-            "creams",
-            "lotions",
-            "suspension",
-            "gels",
-            "powders",
-            "drops",
-            "nebulizers",
-            "Suppositories",
-            "Transdermal Patches",
-            "Lozenges"});
+            "admin",
+            "employee"});
             this.combocategory.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.combocategory.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combocategory.ItemsAppearance.ForeColor = System.Drawing.Color.White;
@@ -615,6 +604,8 @@
             this.combocategory.Size = new System.Drawing.Size(195, 36);
             this.combocategory.TabIndex = 47;
             this.combocategory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.combocategory.SelectedIndexChanged += new System.EventHandler(this.combocategory_SelectedIndexChanged);
+            this.combocategory.TextChanged += new System.EventHandler(this.combocategory_TextChanged);
             // 
             // label8
             // 
@@ -706,77 +697,77 @@
             this.txtname.Size = new System.Drawing.Size(195, 39);
             this.txtname.TabIndex = 40;
             // 
-            // txtquantity
+            // txtemail
             // 
-            this.txtquantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtquantity.BorderRadius = 16;
-            this.txtquantity.BorderThickness = 3;
-            this.txtquantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtquantity.DefaultText = "";
-            this.txtquantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtquantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtquantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtquantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtquantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtquantity.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.txtquantity.ForeColor = System.Drawing.Color.Black;
-            this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtquantity.Location = new System.Drawing.Point(797, 47);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
-            this.txtquantity.Name = "txtquantity";
-            this.txtquantity.PasswordChar = '\0';
-            this.txtquantity.PlaceholderText = "";
-            this.txtquantity.SelectedText = "";
-            this.txtquantity.Size = new System.Drawing.Size(195, 39);
-            this.txtquantity.TabIndex = 32;
+            this.txtemail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtemail.BorderRadius = 16;
+            this.txtemail.BorderThickness = 3;
+            this.txtemail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtemail.DefaultText = "";
+            this.txtemail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtemail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtemail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtemail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtemail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtemail.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtemail.ForeColor = System.Drawing.Color.Black;
+            this.txtemail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtemail.Location = new System.Drawing.Point(797, 47);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.PasswordChar = '\0';
+            this.txtemail.PlaceholderText = "";
+            this.txtemail.SelectedText = "";
+            this.txtemail.Size = new System.Drawing.Size(195, 39);
+            this.txtemail.TabIndex = 32;
             // 
-            // txtunitprice
+            // txtcontact
             // 
-            this.txtunitprice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtunitprice.BorderRadius = 16;
-            this.txtunitprice.BorderThickness = 3;
-            this.txtunitprice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtunitprice.DefaultText = "";
-            this.txtunitprice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtunitprice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtunitprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtunitprice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtunitprice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtunitprice.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.txtunitprice.ForeColor = System.Drawing.Color.Black;
-            this.txtunitprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtunitprice.Location = new System.Drawing.Point(20, 112);
-            this.txtunitprice.Margin = new System.Windows.Forms.Padding(4);
-            this.txtunitprice.Name = "txtunitprice";
-            this.txtunitprice.PasswordChar = '\0';
-            this.txtunitprice.PlaceholderText = "";
-            this.txtunitprice.SelectedText = "";
-            this.txtunitprice.Size = new System.Drawing.Size(195, 39);
-            this.txtunitprice.TabIndex = 41;
+            this.txtcontact.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtcontact.BorderRadius = 16;
+            this.txtcontact.BorderThickness = 3;
+            this.txtcontact.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcontact.DefaultText = "";
+            this.txtcontact.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtcontact.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtcontact.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcontact.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcontact.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtcontact.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtcontact.ForeColor = System.Drawing.Color.Black;
+            this.txtcontact.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtcontact.Location = new System.Drawing.Point(20, 112);
+            this.txtcontact.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcontact.Name = "txtcontact";
+            this.txtcontact.PasswordChar = '\0';
+            this.txtcontact.PlaceholderText = "";
+            this.txtcontact.SelectedText = "";
+            this.txtcontact.Size = new System.Drawing.Size(195, 39);
+            this.txtcontact.TabIndex = 41;
             // 
-            // txtmanufacturer
+            // txtsalary
             // 
-            this.txtmanufacturer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtmanufacturer.BorderRadius = 16;
-            this.txtmanufacturer.BorderThickness = 3;
-            this.txtmanufacturer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmanufacturer.DefaultText = "";
-            this.txtmanufacturer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtmanufacturer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtmanufacturer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtmanufacturer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtmanufacturer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtmanufacturer.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.txtmanufacturer.ForeColor = System.Drawing.Color.Black;
-            this.txtmanufacturer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtmanufacturer.Location = new System.Drawing.Point(797, 115);
-            this.txtmanufacturer.Margin = new System.Windows.Forms.Padding(4);
-            this.txtmanufacturer.Name = "txtmanufacturer";
-            this.txtmanufacturer.PasswordChar = '\0';
-            this.txtmanufacturer.PlaceholderText = "";
-            this.txtmanufacturer.SelectedText = "";
-            this.txtmanufacturer.Size = new System.Drawing.Size(195, 39);
-            this.txtmanufacturer.TabIndex = 37;
+            this.txtsalary.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtsalary.BorderRadius = 16;
+            this.txtsalary.BorderThickness = 3;
+            this.txtsalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtsalary.DefaultText = "";
+            this.txtsalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtsalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtsalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtsalary.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.txtsalary.ForeColor = System.Drawing.Color.Black;
+            this.txtsalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtsalary.Location = new System.Drawing.Point(797, 115);
+            this.txtsalary.Margin = new System.Windows.Forms.Padding(4);
+            this.txtsalary.Name = "txtsalary";
+            this.txtsalary.PasswordChar = '\0';
+            this.txtsalary.PlaceholderText = "";
+            this.txtsalary.SelectedText = "";
+            this.txtsalary.Size = new System.Drawing.Size(195, 39);
+            this.txtsalary.TabIndex = 37;
             // 
             // panel1
             // 
@@ -1049,41 +1040,41 @@
             this.ownerinventoryview.BackgroundColor = System.Drawing.Color.White;
             this.ownerinventoryview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ownerinventoryview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ownerinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ownerinventoryview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.ownerinventoryview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ownerinventoryview.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ownerinventoryview.DefaultCellStyle = dataGridViewCellStyle17;
             this.ownerinventoryview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ownerinventoryview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ownerinventoryview.Location = new System.Drawing.Point(0, 0);
             this.ownerinventoryview.Margin = new System.Windows.Forms.Padding(10);
             this.ownerinventoryview.Name = "ownerinventoryview";
             this.ownerinventoryview.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ownerinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ownerinventoryview.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.ownerinventoryview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ownerinventoryview.Size = new System.Drawing.Size(1047, 166);
             this.ownerinventoryview.TabIndex = 26;
-            this.ownerinventoryview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ownerinventoryview_CellContentClick);
+            this.ownerinventoryview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ownerinventoryview_CellClick);
             // 
             // adminempolyee
             // 
@@ -1147,9 +1138,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtname;
-        private Guna.UI2.WinForms.Guna2TextBox txtquantity;
-        private Guna.UI2.WinForms.Guna2TextBox txtunitprice;
-        private Guna.UI2.WinForms.Guna2TextBox txtmanufacturer;
+        private Guna.UI2.WinForms.Guna2TextBox txtemail;
+        private Guna.UI2.WinForms.Guna2TextBox txtcontact;
+        private Guna.UI2.WinForms.Guna2TextBox txtsalary;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2GradientButton btnreset;
