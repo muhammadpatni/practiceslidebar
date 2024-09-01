@@ -533,7 +533,7 @@ namespace practiceslidebar
                 messagebox m = new messagebox();
                 m.Show();
                 form_manager.messagebox.tittle.Text = "Failed";
-                form_manager.messagebox.message.Text = "quantity is required";
+                form_manager.messagebox.message.Text = "email is required";
                 return false;
             }
             if (txtcontact.Text == string.Empty)
@@ -541,7 +541,7 @@ namespace practiceslidebar
                 messagebox m = new messagebox();
                 m.Show();
                 form_manager.messagebox.tittle.Text = "Failed";
-                form_manager.messagebox.message.Text = "unitprice is required";
+                form_manager.messagebox.message.Text = "contact is required";
                 return false;
             }
             if (combocategory.Text == string.Empty)
@@ -549,7 +549,7 @@ namespace practiceslidebar
                 messagebox m = new messagebox();
                 m.Show();
                 form_manager.messagebox.tittle.Text = "Failed";
-                form_manager.messagebox.message.Text = "category is required";
+                form_manager.messagebox.message.Text = "position is required";
                 return false;
             }
             if (txtsalary.Text == string.Empty)
@@ -557,23 +557,26 @@ namespace practiceslidebar
                 messagebox m = new messagebox();
                 m.Show();
                 form_manager.messagebox.tittle.Text = "Failed";
-                form_manager.messagebox.message.Text = "manufacturer is required";
+                form_manager.messagebox.message.Text = "salary is required";
                 return false;
             }
-            if (txtusername.Text == string.Empty)
+            if (txtusername.Visible != false)
             {
-                messagebox m = new messagebox();
-                m.Show();
-                form_manager.messagebox.tittle.Text = "Failed";
-                form_manager.messagebox.message.Text = "manufacturer is required";
-                return false;
+                if (txtusername.Text == string.Empty)
+                {
+                    messagebox m = new messagebox();
+                    m.Show();
+                    form_manager.messagebox.tittle.Text = "Failed";
+                    form_manager.messagebox.message.Text = "username is required";
+                    return false;
+                }
             }
             if (txtpassword.Text == string.Empty)
             {
                 messagebox m = new messagebox();
                 m.Show();
                 form_manager.messagebox.tittle.Text = "Failed";
-                form_manager.messagebox.message.Text = "manufacturer is required";
+                form_manager.messagebox.message.Text = "password is required";
                 return false;
             }
            
