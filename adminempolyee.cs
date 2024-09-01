@@ -365,6 +365,7 @@ namespace practiceslidebar
             {
                 if (combocategory.Text == "admin")
                 {
+                    txtusername.Clear();
                     txtusername.Visible = false;
                     label10.Visible = false;
                 }
@@ -382,8 +383,10 @@ namespace practiceslidebar
             {
                 if (combocategory.Text == "admin")
                 {
+                    txtusername.Clear();
                     txtusername.Visible = false;
                     label10.Visible = false;
+
                 }
                 else
                 {
@@ -406,5 +409,177 @@ namespace practiceslidebar
             }
 
         }
+
+        private void btneditoroperator_Click(object sender, EventArgs e)
+        {
+                if (btneditoroperator.Text == "Delete")
+                {
+                  try 
+                    {
+                    string query = "delete from employee where id =@id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", int.Parse(txtid.Text));
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        messagebox m = new messagebox();
+                        m.Show();
+                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.tittle.Text = "";
+                        form_manager.messagebox.message.Text = "data deleted successfully";
+                        reset();
+                        txtid.Clear();
+                    }
+                    else
+                    {
+                        messagebox m = new messagebox();
+                        m.Show();
+                        form_manager.messagebox.tittle.Text = "Error";
+                        form_manager.messagebox.message.Text = "ID not found";
+                    }
+                }
+            catch
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Error";
+                form_manager.messagebox.message.Text = "ID is required";
+            }
+            finally { con.Close(); }
+            }
+
+            if (btneditoroperator.Text == "Update")
+            {
+
+                con.Open();
+                if (is_valid())
+                {
+                    string query = "update employee set name=@name,email=@email,contact=@contact,position=@position,salary=@salary,username=@username,password=@password where id=@id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", int.Parse(txtid.Text));
+                    cmd.Parameters.AddWithValue("@name", txtname.Text);
+                    cmd.Parameters.AddWithValue("@email", txtemail.Text);
+                    cmd.Parameters.AddWithValue("@position",combocategory.Text);
+                    cmd.Parameters.AddWithValue("@contact", txtcontact.Text);
+                    cmd.Parameters.AddWithValue("@salary", txtsalary.Text);
+                    cmd.Parameters.AddWithValue("@username",txtusername.Text );
+                    cmd.Parameters.AddWithValue("@password",txtpassword.Text);
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        messagebox m = new messagebox();
+                        m.Show();
+                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.tittle.Text = "";
+                        form_manager.messagebox.message.Text = "data updated successfully";
+
+                        reset();
+                    }
+                }
+                con.Close();
+            }
+            if (btneditoroperator.Text == "Add")
+            {
+                if (is_valid())
+                {
+                    con.Open();
+                    string query = "insert into employee (id,name,email,contact,position,salary,username,password) values (@id,@name,@email,@contact,@position,@salary,@username,@password)";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", int.Parse(txtid.Text));
+                    cmd.Parameters.AddWithValue("@name", txtname.Text);
+                    cmd.Parameters.AddWithValue("@email", txtemail.Text);
+                    cmd.Parameters.AddWithValue("@contact", txtcontact.Text);
+                    cmd.Parameters.AddWithValue("@position", combocategory.Text);
+                    cmd.Parameters.AddWithValue("@salary", txtsalary.Text);
+                    cmd.Parameters.AddWithValue("@username",txtusername.Text );
+                    cmd.Parameters.AddWithValue("@password",txtpassword.Text );
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        messagebox m = new messagebox();
+                        m.Show();
+                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.tittle.Text = "";
+                        form_manager.messagebox.message.Text = "data inserted successfully";
+
+                        reset();
+                    }
+                }
+                con.Close();
+            }
+            getinventoryrecord();
+        }
+        private bool is_valid()
+        {
+            if (txtid.Text == string.Empty)
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "please select a record";
+                return false;
+            }
+            if (txtname.Text == string.Empty)
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "name is required";
+                return false;
+            }
+            if (txtemail.Text == string.Empty)
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "quantity is required";
+                return false;
+            }
+            if (txtcontact.Text == string.Empty)
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "unitprice is required";
+                return false;
+            }
+            if (combocategory.Text == string.Empty)
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "category is required";
+                return false;
+            }
+            if (txtsalary.Text == string.Empty)
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "manufacturer is required";
+                return false;
+            }
+            if (txtusername.Text == string.Empty)
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "manufacturer is required";
+                return false;
+            }
+            if (txtpassword.Text == string.Empty)
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.tittle.Text = "Failed";
+                form_manager.messagebox.message.Text = "manufacturer is required";
+                return false;
+            }
+           
+
+            return true;
+        }
+
     }
 }
