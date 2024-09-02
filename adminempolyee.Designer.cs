@@ -279,6 +279,8 @@
             this.ficombosort.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ficombosort.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ficombosort.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.ficombosort.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.ficombosort.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
             this.ficombosort.Location = new System.Drawing.Point(529, 15);
             this.ficombosort.Name = "ficombosort";
             this.ficombosort.Size = new System.Drawing.Size(220, 36);
@@ -329,9 +331,9 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.label15.Location = new System.Drawing.Point(19, 19);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 26);
+            this.label15.Size = new System.Drawing.Size(118, 26);
             this.label15.TabIndex = 33;
-            this.label15.Text = "Search";
+            this.label15.Text = "Search ID";
             // 
             // guna2Panel1
             // 
@@ -600,6 +602,8 @@
             this.combocategory.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.combocategory.ItemsAppearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combocategory.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.combocategory.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.combocategory.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
             this.combocategory.Location = new System.Drawing.Point(398, 115);
             this.combocategory.Name = "combocategory";
             this.combocategory.Size = new System.Drawing.Size(195, 36);

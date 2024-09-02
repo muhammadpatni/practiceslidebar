@@ -25,14 +25,7 @@ namespace practiceslidebar
         private void showpassword_CheckedChanged(object sender, EventArgs e)
         {
 
-            if (showpassword.Checked)
-            {
-                txtpassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtpassword.UseSystemPasswordChar = true;
-            }
+           
         }
 
         public void changeuser( string ptemp)
@@ -105,6 +98,27 @@ namespace practiceslidebar
                     form_manager.messagebox.tittle.Text = "Error";
                     form_manager.messagebox.message.Text = "invalid login details";
                 }
+            }
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login2_Load(object sender, EventArgs e)
+        {
+            txtpassword.UseSystemPasswordChar = true;
+        }
+
+        private void showpassword_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if(showpassword.Checked)
+            {  txtpassword.UseSystemPasswordChar=false;
+            }
+            else
+            {
+                txtpassword.UseSystemPasswordChar=true;
             }
         }
     }

@@ -36,7 +36,6 @@ namespace practiceslidebar
         }
         private void btnlogout_Click(object sender, EventArgs e)
         {
-
             login l = new login();
             l.Show();
             this.Hide();
@@ -69,7 +68,6 @@ namespace practiceslidebar
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-
             Application.Exit();
         }
 
@@ -119,6 +117,11 @@ namespace practiceslidebar
         }
 
         private void panellogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void adminview_Load(object sender, EventArgs e)
         {
 
         }
