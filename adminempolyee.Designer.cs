@@ -1109,7 +1109,7 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
+      
         private Guna.UI2.WinForms.Guna2Panel panellll;
         private Guna.UI2.WinForms.Guna2Panel ppp;
         private Guna.UI2.WinForms.Guna2Panel panelfullinventory;

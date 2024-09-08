@@ -28,23 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tittle = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.Label();
             this.ok = new Guna.UI2.WinForms.Guna2TileButton();
             this.messagepic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.messagepic)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 153);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(323, 11);
-            this.guna2Panel1.TabIndex = 0;
             // 
             // tittle
             // 
@@ -81,7 +70,7 @@
             this.ok.FillColor = System.Drawing.Color.White;
             this.ok.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ok.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ok.Location = new System.Drawing.Point(112, 103);
+            this.ok.Location = new System.Drawing.Point(135, 90);
             this.ok.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ok.Name = "ok";
             this.ok.PressedColor = System.Drawing.Color.Transparent;
@@ -107,12 +96,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(323, 164);
+            this.ClientSize = new System.Drawing.Size(323, 174);
             this.Controls.Add(this.tittle);
             this.Controls.Add(this.messagepic);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.message);
-            this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -127,11 +115,9 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TileButton ok;
         public System.Windows.Forms.Label tittle;
         public System.Windows.Forms.Label message;
         public System.Windows.Forms.PictureBox messagepic;
+        public Guna.UI2.WinForms.Guna2TileButton ok;
     }
 }

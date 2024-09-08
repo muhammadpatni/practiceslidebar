@@ -278,7 +278,7 @@ namespace practiceslidebar
                 if (is_valid())
                 {
                     con.Open();
-                    string query = "insert into Inventory2 (id,name,category,quantity,unitprice,mansufacturer,daterecieved,expirydate) values (@id,@name,@category,@quantity,@unitprice,@manufacturer,@daterecieved,@expirydate)";
+                    string query = "insert into Inventory2 (id,name,category,quantity,unitprice,manufacturer,daterecieved,expirydate) values (@id,@name,@category,@quantity,@unitprice,@manufacturer,@daterecieved,@expirydate)";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@id", int.Parse(txtid.Text));
                     cmd.Parameters.AddWithValue("@name", txtname.Text);

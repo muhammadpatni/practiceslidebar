@@ -34,7 +34,6 @@
             this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnemployee_invoices = new Guna.UI.WinForms.GunaButton();
-            this.btnemployee_bills = new Guna.UI.WinForms.GunaButton();
             this.btnemployee_customer = new Guna.UI.WinForms.GunaButton();
             this.panellogo = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -67,6 +66,7 @@
             this.panelside.Name = "panelside";
             this.panelside.Size = new System.Drawing.Size(214, 647);
             this.panelside.TabIndex = 4;
+            this.panelside.Paint += new System.Windows.Forms.PaintEventHandler(this.panelside_Paint);
             // 
             // panel2
             // 
@@ -111,12 +111,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnemployee_invoices);
-            this.panel1.Controls.Add(this.btnemployee_bills);
             this.panel1.Controls.Add(this.btnemployee_customer);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 190);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 144);
+            this.panel1.Size = new System.Drawing.Size(214, 89);
             this.panel1.TabIndex = 1;
             // 
             // btnemployee_invoices
@@ -145,39 +144,9 @@
             this.btnemployee_invoices.OnPressedColor = System.Drawing.Color.Black;
             this.btnemployee_invoices.Size = new System.Drawing.Size(214, 48);
             this.btnemployee_invoices.TabIndex = 7;
-            this.btnemployee_invoices.Text = "INVOICES";
+            this.btnemployee_invoices.Text = "CUSTOMER";
             this.btnemployee_invoices.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnemployee_invoices.Click += new System.EventHandler(this.btnadmin_stock_Click);
-            // 
-            // btnemployee_bills
-            // 
-            this.btnemployee_bills.AnimationHoverSpeed = 0.07F;
-            this.btnemployee_bills.AnimationSpeed = 0.03F;
-            this.btnemployee_bills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnemployee_bills.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnemployee_bills.BorderColor = System.Drawing.Color.Black;
-            this.btnemployee_bills.CausesValidation = false;
-            this.btnemployee_bills.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnemployee_bills.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnemployee_bills.FocusedColor = System.Drawing.Color.Empty;
-            this.btnemployee_bills.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnemployee_bills.ForeColor = System.Drawing.Color.White;
-            this.btnemployee_bills.Image = null;
-            this.btnemployee_bills.ImageOffsetX = 6;
-            this.btnemployee_bills.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnemployee_bills.Location = new System.Drawing.Point(0, 96);
-            this.btnemployee_bills.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnemployee_bills.Name = "btnemployee_bills";
-            this.btnemployee_bills.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnemployee_bills.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnemployee_bills.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnemployee_bills.OnHoverImage = null;
-            this.btnemployee_bills.OnPressedColor = System.Drawing.Color.Black;
-            this.btnemployee_bills.Size = new System.Drawing.Size(214, 48);
-            this.btnemployee_bills.TabIndex = 6;
-            this.btnemployee_bills.Text = "BILL";
-            this.btnemployee_bills.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnemployee_bills.Click += new System.EventHandler(this.btnadmin_employee_Click);
             // 
             // btnemployee_customer
             // 
@@ -205,7 +174,7 @@
             this.btnemployee_customer.OnPressedColor = System.Drawing.Color.Black;
             this.btnemployee_customer.Size = new System.Drawing.Size(214, 48);
             this.btnemployee_customer.TabIndex = 5;
-            this.btnemployee_customer.Text = "CUSTOMER";
+            this.btnemployee_customer.Text = "BILL";
             this.btnemployee_customer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnemployee_customer.Click += new System.EventHandler(this.btnadmin_inventory_Click);
             // 
@@ -412,7 +381,6 @@
         private Guna.UI.WinForms.GunaButton btnlogout;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaButton btnemployee_invoices;
-        private Guna.UI.WinForms.GunaButton btnemployee_bills;
         private Guna.UI.WinForms.GunaButton btnemployee_customer;
         private System.Windows.Forms.Panel panellogo;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
