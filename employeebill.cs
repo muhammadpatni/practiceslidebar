@@ -38,6 +38,15 @@ namespace practiceslidebar
             ad.Fill(dt);
             inventory.DataSource = dt;
         }
+        public void interfaceadjustment()
+        {
+            inventory.Columns["name"].Width = 120;
+            inventory.Columns["quantity"].Width = 80;
+            inventory.Columns["category"].Width = 140;
+            inventory.Columns["unitprice"].Width = 80;
+            inventory.Columns["manufacturer"].Width = 120;
+            inventory.Columns["status"].Width = 120;
+        }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Image image = Image.FromFile("C:\\Users\\HP\\Downloads\\LOGO.png");
@@ -155,6 +164,7 @@ namespace practiceslidebar
             {
                 getinventory();
             txtinnumber.Text =i.ToString();
+            interfaceadjustment();
                 PaperSize paperSize = new PaperSize("Custom", 410, 800); // 58mm = ~2.28 inches, 200 = ~2.28 * 100 (100th of an inch units)
                 printDocument1.DefaultPageSettings.PaperSize = paperSize;
                 printDocument1.DefaultPageSettings.Margins = new Margins(0, 0, 0,0);
@@ -175,6 +185,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                inventory.DataSource = dataTable;
+                interfaceadjustment();
 
             }
             else
