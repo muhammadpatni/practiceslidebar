@@ -15,8 +15,9 @@ namespace practiceslidebar
         public ownerview()
         {
             InitializeComponent();
+            form_manager.ownerview = this;
         }
-
+        public bool logic = true;
         public void loadform(object Form)
         {
 
@@ -89,10 +90,29 @@ namespace practiceslidebar
             if (WindowState==FormWindowState.Normal)
             {
                 WindowState=FormWindowState.Maximized;
+                logic = false;
+                if(form_manager.ownerInventory!=null)
+                {
+                    form_manager.ownerInventory.interfaceadjustment();
+                }
+                if (form_manager.Owner_Employees != null)
+                {
+                    form_manager.Owner_Employees.interfaceadjustment();
+                }
+
             }
             else 
             {
                      WindowState = FormWindowState.Normal;
+                logic = true;
+                if (form_manager.ownerInventory != null)
+                {
+                    form_manager.ownerInventory.interfaceadjustment();
+                }
+                if (form_manager.Owner_Employees != null)
+                {
+                    form_manager.Owner_Employees.interfaceadjustment();
+                }
             }
         }
 

@@ -79,15 +79,20 @@ namespace practiceslidebar
             {
                 loadform(new login2());
                 form_manager.employeelogin.changeuser("owner");
+                form_manager.employeelogin.txtpassword.Focus();
             }
             else if (combouser.Text =="admin")
             {
                 loadform(new login2());
                 form_manager.employeelogin.changeuser("admin");
+                form_manager.employeelogin.txtpassword.Focus();
+
             }
             else if (combouser.Text == "employee")
             {
                 loadform(new login2());
+                form_manager.employeelogin.txtusername.Focus();
+
             }
 
 

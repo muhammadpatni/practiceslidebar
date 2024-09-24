@@ -80,12 +80,14 @@ namespace practiceslidebar
                 {
                     i = 1;
                     form_manager.employeebill.txtcusid.Text= i.ToString();
+                    form_manager.employeebill.txtinnumber.Text = i.ToString();
                 }
                 else
                 {
                     i = Convert.ToInt32(sdr["id"]) + 1;
 
                     form_manager.employeebill.txtcusid.Text = i.ToString();
+                    form_manager.employeebill.txtinnumber.Text = i.ToString();
                 }
             }
             con.Close();
@@ -95,6 +97,7 @@ namespace practiceslidebar
 
         private void btnadmin_stock_Click(object sender, EventArgs e)
         {
+            loadform(new employeecustomer());
             btnemployee_invoices.Location = new Point(10, 48);
             btnemployee_invoices.Size = new Size(204, 48);
             btnemployee_customer.Location = new Point(0, 0);

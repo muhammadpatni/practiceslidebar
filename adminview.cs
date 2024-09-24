@@ -18,7 +18,7 @@ namespace practiceslidebar
             InitializeComponent();
             form_manager.adminview=this;
         }
-
+        public bool logic = true;
         public void loadform(object Form)
         {
 
@@ -46,11 +46,41 @@ namespace practiceslidebar
             if (WindowState == FormWindowState.Normal)
             {
                 isvalid = true;
+                logic = false;
+                if (form_manager.adminInventory != null)
+                {
+                    form_manager.adminInventory.interfaceadjustment();
+                    form_manager.adminInventory.interfaceadjustment1();
+                }
+                if (form_manager.adminempolyee != null)
+                {
+                    form_manager.adminempolyee.interfaceadjustment();
+                    form_manager.adminempolyee.interfaceadjustment1();
+                }
+                if (form_manager.adminoutofstock != null)
+                {
+                    form_manager.adminoutofstock.interfaceadjustment();
+                }
                 isvalid1 = false;
                 WindowState = FormWindowState.Maximized; 
             }
             else
             {
+                logic = true;
+                if (form_manager.adminInventory != null)
+                {
+                    form_manager.adminInventory.interfaceadjustment();
+                    form_manager.adminInventory.interfaceadjustment1();
+                }
+                if (form_manager.adminempolyee != null)
+                {
+                    form_manager.adminempolyee.interfaceadjustment();
+                    form_manager.adminempolyee.interfaceadjustment1();
+                }
+                if (form_manager.adminoutofstock != null)
+                {
+                    form_manager.adminoutofstock.interfaceadjustment();
+                }
                 isvalid = false;
                 isvalid1 = true;
                 WindowState = FormWindowState.Normal;

@@ -21,7 +21,69 @@ namespace practiceslidebar
             InitializeComponent();
             form_manager.adminInventory = this;
         }
-
+        private void getinventoryrecord()
+        {
+            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ";
+            SqlDataAdapter ad = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            ownerinventoryview.DataSource = dt;
+            fullinventoryview.DataSource = dt;
+        }
+        public void interfaceadjustment()
+        {
+            if (form_manager.adminview.logic)
+            {
+                ownerinventoryview.Columns["id"].Width = 60;
+                ownerinventoryview.Columns["name"].Width = 130;
+                ownerinventoryview.Columns["quantity"].Width = 80;
+                ownerinventoryview.Columns["category"].Width = 130;
+                ownerinventoryview.Columns["unitprice"].Width = 90;
+                ownerinventoryview.Columns["manufacturer"].Width = 130;
+                ownerinventoryview.Columns["daterecieved"].Width = 130;
+                ownerinventoryview.Columns["expirydate"].Width = 130;
+                ownerinventoryview.Columns["status"].Width = 110;
+            }
+            else
+            {
+                ownerinventoryview.Columns["id"].Width = 70;
+                ownerinventoryview.Columns["name"].Width = 140;
+                ownerinventoryview.Columns["quantity"].Width = 90;
+                ownerinventoryview.Columns["category"].Width = 140;
+                ownerinventoryview.Columns["unitprice"].Width = 100;
+                ownerinventoryview.Columns["manufacturer"].Width = 140;
+                ownerinventoryview.Columns["daterecieved"].Width = 140;
+                ownerinventoryview.Columns["expirydate"].Width = 140;
+                ownerinventoryview.Columns["status"].Width = 120;
+            }
+        }
+        public void interfaceadjustment1()
+        {
+            if (form_manager.adminview.logic)
+            {
+                fullinventoryview.Columns["id"].Width = 60;
+                fullinventoryview.Columns["name"].Width = 130;
+                fullinventoryview.Columns["quantity"].Width = 80;
+                fullinventoryview .Columns["category"].Width = 130;
+                fullinventoryview.Columns["unitprice"].Width = 90;
+                fullinventoryview.Columns["manufacturer"].Width = 130;
+                fullinventoryview.Columns["daterecieved"].Width = 130;
+                fullinventoryview.Columns["expirydate"].Width = 130;
+                fullinventoryview.Columns["status"].Width = 110;
+            }
+            else
+            {
+                fullinventoryview.Columns["id"].Width = 70;
+                fullinventoryview.Columns["name"].Width = 140;
+                fullinventoryview.Columns["quantity"].Width = 90;
+                fullinventoryview.Columns["category"].Width = 140;
+                fullinventoryview.Columns["unitprice"].Width = 100;
+                fullinventoryview.Columns["manufacturer"].Width = 140;
+                fullinventoryview.Columns["daterecieved"].Width = 140;
+                fullinventoryview.Columns["expirydate"].Width = 140;
+                fullinventoryview.Columns["status"].Width = 120;
+            }
+        }
 
         void reset()
         {
@@ -33,16 +95,6 @@ namespace practiceslidebar
             txtunitprice.Clear();
             daterecieved.Value = DateTime.Now;
             expirydate.Value = DateTime.Now;
-        }
-
-        private void getinventoryrecord()
-        {
-            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ";
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            ownerinventoryview.DataSource = dt;
-            fullinventoryview.DataSource = dt;
         }
 
         private void admininventory_Load(object sender, EventArgs e)
@@ -59,6 +111,7 @@ namespace practiceslidebar
 
             ppp.Visible = false;
             getinventoryrecord();
+            interfaceadjustment();
             reset();
             paneleditor.Visible = false;
             panelfullinventory.Visible = false;
@@ -95,6 +148,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 ownerinventoryview.DataSource = dataTable;
+                interfaceadjustment();
 
             }
             else
@@ -118,6 +172,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 ownerinventoryview.DataSource = dataTable;
+                interfaceadjustment();
 
             }
             else
@@ -510,6 +565,7 @@ namespace practiceslidebar
             panel4.Visible = false;
             panelfullinventory.Visible = true;
             panelfullinventory.Dock = DockStyle.Fill;
+            interfaceadjustment1();
             reset();
 
         }
@@ -538,6 +594,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 fullinventoryview.DataSource = dataTable;
+                interfaceadjustment1();
 
             }
             else
@@ -561,6 +618,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 fullinventoryview.DataSource = dataTable;
+                interfaceadjustment1();
 
             }
             else
@@ -628,7 +686,6 @@ namespace practiceslidebar
 
             return true;
         }
-
         private void ownerinventoryview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -654,21 +711,6 @@ namespace practiceslidebar
                 }
 
             }
-        }
-
-        private void ownerinventoryview_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void paneleditor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

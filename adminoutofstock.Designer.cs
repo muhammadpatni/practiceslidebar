@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelfullinventory = new Guna.UI2.WinForms.Guna2Panel();
-            this.inventoryoutofstock = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -41,9 +40,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.search = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.inventoryoutofstock = new System.Windows.Forms.DataGridView();
             this.panelfullinventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryoutofstock)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryoutofstock)).BeginInit();
             this.SuspendLayout();
             // 
             // panelfullinventory
@@ -56,48 +56,6 @@
             this.panelfullinventory.Name = "panelfullinventory";
             this.panelfullinventory.Size = new System.Drawing.Size(1047, 541);
             this.panelfullinventory.TabIndex = 28;
-            // 
-            // inventoryoutofstock
-            // 
-            this.inventoryoutofstock.AllowUserToAddRows = false;
-            this.inventoryoutofstock.AllowUserToDeleteRows = false;
-            this.inventoryoutofstock.BackgroundColor = System.Drawing.Color.White;
-            this.inventoryoutofstock.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.inventoryoutofstock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inventoryoutofstock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.inventoryoutofstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.inventoryoutofstock.DefaultCellStyle = dataGridViewCellStyle8;
-            this.inventoryoutofstock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inventoryoutofstock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.inventoryoutofstock.Location = new System.Drawing.Point(0, 0);
-            this.inventoryoutofstock.Margin = new System.Windows.Forms.Padding(10);
-            this.inventoryoutofstock.Name = "inventoryoutofstock";
-            this.inventoryoutofstock.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inventoryoutofstock.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.inventoryoutofstock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.inventoryoutofstock.Size = new System.Drawing.Size(1047, 471);
-            this.inventoryoutofstock.TabIndex = 60;
             // 
             // panel2
             // 
@@ -113,6 +71,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1047, 70);
             this.panel2.TabIndex = 59;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -243,6 +202,49 @@
             this.label15.TabIndex = 33;
             this.label15.Text = "Search";
             // 
+            // inventoryoutofstock
+            // 
+            this.inventoryoutofstock.AllowUserToAddRows = false;
+            this.inventoryoutofstock.AllowUserToDeleteRows = false;
+            this.inventoryoutofstock.BackgroundColor = System.Drawing.Color.White;
+            this.inventoryoutofstock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.inventoryoutofstock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.inventoryoutofstock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.inventoryoutofstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.inventoryoutofstock.DefaultCellStyle = dataGridViewCellStyle2;
+            this.inventoryoutofstock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inventoryoutofstock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.inventoryoutofstock.Location = new System.Drawing.Point(0, 0);
+            this.inventoryoutofstock.Margin = new System.Windows.Forms.Padding(10);
+            this.inventoryoutofstock.MultiSelect = false;
+            this.inventoryoutofstock.Name = "inventoryoutofstock";
+            this.inventoryoutofstock.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.inventoryoutofstock.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.inventoryoutofstock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.inventoryoutofstock.Size = new System.Drawing.Size(1047, 471);
+            this.inventoryoutofstock.TabIndex = 60;
+            // 
             // adminoutofstock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,9 +257,9 @@
             this.Text = "adminoutofstock";
             this.Load += new System.EventHandler(this.adminoutofstock_Load);
             this.panelfullinventory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryoutofstock)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryoutofstock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,7 +267,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel panelfullinventory;
-        private System.Windows.Forms.DataGridView inventoryoutofstock;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
@@ -274,5 +275,6 @@
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2TextBox search;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView inventoryoutofstock;
     }
 }

@@ -107,6 +107,7 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(300, 43);
             this.txtusername.TabIndex = 14;
+            this.txtusername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtusername_KeyDown);
             // 
             // label1
             // 
@@ -164,6 +165,8 @@
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(300, 43);
             this.txtpassword.TabIndex = 20;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged_1);
+            this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             // 
             // login2
             // 

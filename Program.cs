@@ -16,7 +16,7 @@ namespace practiceslidebar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new employeeview());
+            Application.Run(new login());
         }
     }
 }

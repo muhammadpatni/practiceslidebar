@@ -39,6 +39,56 @@ namespace practiceslidebar
             ownerinventoryview.DataSource = dt;
             fullinventoryview.DataSource = dt;
         }
+        public void interfaceadjustment()
+        {
+            if (form_manager.adminview.logic)
+            {
+                ownerinventoryview.Columns["id"].Width = 70;
+                ownerinventoryview.Columns["name"].Width = 140;
+                ownerinventoryview.Columns["email"].Width = 210;
+                ownerinventoryview.Columns["contact"].Width = 130;
+                ownerinventoryview.Columns["position"].Width = 100;
+                ownerinventoryview.Columns["salary"].Width = 100;
+                ownerinventoryview.Columns["username"].Width = 120;
+                ownerinventoryview.Columns["password"].Width = 120;
+            }
+            else
+            {
+                ownerinventoryview.Columns["id"].Width = 80;
+                ownerinventoryview.Columns["name"].Width = 150;
+                ownerinventoryview.Columns["email"].Width = 220;
+                ownerinventoryview.Columns["contact"].Width = 140;
+                ownerinventoryview.Columns["position"].Width = 110;
+                ownerinventoryview.Columns["salary"].Width = 110;
+                ownerinventoryview.Columns["username"].Width = 130;
+                ownerinventoryview.Columns["password"].Width = 130;
+            }
+        }
+        public void interfaceadjustment1()
+        {
+            if (form_manager.adminview.logic)
+            {
+                fullinventoryview.Columns["id"].Width = 70;
+                fullinventoryview.Columns["name"].Width = 140;
+                fullinventoryview.Columns["email"].Width = 210;
+                fullinventoryview.Columns["contact"].Width = 130;
+                fullinventoryview.Columns["position"].Width = 100;
+                fullinventoryview.Columns["salary"].Width = 100;
+                fullinventoryview.Columns["username"].Width = 120;
+                fullinventoryview.Columns["password"].Width = 120;
+            }
+            else
+            {
+                fullinventoryview.Columns["id"].Width = 80;
+                fullinventoryview.Columns["name"].Width = 150;
+                fullinventoryview.Columns["email"].Width = 220;
+                fullinventoryview.Columns["contact"].Width = 140;
+                fullinventoryview.Columns["position"].Width = 110;
+                fullinventoryview.Columns["salary"].Width = 110;
+                fullinventoryview.Columns["username"].Width = 130;
+                fullinventoryview.Columns["password"].Width = 130;
+            }
+        }
         private void adminempolyee_Load(object sender, EventArgs e)
         {
             if (form_manager.adminview.isvalid1)
@@ -53,6 +103,7 @@ namespace practiceslidebar
 
             ppp.Visible = false;
             getinventoryrecord();
+            interfaceadjustment();
             reset();
             paneleditor.Visible = false;
             panelfullinventory.Visible = false;
@@ -183,6 +234,7 @@ namespace practiceslidebar
             panel4.Visible = false;
             panelfullinventory.Visible = true;
             panelfullinventory.Dock = DockStyle.Fill;
+            interfaceadjustment1();
             reset();
         }
         private void btneditorclear_Click(object sender, EventArgs e)
@@ -339,23 +391,6 @@ namespace practiceslidebar
                 form_manager.messagebox.tittle.Text = "";
                 form_manager.messagebox.message.Text = "no record found";
                 fullinventoryview.DataSource = null;
-            }
-        }
-
-        private void ownerinventoryview_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow selectedRow = ownerinventoryview.Rows[e.RowIndex];
-                if (btneditoroperator.Text != "Add")
-                { txtid.Text = selectedRow.Cells[0].Value.ToString(); }
-                txtname.Text = selectedRow.Cells[1].Value.ToString();
-                txtemail.Text = selectedRow.Cells[2].Value.ToString();
-                txtcontact.Text = selectedRow.Cells[3].Value.ToString();
-                combocategory.SelectedItem = selectedRow.Cells[4].Value.ToString();
-                txtsalary.Text = selectedRow.Cells[5].Value.ToString();
-                txtusername.Text = selectedRow.Cells[6].Value.ToString();
-                txtpassword.Text = selectedRow.Cells[7].Value.ToString();
             }
         }
 
@@ -579,10 +614,24 @@ namespace practiceslidebar
                 form_manager.messagebox.message.Text = "password is required";
                 return false;
             }
-           
-
+          
             return true;
         }
-
+        private void ownerinventoryview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = ownerinventoryview.Rows[e.RowIndex];
+                if (btneditoroperator.Text != "Add")
+                { txtid.Text = selectedRow.Cells[0].Value.ToString(); }
+                txtname.Text = selectedRow.Cells[1].Value.ToString();
+                txtemail.Text = selectedRow.Cells[2].Value.ToString();
+                txtcontact.Text = selectedRow.Cells[3].Value.ToString();
+                combocategory.SelectedItem = selectedRow.Cells[4].Value.ToString();
+                txtsalary.Text = selectedRow.Cells[5].Value.ToString();
+                txtusername.Text = selectedRow.Cells[6].Value.ToString();
+                txtpassword.Text = selectedRow.Cells[7].Value.ToString();
+            }
+        }
     }
 }

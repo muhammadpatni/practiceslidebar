@@ -40,7 +40,7 @@ namespace practiceslidebar
            this.temp = ptemp;
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
+        void performbuttonlogin()
         {
             if (temp == "owner")
             {
@@ -101,6 +101,12 @@ namespace practiceslidebar
             }
         }
 
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            performbuttonlogin();
+            
+        }
+
         private void txtpassword_TextChanged(object sender, EventArgs e)
         {
 
@@ -119,6 +125,27 @@ namespace practiceslidebar
             else
             {
                 txtpassword.UseSystemPasswordChar=true;
+            }
+        }
+
+        private void txtusername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                txtpassword.Focus();
+            }
+        }
+
+        private void txtpassword_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                performbuttonlogin();
             }
         }
     }

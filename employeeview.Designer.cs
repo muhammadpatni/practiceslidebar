@@ -112,8 +112,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnemployee_invoices);
             this.panel1.Controls.Add(this.btnemployee_customer);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 190);
+            this.panel1.Location = new System.Drawing.Point(1, 215);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 89);
             this.panel1.TabIndex = 1;
@@ -134,7 +133,7 @@
             this.btnemployee_invoices.Image = null;
             this.btnemployee_invoices.ImageOffsetX = 6;
             this.btnemployee_invoices.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnemployee_invoices.Location = new System.Drawing.Point(0, 48);
+            this.btnemployee_invoices.Location = new System.Drawing.Point(0, 41);
             this.btnemployee_invoices.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnemployee_invoices.Name = "btnemployee_invoices";
             this.btnemployee_invoices.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));

@@ -17,6 +17,7 @@ namespace practiceslidebar
         public adminoutofstock()
         {
             InitializeComponent();
+            form_manager.adminoutofstock = this;
         }
         private void getinventoryrecord()
         {
@@ -26,7 +27,33 @@ namespace practiceslidebar
             ad.Fill(dt);
             inventoryoutofstock.DataSource = dt;
         }
-
+        public void interfaceadjustment()
+        {
+            if (form_manager.adminview.logic)
+            {
+                inventoryoutofstock.Columns["id"].Width = 60;
+                inventoryoutofstock.Columns["name"].Width = 130;
+                inventoryoutofstock.Columns["quantity"].Width = 80;
+                inventoryoutofstock.Columns["category"].Width = 130;
+                inventoryoutofstock.Columns["unitprice"].Width = 90;
+                inventoryoutofstock.Columns["manufacturer"].Width = 130;
+                inventoryoutofstock.Columns["daterecieved"].Width = 130;
+                inventoryoutofstock.Columns["expirydate"].Width = 130;
+                inventoryoutofstock.Columns["status"].Width = 110;
+            }
+            else
+            {
+                inventoryoutofstock.Columns["id"].Width = 70;
+                inventoryoutofstock.Columns["name"].Width = 140;
+                inventoryoutofstock.Columns["quantity"].Width = 90;
+                inventoryoutofstock.Columns["category"].Width = 140;
+                inventoryoutofstock.Columns["unitprice"].Width = 100;
+                inventoryoutofstock.Columns["manufacturer"].Width = 140;
+                inventoryoutofstock.Columns["daterecieved"].Width = 140;
+                inventoryoutofstock.Columns["expirydate"].Width = 140;
+                inventoryoutofstock.Columns["status"].Width = 120;
+            }
+        }
 
         private void search_TextChanged(object sender, EventArgs e)
         {
@@ -38,6 +65,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 inventoryoutofstock.DataSource = dataTable;
+                interfaceadjustment();
 
             }
             else
@@ -60,7 +88,8 @@ namespace practiceslidebar
 
         private void adminoutofstock_Load(object sender, EventArgs e)
         {
-            getinventoryrecord();
+            getinventoryrecord(); 
+            interfaceadjustment();
         }
 
         private void combosort_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,6 +102,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 inventoryoutofstock.DataSource = dataTable;
+                interfaceadjustment();
 
             }
             else
@@ -84,6 +114,11 @@ namespace practiceslidebar
                 form_manager.messagebox.message.Text = "no record found";
                 inventoryoutofstock.DataSource = null;
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
