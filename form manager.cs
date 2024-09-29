@@ -19,6 +19,9 @@ namespace practiceslidebar
         public static employeebill employeebill { get; set;}
         public static Owner_Employees Owner_Employees { get; set; }
         public static ownerview ownerview { get; set; } 
+        public static employeecustomer employeecustomer { get; set; }
+        public static employeeview employeeview { get; set; }
+
         public static adminoutofstock adminoutofstock { get; set; } 
 
 

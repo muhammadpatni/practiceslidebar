@@ -311,6 +311,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 ownerinventoryview.DataSource = dataTable;
+                interfaceadjustment();
             }
             else
             {
@@ -332,6 +333,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 ownerinventoryview.DataSource = dataTable;
+                interfaceadjustment();
 
             }
             else
@@ -359,6 +361,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 fullinventoryview.DataSource = dataTable;
+                interfaceadjustment1();
 
             }
             else
@@ -381,6 +384,7 @@ namespace practiceslidebar
             if (dataTable.Rows.Count > 0)
             {
                 fullinventoryview.DataSource = dataTable;
+                interfaceadjustment1();
 
             }
             else

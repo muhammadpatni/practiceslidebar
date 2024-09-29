@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,6 +20,7 @@ namespace practiceslidebar
         public employeecustomer()
         {
             InitializeComponent();
+            form_manager.employeecustomer = this;
         }
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
 
@@ -37,9 +39,29 @@ namespace practiceslidebar
             customerview.Columns.Add(buttonColumn);
 
         }
+        public void interfaceadjustment()
+        {
+            if (form_manager.employeeview.logic)
+            {
+                customerview.Columns["id"].Width = 130;
+                customerview.Columns["name"].Width = 280;
+                customerview .Columns["amount"].Width = 200;
+                customerview .Columns["date"].Width = 220;
+                customerview.Columns["invoice"].Width = 170;   
+            }
+            else
+            {
+                customerview.Columns["id"].Width = 150;
+                customerview.Columns["name"].Width = 290;
+                customerview.Columns["amount"].Width = 230;
+                customerview.Columns["date"].Width = 230;
+                customerview.Columns["invoice"].Width = 180;
+            }
+        }
         private void employeecustomer_Load(object sender, EventArgs e)
         {
            getinventory();
+            interfaceadjustment();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -99,5 +121,48 @@ namespace practiceslidebar
             }
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnreset_Click(object sender, EventArgs e)
+        {
+            txtsearch.Clear();
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = "select id ,name, amount,date from customer where cast (id as varchar) like  @id +'%'";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@id", txtsearch.Text.Trim());
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            if (dataTable.Rows.Count > 0)
+            {
+                customerview.Columns.Remove("invoice");
+                customerview.DataSource = dataTable;
+                DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+                buttonColumn.HeaderText = "";
+                buttonColumn.Name = "invoice";
+                buttonColumn.Text = "invoice";
+                buttonColumn.UseColumnTextForButtonValue = true;
+                customerview.Columns.Add(buttonColumn);
+                interfaceadjustment();
+            }
+            else
+            {
+                messagebox m = new messagebox();
+                m.Show();
+                form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\exclamation-mark.png");
+                form_manager.messagebox.tittle.Text = "";
+                form_manager.messagebox.message.Text = "no record found";
+                customerview.DataSource = null;
+                //customerview.Columns.Remove("invoice");
+
+
+            }
+
+        }
     }
 }

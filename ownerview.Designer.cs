@@ -33,6 +33,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.btnownwe_inventory = new Guna.UI.WinForms.GunaButton();
             this.btnownwe_employee = new Guna.UI.WinForms.GunaButton();
             this.btnonwer_dash = new Guna.UI.WinForms.GunaButton();
@@ -65,9 +68,8 @@
             this.panelside.Location = new System.Drawing.Point(0, 0);
             this.panelside.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelside.Name = "panelside";
-            this.panelside.Size = new System.Drawing.Size(214, 647);
+            this.panelside.Size = new System.Drawing.Size(219, 647);
             this.panelside.TabIndex = 2;
-            this.panelside.Paint += new System.Windows.Forms.PaintEventHandler(this.panelside_Paint);
             // 
             // panel2
             // 
@@ -75,7 +77,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 578);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(214, 69);
+            this.panel2.Size = new System.Drawing.Size(219, 69);
             this.panel2.TabIndex = 10;
             // 
             // btnlogout
@@ -110,15 +112,49 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.btnownwe_inventory);
             this.panel1.Controls.Add(this.btnownwe_employee);
             this.panel1.Controls.Add(this.btnonwer_dash);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 190);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 144);
+            this.panel1.Size = new System.Drawing.Size(219, 144);
             this.panel1.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Snow;
+            this.panel7.ForeColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(0, 96);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(22, 48);
+            this.panel7.TabIndex = 36;
+            this.panel7.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Snow;
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(22, 48);
+            this.panel5.TabIndex = 35;
+            this.panel5.Visible = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Snow;
+            this.panel8.ForeColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(0, 48);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(22, 48);
+            this.panel8.TabIndex = 36;
+            this.panel8.Visible = false;
             // 
             // btnownwe_inventory
             // 
@@ -131,7 +167,7 @@
             this.btnownwe_inventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnownwe_inventory.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnownwe_inventory.FocusedColor = System.Drawing.Color.Empty;
-            this.btnownwe_inventory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnownwe_inventory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnownwe_inventory.ForeColor = System.Drawing.Color.White;
             this.btnownwe_inventory.Image = null;
             this.btnownwe_inventory.ImageOffsetX = 6;
@@ -139,11 +175,12 @@
             this.btnownwe_inventory.Location = new System.Drawing.Point(0, 48);
             this.btnownwe_inventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnownwe_inventory.Name = "btnownwe_inventory";
-            this.btnownwe_inventory.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_inventory.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnownwe_inventory.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.btnownwe_inventory.OnHoverBorderColor = System.Drawing.Color.DimGray;
             this.btnownwe_inventory.OnHoverForeColor = System.Drawing.Color.White;
             this.btnownwe_inventory.OnHoverImage = null;
-            this.btnownwe_inventory.OnPressedColor = System.Drawing.Color.Black;
+            this.btnownwe_inventory.OnPressedColor = System.Drawing.Color.White;
+            this.btnownwe_inventory.OnPressedDepth = 40;
             this.btnownwe_inventory.Size = new System.Drawing.Size(214, 48);
             this.btnownwe_inventory.TabIndex = 1;
             this.btnownwe_inventory.Text = "INVENTORY";
@@ -161,7 +198,7 @@
             this.btnownwe_employee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnownwe_employee.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnownwe_employee.FocusedColor = System.Drawing.Color.Empty;
-            this.btnownwe_employee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnownwe_employee.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnownwe_employee.ForeColor = System.Drawing.Color.White;
             this.btnownwe_employee.Image = null;
             this.btnownwe_employee.ImageOffsetX = 6;
@@ -169,14 +206,15 @@
             this.btnownwe_employee.Location = new System.Drawing.Point(0, 96);
             this.btnownwe_employee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnownwe_employee.Name = "btnownwe_employee";
-            this.btnownwe_employee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnownwe_employee.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnownwe_employee.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.btnownwe_employee.OnHoverBorderColor = System.Drawing.Color.DimGray;
             this.btnownwe_employee.OnHoverForeColor = System.Drawing.Color.White;
             this.btnownwe_employee.OnHoverImage = null;
-            this.btnownwe_employee.OnPressedColor = System.Drawing.Color.Black;
+            this.btnownwe_employee.OnPressedColor = System.Drawing.Color.White;
+            this.btnownwe_employee.OnPressedDepth = 40;
             this.btnownwe_employee.Size = new System.Drawing.Size(214, 48);
             this.btnownwe_employee.TabIndex = 2;
-            this.btnownwe_employee.Text = "EMPLOYEES DETAILS";
+            this.btnownwe_employee.Text = "EMPLOYEES DETAIL";
             this.btnownwe_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnownwe_employee.Click += new System.EventHandler(this.btnownwe_employee_Click);
             // 
@@ -184,14 +222,14 @@
             // 
             this.btnonwer_dash.AnimationHoverSpeed = 0.07F;
             this.btnonwer_dash.AnimationSpeed = 0.03F;
-            this.btnonwer_dash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(51)))));
+            this.btnonwer_dash.BackColor = System.Drawing.Color.Transparent;
             this.btnonwer_dash.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnonwer_dash.BorderColor = System.Drawing.Color.Black;
             this.btnonwer_dash.CausesValidation = false;
             this.btnonwer_dash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnonwer_dash.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnonwer_dash.FocusedColor = System.Drawing.Color.Empty;
-            this.btnonwer_dash.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnonwer_dash.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnonwer_dash.ForeColor = System.Drawing.Color.White;
             this.btnonwer_dash.Image = null;
             this.btnonwer_dash.ImageOffsetX = 6;
@@ -199,11 +237,12 @@
             this.btnonwer_dash.Location = new System.Drawing.Point(0, 0);
             this.btnonwer_dash.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnonwer_dash.Name = "btnonwer_dash";
-            this.btnonwer_dash.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnonwer_dash.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnonwer_dash.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.btnonwer_dash.OnHoverBorderColor = System.Drawing.Color.DimGray;
             this.btnonwer_dash.OnHoverForeColor = System.Drawing.Color.White;
             this.btnonwer_dash.OnHoverImage = null;
-            this.btnonwer_dash.OnPressedColor = System.Drawing.Color.Black;
+            this.btnonwer_dash.OnPressedColor = System.Drawing.Color.White;
+            this.btnonwer_dash.OnPressedDepth = 40;
             this.btnonwer_dash.Size = new System.Drawing.Size(214, 48);
             this.btnonwer_dash.TabIndex = 0;
             this.btnonwer_dash.Text = "DASHBOARD";
@@ -217,7 +256,7 @@
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(214, 190);
+            this.panellogo.Size = new System.Drawing.Size(219, 190);
             this.panellogo.TabIndex = 8;
             // 
             // guna2CirclePictureBox1
@@ -240,11 +279,12 @@
             this.paneltop.Controls.Add(this.btnmaximize);
             this.paneltop.Controls.Add(this.btnclose);
             this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltop.Location = new System.Drawing.Point(221, 0);
+            this.paneltop.Location = new System.Drawing.Point(226, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(1063, 58);
+            this.paneltop.Size = new System.Drawing.Size(1058, 58);
             this.paneltop.TabIndex = 3;
+            this.paneltop.Paint += new System.Windows.Forms.PaintEventHandler(this.paneltop_Paint);
             // 
             // btnminimize
             // 
@@ -263,7 +303,7 @@
             this.btnminimize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.ImageOffsetX = 6;
             this.btnminimize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnminimize.Location = new System.Drawing.Point(964, 0);
+            this.btnminimize.Location = new System.Drawing.Point(959, 0);
             this.btnminimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnminimize.Name = "btnminimize";
             this.btnminimize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -306,7 +346,7 @@
             this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnmaximize.ImageOffsetX = 6;
             this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnmaximize.Location = new System.Drawing.Point(997, 0);
+            this.btnmaximize.Location = new System.Drawing.Point(992, 0);
             this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnmaximize.Name = "btnmaximize";
             this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -336,7 +376,7 @@
             this.btnclose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnclose.ImageOffsetX = 6;
             this.btnclose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnclose.Location = new System.Drawing.Point(1030, 0);
+            this.btnclose.Location = new System.Drawing.Point(1025, 0);
             this.btnclose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnclose.Name = "btnclose";
             this.btnclose.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -355,11 +395,10 @@
             this.panelmain.Controls.Add(this.label3);
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Location = new System.Drawing.Point(221, 58);
+            this.panelmain.Location = new System.Drawing.Point(226, 58);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(1063, 589);
+            this.panelmain.Size = new System.Drawing.Size(1058, 589);
             this.panelmain.TabIndex = 4;
-            this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
             // 
             // label3
             // 
@@ -371,13 +410,11 @@
             this.label3.Size = new System.Drawing.Size(775, 65);
             this.label3.TabIndex = 33;
             this.label3.Text = "Please Select Any Option From Menu";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(214, 0);
+            this.panel3.Location = new System.Drawing.Point(219, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(7, 647);
             this.panel3.TabIndex = 35;
@@ -430,5 +467,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
     }
 }

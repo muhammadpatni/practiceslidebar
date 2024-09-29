@@ -46,6 +46,9 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnminimize = new Guna.UI.WinForms.GunaButton();
             this.paneltop = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,7 +68,7 @@
             this.panelside.Location = new System.Drawing.Point(0, 0);
             this.panelside.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelside.Name = "panelside";
-            this.panelside.Size = new System.Drawing.Size(214, 647);
+            this.panelside.Size = new System.Drawing.Size(219, 647);
             this.panelside.TabIndex = 3;
             // 
             // panel2
@@ -74,7 +77,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 547);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(214, 100);
+            this.panel2.Size = new System.Drawing.Size(219, 100);
             this.panel2.TabIndex = 10;
             // 
             // btnlogout
@@ -109,14 +112,17 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.btnadmin_stock);
             this.panel1.Controls.Add(this.btnadmin_employee);
             this.panel1.Controls.Add(this.btnadmin_inventory);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 190);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 144);
+            this.panel1.Size = new System.Drawing.Size(219, 144);
             this.panel1.TabIndex = 1;
             // 
             // btnadmin_stock
@@ -130,7 +136,7 @@
             this.btnadmin_stock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnadmin_stock.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnadmin_stock.FocusedColor = System.Drawing.Color.Empty;
-            this.btnadmin_stock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadmin_stock.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadmin_stock.ForeColor = System.Drawing.Color.White;
             this.btnadmin_stock.Image = null;
             this.btnadmin_stock.ImageOffsetX = 6;
@@ -145,7 +151,7 @@
             this.btnadmin_stock.OnPressedColor = System.Drawing.Color.Black;
             this.btnadmin_stock.Size = new System.Drawing.Size(214, 48);
             this.btnadmin_stock.TabIndex = 7;
-            this.btnadmin_stock.Text = "PRODUCT OUT OF STOCK";
+            this.btnadmin_stock.Text = "   PRODUCT OUT OF STOCK";
             this.btnadmin_stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnadmin_stock.Click += new System.EventHandler(this.btnadmin_stock_Click);
             // 
@@ -216,7 +222,7 @@
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(214, 190);
+            this.panellogo.Size = new System.Drawing.Size(219, 190);
             this.panellogo.TabIndex = 8;
             this.panellogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panellogo_Paint);
             // 
@@ -238,9 +244,9 @@
             this.panelmain.Controls.Add(this.label3);
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Location = new System.Drawing.Point(221, 67);
+            this.panelmain.Location = new System.Drawing.Point(226, 67);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(1063, 580);
+            this.panelmain.Size = new System.Drawing.Size(1058, 580);
             this.panelmain.TabIndex = 5;
             this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
             // 
@@ -259,7 +265,7 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(214, 0);
+            this.panel3.Location = new System.Drawing.Point(219, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(7, 647);
             this.panel3.TabIndex = 6;
@@ -281,7 +287,7 @@
             this.btnclose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnclose.ImageOffsetX = 6;
             this.btnclose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnclose.Location = new System.Drawing.Point(1030, 0);
+            this.btnclose.Location = new System.Drawing.Point(1025, 0);
             this.btnclose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnclose.Name = "btnclose";
             this.btnclose.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -311,7 +317,7 @@
             this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnmaximize.ImageOffsetX = 6;
             this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnmaximize.Location = new System.Drawing.Point(997, 0);
+            this.btnmaximize.Location = new System.Drawing.Point(992, 0);
             this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnmaximize.Name = "btnmaximize";
             this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -354,7 +360,7 @@
             this.btnminimize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.ImageOffsetX = 6;
             this.btnminimize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnminimize.Location = new System.Drawing.Point(964, 0);
+            this.btnminimize.Location = new System.Drawing.Point(959, 0);
             this.btnminimize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnminimize.Name = "btnminimize";
             this.btnminimize.OnHoverBaseColor = System.Drawing.Color.Gray;
@@ -375,11 +381,41 @@
             this.paneltop.Controls.Add(this.btnmaximize);
             this.paneltop.Controls.Add(this.btnclose);
             this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltop.Location = new System.Drawing.Point(221, 0);
+            this.paneltop.Location = new System.Drawing.Point(226, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(1063, 67);
+            this.paneltop.Size = new System.Drawing.Size(1058, 67);
             this.paneltop.TabIndex = 4;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Snow;
+            this.panel7.ForeColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(0, 96);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(22, 48);
+            this.panel7.TabIndex = 38;
+            this.panel7.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Snow;
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(22, 48);
+            this.panel5.TabIndex = 37;
+            this.panel5.Visible = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Snow;
+            this.panel8.ForeColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(0, 48);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(22, 48);
+            this.panel8.TabIndex = 39;
+            this.panel8.Visible = false;
             // 
             // adminview
             // 
@@ -427,5 +463,8 @@
         private Guna.UI.WinForms.GunaButton btnminimize;
         private System.Windows.Forms.Panel paneltop;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
     }
 }

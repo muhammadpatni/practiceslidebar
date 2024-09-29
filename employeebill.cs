@@ -138,7 +138,6 @@ namespace practiceslidebar
                         if (i==billitem.Rows.Count-1)
                         {
                             billitem.Rows.Add(txtquan.Text, name, price, txtamount.Text);
-                            discard.Rows.Add("Discard");
                             grandt += decimal.Parse(txtamount.Text);
                             lbgt.Text = grandt.ToString();
                             break;
@@ -154,7 +153,6 @@ namespace practiceslidebar
             else
             {    
                 billitem.Rows.Add(txtquan.Text, name, price, txtamount.Text);
-                discard.Rows.Add("Discard");
                 grandt += decimal.Parse(txtamount.Text);
                 lbgt.Text = grandt.ToString();
             }

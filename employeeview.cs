@@ -17,8 +17,9 @@ namespace practiceslidebar
         public employeeview()
         {
             InitializeComponent();
+            form_manager.employeeview=this;
         }
-
+        public bool logic = true;
         private void btnlogout_Click(object sender, EventArgs e)
         {
             login l = new login();
@@ -48,12 +49,24 @@ namespace practiceslidebar
         private void btnmaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
-            { 
+            {
+                logic = false;
+                if (form_manager.employeecustomer != null)
+                {
+                    form_manager.employeecustomer.interfaceadjustment();
+                }
                 WindowState = FormWindowState.Maximized;
+                
             }
             else
             {
+                logic = true;
+                if (form_manager.employeecustomer != null)
+                {
+                    form_manager.employeecustomer.interfaceadjustment();
+                }
                 WindowState = FormWindowState.Normal;
+                
             }
         }
 

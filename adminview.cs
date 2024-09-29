@@ -100,43 +100,91 @@ namespace practiceslidebar
         {
             Application.Exit();
         }
+        void interfacedesign()
+        {
 
-       
-
-        
-
+            if (btnadmin_inventory.BaseColor == Color.Snow)
+            {
+                btnadmin_inventory.OnHoverBaseColor = Color.Snow;
+                btnadmin_inventory.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnadmin_inventory.OnHoverBaseColor = Color.DimGray;
+                btnadmin_inventory.OnHoverForeColor = Color.White;
+            }
+            if (btnadmin_employee.BaseColor == Color.Snow)
+            {
+                btnadmin_employee.OnHoverBaseColor = Color.Snow;
+                btnadmin_employee.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnadmin_employee.OnHoverBaseColor = Color.DimGray;
+                btnadmin_employee.OnHoverForeColor = Color.White;
+            }
+            if (btnadmin_stock.BaseColor == Color.Snow)
+            {
+                btnadmin_stock.OnHoverBaseColor = Color.Snow;
+                btnadmin_stock.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnadmin_stock.OnHoverBaseColor = Color.DimGray;
+                btnadmin_stock.OnHoverForeColor = Color.White;
+            }
+        }
         private void btnadmin_stock_Click(object sender, EventArgs e)
-        {   
-            btnadmin_stock.Location = new Point(10, 48);
-            btnadmin_stock.Size = new Size(204, 48);
-            btnadmin_inventory.Location = new Point(0, 0);
-            btnadmin_employee.Location = new Point(0, 96);
-            btnadmin_employee.Size = new Size(214, 48);
-            btnadmin_inventory.Size = new Size(214, 48);
-
+        {
+            panel8.Visible = true;
+            panel5.Visible = false;
+            panel7.Visible = false;
+            btnadmin_stock.BaseColor = Color.Snow;
+            btnadmin_stock.Radius = 24;
+            btnadmin_stock.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_employee.Radius = 0;
+            btnadmin_employee.ForeColor = Color.White;
+            btnadmin_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_inventory.Radius = 0;
+            btnadmin_inventory.ForeColor = Color.White;
+            interfacedesign();
             loadform(new adminoutofstock());
         }
 
         private void btnadmin_employee_Click(object sender, EventArgs e)
         {
-            btnadmin_employee.Location = new Point(10, 96);
-            btnadmin_employee.Size = new Size(204, 48);
-            btnadmin_inventory.Location = new Point(0, 0);
-            btnadmin_stock.Location = new Point(0, 48);
-            btnadmin_stock.Size = new Size(214, 48);
-            btnadmin_inventory.Size = new Size(214, 48);
-
+            panel7.Visible = true;
+            panel5.Visible = false;
+            panel8.Visible = false;
+            btnadmin_employee.BaseColor = Color.Snow;
+            btnadmin_employee.Radius = 24;
+            btnadmin_employee.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_stock.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_stock.Radius = 0;
+            btnadmin_stock.ForeColor = Color.White;
+            btnadmin_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_inventory.Radius = 0;
+            btnadmin_inventory.ForeColor = Color.White;
+            interfacedesign();
             loadform(new adminempolyee());
         }
 
         private void btnadmin_inventory_Click(object sender, EventArgs e)
         {
-            btnadmin_inventory.Location = new Point(10, 0);
-            btnadmin_inventory.Size = new Size(204, 48);
-            btnadmin_employee.Location = new Point(0, 96);
-            btnadmin_stock.Location = new Point(0, 48);
-            btnadmin_employee.Size = new Size(214, 48);
-            btnadmin_stock.Size = new Size(214, 48);
+            panel5.Visible = true;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            btnadmin_inventory.BaseColor = Color.Snow;
+            btnadmin_inventory.Radius = 24;
+            btnadmin_inventory.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_employee.Radius = 0;
+            btnadmin_employee.ForeColor = Color.White;
+            btnadmin_stock.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_stock.Radius = 0;
+            btnadmin_stock.ForeColor = Color.White;
+            interfacedesign();
 
             loadform(new admininventory());
         }

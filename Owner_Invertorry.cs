@@ -32,7 +32,7 @@ namespace practiceslidebar
             ownerinventoryview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
         }
-        public  void interfaceadjustment()
+        public void interfaceadjustment()
         {
             if (form_manager.ownerview.logic)
             {
@@ -58,12 +58,6 @@ namespace practiceslidebar
                 ownerinventoryview.Columns["expirydate"].Width = 130;
                 ownerinventoryview.Columns["status"].Width = 130;
             }
-        }
-
-        private void ownerInventory_Load(object sender, EventArgs e)
-        {
-            getinventoryrecord();
-            interfaceadjustment();
         }
 
         private void btnreset_Click(object sender, EventArgs e)
@@ -121,23 +115,10 @@ namespace practiceslidebar
             }
         }
 
-        private void ownerinventoryview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ownerInventory_Load_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void ownerinventoryview_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void ownerinventoryview_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
-        {
+            getinventoryrecord();
+            interfaceadjustment();
 
         }
     }

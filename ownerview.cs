@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,45 +48,93 @@ namespace practiceslidebar
         {
             Application.Exit();
         }
+        void interfacedesign()
+        {
 
+            if (btnonwer_dash.BaseColor == Color.Snow)
+            {
+                btnonwer_dash.OnHoverBaseColor = Color.Snow;
+                btnonwer_dash.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnonwer_dash.OnHoverBaseColor = Color.DimGray;
+                btnonwer_dash.OnHoverForeColor = Color.White;
+            }
+            if (btnownwe_inventory.BaseColor == Color.Snow)
+            {
+                btnownwe_inventory.OnHoverBaseColor = Color.Snow;
+                btnownwe_inventory.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnownwe_inventory.OnHoverBaseColor = Color.DimGray;
+                btnownwe_inventory.OnHoverForeColor = Color.White;
+            }
+            if (btnownwe_employee.BaseColor == Color.Snow)
+            {
+                btnownwe_employee.OnHoverBaseColor = Color.Snow;
+                btnownwe_employee.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnownwe_employee.OnHoverBaseColor = Color.DimGray;
+                btnownwe_employee.OnHoverForeColor = Color.White;
+            }
+        }
         private void btnonwer_dash_Click(object sender, EventArgs e)
         {
-            btnonwer_dash.Location = new Point(10, 0);
-            btnonwer_dash.Size = new Size(204, 48);
-            btnownwe_employee.Location = new Point(0, 96);
-            btnownwe_inventory.Location = new Point(0,48);
-            btnownwe_employee.Size = new Size(214, 48);
-            btnownwe_inventory.Size = new Size(214, 48);
-
+            panel5.Visible = true;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            btnonwer_dash.BaseColor = Color.Snow;
+            btnonwer_dash.Radius = 24;
+            btnonwer_dash.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnownwe_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnownwe_inventory.Radius = 0;
+            btnownwe_inventory.ForeColor = Color.White;
+            btnownwe_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnownwe_employee.Radius = 0;
+            btnownwe_employee.ForeColor = Color.White;
+            interfacedesign();
             loadform(new Ownerdash());
         }
 
         private void btnownwe_inventory_Click(object sender, EventArgs e)
         {
-            btnownwe_inventory.Location = new Point(10, 48);
-            btnownwe_inventory.Size = new Size(204, 48);
-            btnonwer_dash.Location = new Point(0, 0);
-            btnownwe_employee.Location = new Point(0, 96);
-            btnownwe_employee.Size = new Size(214, 48);
-            btnonwer_dash.Size = new Size(214, 48);
-
+            panel8.Visible = true;
+            panel5.Visible = false;
+            panel7.Visible = false;
+            btnownwe_inventory.BaseColor = Color.Snow;
+            btnownwe_inventory.Radius = 24;
+            btnownwe_inventory.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnonwer_dash.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnonwer_dash.Radius = 0;
+            btnonwer_dash.ForeColor = Color.White;
+            btnownwe_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnownwe_employee.Radius = 0;
+            btnownwe_employee.ForeColor = Color.White;
+            interfacedesign();
             loadform(new ownerInventory());
         }
 
-
-
         private void btnownwe_employee_Click(object sender, EventArgs e)
         {
-            btnownwe_employee.Location = new Point(10, 96);
-            btnownwe_employee.Size = new Size(204, 48);
-            btnownwe_inventory.Location = new Point(0, 48);
-            btnonwer_dash.Location = new Point(0, 0);
-            btnonwer_dash.Size = new Size(214, 48);
-            btnownwe_inventory.Size = new Size(214, 48);
-
+            panel7.Visible = true;
+            panel5.Visible = false;
+            panel8.Visible = false;
+            btnownwe_employee.BaseColor = Color.Snow;
+            btnownwe_employee.Radius = 24;
+            btnownwe_employee.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnownwe_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnownwe_inventory.Radius = 0;
+            btnownwe_inventory.ForeColor = Color.White;
+            btnonwer_dash.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnonwer_dash.Radius = 0;
+            btnonwer_dash.ForeColor = Color.White;
+            interfacedesign();
             loadform(new Owner_Employees());
         }
-
         private void btnmaximize_Click(object sender, EventArgs e)
         {
             if (WindowState==FormWindowState.Normal)
@@ -99,7 +149,6 @@ namespace practiceslidebar
                 {
                     form_manager.Owner_Employees.interfaceadjustment();
                 }
-
             }
             else 
             {
@@ -121,17 +170,7 @@ namespace practiceslidebar
                 WindowState = FormWindowState.Minimized;
         }
 
-        private void panelmain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelside_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void paneltop_Paint(object sender, PaintEventArgs e)
         {
 
         }
