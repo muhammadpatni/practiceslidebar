@@ -32,10 +32,11 @@ namespace practiceslidebar
             ad.Fill(dt);
             customerview.DataSource = dt;
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
-            buttonColumn.HeaderText = "";        
+            buttonColumn.HeaderText = "Option";        
             buttonColumn.Name = "invoice";            
             buttonColumn.Text = "invoice";             
             buttonColumn.UseColumnTextForButtonValue = true;
+            buttonColumn.FlatStyle=FlatStyle.Flat;
             customerview.Columns.Add(buttonColumn);
 
         }

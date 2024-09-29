@@ -128,8 +128,8 @@ namespace practiceslidebar
                             billitem.Rows[i].Cells["Quantity"].Value = tquantity;
                             billitem.Rows[i].Cells["amount"].Value = tquantity * price;
                             grandt += decimal.Parse(billitem.Rows[i].Cells["amount"].Value.ToString());
-                            lbgt.Text = grandt.ToString();
-                           tquantity=0;
+                            txtgrandtotal.Text = "RS " + grandt.ToString();
+                            tquantity = 0;
                             break;
                         }
                     }
@@ -139,7 +139,7 @@ namespace practiceslidebar
                         {
                             billitem.Rows.Add(txtquan.Text, name, price, txtamount.Text);
                             grandt += decimal.Parse(txtamount.Text);
-                            lbgt.Text = grandt.ToString();
+                            txtgrandtotal.Text = "RS " + grandt.ToString();
                             break;
                         }
                         else
@@ -154,7 +154,7 @@ namespace practiceslidebar
             {    
                 billitem.Rows.Add(txtquan.Text, name, price, txtamount.Text);
                 grandt += decimal.Parse(txtamount.Text);
-                lbgt.Text = grandt.ToString();
+                txtgrandtotal.Text = "RS " + grandt.ToString();
             }
         }
 
@@ -438,6 +438,11 @@ namespace practiceslidebar
 
         }
 
+        private void txtgrandtotall_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtinnumber_TextChanged(object sender, EventArgs e)
         {
 
@@ -472,7 +477,7 @@ namespace practiceslidebar
             txtquan.Visible=false;
             billitem.Rows.Clear();
             grandt = 0;
-            lbgt.Text=grandt.ToString();
+            txtgrandtotal.Text = "RS " +grandt.ToString();
             getinventory();
         }
 
@@ -529,7 +534,7 @@ namespace practiceslidebar
                 con.Close();
                 getinventory();
                 grandt -=  Convert.ToDecimal(billitem.Rows[e.RowIndex].Cells[3].Value);
-                lbgt.Text = grandt.ToString();
+                txtgrandtotal .Text = "RS " +grandt.ToString();
                 billitem.Rows.RemoveAt(e.RowIndex);
             }
         }
