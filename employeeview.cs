@@ -74,15 +74,42 @@ namespace practiceslidebar
         {
             Application.Exit();
         }
+        void interfacedesign()
+        {
 
+            if (btnemployeebill.BaseColor == Color.Snow)
+            {
+                btnemployeebill.OnHoverBaseColor = Color.Snow;
+                btnemployeebill.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnemployeebill.OnHoverBaseColor = Color.DimGray;
+                btnemployeebill.OnHoverForeColor = Color.White;
+            }
+            if (btnemployeecustomer.BaseColor == Color.Snow)
+            {
+                btnemployeecustomer.OnHoverBaseColor = Color.Snow;
+                btnemployeecustomer.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnemployeecustomer.OnHoverBaseColor = Color.DimGray;
+                btnemployeecustomer.OnHoverForeColor = Color.White;
+            }
+        }
         private void btnadmin_inventory_Click(object sender, EventArgs e)
         {
             loadform(new employeebill());
-            btnemployee_customer.Location = new Point(10, 0);
-            btnemployee_customer.Size = new Size(204, 48);
-            btnemployee_invoices.Location = new Point(0, 48);
-            btnemployee_invoices.Size = new Size(214, 48);
-
+            panel8.Visible = false;
+            panel5.Visible = true;
+            btnemployeebill.BaseColor = Color.Snow;
+            btnemployeebill.Radius = 24;
+            btnemployeebill.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeecustomer.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeecustomer.Radius = 0;
+            btnemployeecustomer.ForeColor = Color.White;
+            interfacedesign();
             SqlCommand cmd = new SqlCommand("select max(id) as id from customer", con);
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
@@ -108,16 +135,21 @@ namespace practiceslidebar
            
         }
 
-        private void btnadmin_stock_Click(object sender, EventArgs e)
+        private void btnemployeecustomer_Click(object sender, EventArgs e)
         {
             loadform(new employeecustomer());
-            btnemployee_invoices.Location = new Point(10, 48);
-            btnemployee_invoices.Size = new Size(204, 48);
-            btnemployee_customer.Location = new Point(0, 0);
-            btnemployee_customer.Size = new Size(214, 48);
+            panel8.Visible = true;
+            panel5.Visible = false;
+            btnemployeecustomer.BaseColor = Color.Snow;
+            btnemployeecustomer.Radius = 24;
+            btnemployeecustomer.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeebill.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeebill.Radius = 0;
+            btnemployeebill.ForeColor = Color.White;
+            interfacedesign();
         }
 
-        private void panelside_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
