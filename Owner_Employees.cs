@@ -22,21 +22,11 @@ namespace practiceslidebar
 
         private void Owner_Employees_Load(object sender, EventArgs e)
         {
-            getinventoryrecord();
-            interfaceadjustment();
-        }
-
-        private void getinventoryrecord()
-        {
-            string query = "select id,name,email,contact,position,salary from employee where position !='owner'; ";
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            owneremployeeview.DataSource = dt;
+            getdatafromdatabase.getdata("select id,name,email,contact,position,salary from employee where position !='owner'; ", owneremployeeview);
             owneremployeeview.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
             owneremployeeview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            interfaceadjustment();
         }
-
         public void interfaceadjustment()
         {
             if (form_manager.ownerview.logic)
@@ -112,24 +102,5 @@ namespace practiceslidebar
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void owneremployeeview_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void ownerinventoryview_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

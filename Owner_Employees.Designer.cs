@@ -64,7 +64,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1063, 65);
             this.panel1.TabIndex = 24;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
@@ -252,7 +251,6 @@
             this.owneremployeeview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.owneremployeeview.Size = new System.Drawing.Size(1063, 524);
             this.owneremployeeview.TabIndex = 29;
-            this.owneremployeeview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ownerinventoryview_CellContentClick);
             // 
             // Owner_Employees
             // 

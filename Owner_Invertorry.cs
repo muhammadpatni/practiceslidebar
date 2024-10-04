@@ -20,18 +20,6 @@ namespace practiceslidebar
             InitializeComponent();
             form_manager.ownerInventory = this;
         }
-
-        private void getinventoryrecord()
-        {
-            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2";
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            ownerinventoryview.DataSource = dt;
-            ownerinventoryview.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
-            ownerinventoryview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-        }
         public void interfaceadjustment()
         {
             if (form_manager.ownerview.logic)
@@ -117,7 +105,9 @@ namespace practiceslidebar
 
         private void ownerInventory_Load_1(object sender, EventArgs e)
         {
-            getinventoryrecord();
+            getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2", ownerinventoryview);
+            ownerinventoryview.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
+            ownerinventoryview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             interfaceadjustment();
 
         }

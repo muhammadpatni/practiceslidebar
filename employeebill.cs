@@ -393,6 +393,7 @@ namespace practiceslidebar
                     billitem.Rows.Clear();
                     txtcusname.Focus();
                     grandt = 0;
+                    txtgrandtotal.Text = "RS";
                     billitem.Rows.Clear();
                 }
                 catch (Exception ex)

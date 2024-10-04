@@ -19,21 +19,13 @@ namespace practiceslidebar
             InitializeComponent();
             form_manager.adminoutofstock = this;
         }
-        private void getinventoryrecord()
-        {
-            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where quantity=0;";
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            inventoryoutofstock.DataSource = dt;
-        }
         public void interfaceadjustment()
         {
             if (form_manager.adminview.logic)
             {
                 inventoryoutofstock.Columns["id"].Width = 60;
                 inventoryoutofstock.Columns["name"].Width = 130;
-                inventoryoutofstock.Columns["quantity"].Width = 80;
+                inventoryoutofstock.Columns["quantity"].Width = 100;
                 inventoryoutofstock.Columns["category"].Width = 130;
                 inventoryoutofstock.Columns["unitprice"].Width = 90;
                 inventoryoutofstock.Columns["manufacturer"].Width = 130;
@@ -45,7 +37,7 @@ namespace practiceslidebar
             {
                 inventoryoutofstock.Columns["id"].Width = 70;
                 inventoryoutofstock.Columns["name"].Width = 140;
-                inventoryoutofstock.Columns["quantity"].Width = 90;
+                inventoryoutofstock.Columns["quantity"].Width = 100;
                 inventoryoutofstock.Columns["category"].Width = 140;
                 inventoryoutofstock.Columns["unitprice"].Width = 100;
                 inventoryoutofstock.Columns["manufacturer"].Width = 140;
@@ -88,7 +80,7 @@ namespace practiceslidebar
 
         private void adminoutofstock_Load(object sender, EventArgs e)
         {
-            getinventoryrecord(); 
+            getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where quantity=0;", inventoryoutofstock);
             interfaceadjustment();
         }
 
@@ -114,11 +106,6 @@ namespace practiceslidebar
                 form_manager.messagebox.message.Text = "no record found";
                 inventoryoutofstock.DataSource = null;
             }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

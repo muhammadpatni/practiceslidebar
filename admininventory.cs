@@ -21,15 +21,6 @@ namespace practiceslidebar
             InitializeComponent();
             form_manager.adminInventory = this;
         }
-        private void getinventoryrecord()
-        {
-            string query = "select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ";
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            ownerinventoryview.DataSource = dt;
-            fullinventoryview.DataSource = dt;
-        }
         public void interfaceadjustment()
         {
             if (form_manager.adminview.logic)
@@ -110,7 +101,7 @@ namespace practiceslidebar
             }
 
             ppp.Visible = false;
-            getinventoryrecord();
+            getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ", ownerinventoryview, fullinventoryview);
             interfaceadjustment();
             reset();
             paneleditor.Visible = false;
@@ -357,7 +348,8 @@ namespace practiceslidebar
                 }
                 con.Close();
              }
-                getinventoryrecord();   
+            getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ", ownerinventoryview, fullinventoryview);
+
         }
 
         private void btnreset_Click_1(object sender, EventArgs e)

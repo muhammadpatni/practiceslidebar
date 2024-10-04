@@ -30,15 +30,6 @@ namespace practiceslidebar
             txtusername.Clear();
             txtpassword.Clear();
         }
-        private void getinventoryrecord()
-        {
-            string query = "select id,name,email,contact,position,salary,username,password from employee where position!='owner'; ";
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            ownerinventoryview.DataSource = dt;
-            fullinventoryview.DataSource = dt;
-        }
         public void interfaceadjustment()
         {
             if (form_manager.adminview.logic)
@@ -102,7 +93,7 @@ namespace practiceslidebar
             }
 
             ppp.Visible = false;
-            getinventoryrecord();
+            getdatafromdatabase.getdata("select id,name,email,contact,position,salary,username,password from employee where position!='owner'; ", ownerinventoryview, fullinventoryview);
             interfaceadjustment();
             reset();
             paneleditor.Visible = false;
@@ -547,7 +538,7 @@ namespace practiceslidebar
                 }
                 con.Close();
             }
-            getinventoryrecord();
+            getdatafromdatabase.getdata("select id,name,email,contact,position,salary,username,password from employee where position!='owner'; ", ownerinventoryview, fullinventoryview);
         }
         private bool is_valid()
         {

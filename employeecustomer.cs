@@ -26,11 +26,7 @@ namespace practiceslidebar
 
         void getinventory()
         {
-            string query = "select id ,name, amount,date from customer";
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            customerview.DataSource = dt;
+            getdatafromdatabase.getdata("select id ,name, amount,date from customer", customerview);
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
             buttonColumn.HeaderText = "Option";        
             buttonColumn.Name = "invoice";            
@@ -38,7 +34,6 @@ namespace practiceslidebar
             buttonColumn.UseColumnTextForButtonValue = true;
             buttonColumn.FlatStyle=FlatStyle.Flat;
             customerview.Columns.Add(buttonColumn);
-
         }
         public void interfaceadjustment()
         {
@@ -160,8 +155,6 @@ namespace practiceslidebar
                 form_manager.messagebox.message.Text = "no record found";
                 customerview.DataSource = null;
                 //customerview.Columns.Remove("invoice");
-
-
             }
 
         }
