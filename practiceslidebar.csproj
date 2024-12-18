@@ -339,10 +339,16 @@
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-08-12 at 4.18.17 PM.jpeg" />
     <None Include="Resources\stack.png" />
     <None Include="Resources\dustbin.png" />
     <None Include="Resources\delete-16.png" />
-    <Content Include="Resources\LOGO.png" />
+    <None Include="Resources\icons8-edit-48.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\exclamation-mark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />

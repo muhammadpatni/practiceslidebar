@@ -21,8 +21,6 @@ namespace practiceslidebar
         public bool logic = true;
         public void loadform(object Form)
         {
-
-
             if (this.panelmain.Controls.Count > 0)
             {
                 this.panelmain.Controls.RemoveAt(0);

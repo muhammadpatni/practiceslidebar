@@ -105,7 +105,6 @@
             this.txtinnumber.Name = "txtinnumber";
             this.txtinnumber.Size = new System.Drawing.Size(153, 22);
             this.txtinnumber.TabIndex = 1;
-            this.txtinnumber.TextChanged += new System.EventHandler(this.txtinnumber_TextChanged);
             // 
             // txtcusname
             // 
@@ -395,7 +394,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1039, 307);
             this.panel2.TabIndex = 30;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtgrandtotal
             // 
@@ -420,7 +418,6 @@
             this.txtgrandtotal.SelectedText = "";
             this.txtgrandtotal.Size = new System.Drawing.Size(209, 43);
             this.txtgrandtotal.TabIndex = 31;
-            this.txtgrandtotal.TextChanged += new System.EventHandler(this.txtgrandtotall_TextChanged);
             // 
             // label7
             // 
@@ -443,7 +440,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1063, 75);
             this.panel3.TabIndex = 31;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnsave
             // 

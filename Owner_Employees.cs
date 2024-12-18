@@ -31,21 +31,24 @@ namespace practiceslidebar
         {
             if (form_manager.ownerview.logic)
             {
-                owneremployeeview.Columns["id"].Width = 120;
-                owneremployeeview.Columns["name"].Width = 210;
-                owneremployeeview.Columns["email"].Width = 230;
-                owneremployeeview.Columns["contact"].Width = 150;
-                owneremployeeview.Columns["position"].Width = 130;
-                owneremployeeview.Columns["salary"].Width = 150;
+               
+                    owneremployeeview.Columns["id"].Width = 120;
+                    owneremployeeview.Columns["name"].Width = 210;
+                    owneremployeeview.Columns["email"].Width = 230;
+                    owneremployeeview.Columns["contact"].Width = 150;
+                    owneremployeeview.Columns["position"].Width = 130;
+                    owneremployeeview.Columns["salary"].Width = 150;
+             
             }
             else
             {
-                owneremployeeview.Columns["id"].Width = 130;
-                owneremployeeview.Columns["name"].Width = 230;
-                owneremployeeview.Columns["email"].Width = 240;
-                owneremployeeview.Columns["contact"].Width = 160;
-                owneremployeeview.Columns["position"].Width = 150;
-                owneremployeeview.Columns["salary"].Width = 160;
+                    owneremployeeview.Columns["id"].Width = 130;
+                    owneremployeeview.Columns["name"].Width = 230;
+                    owneremployeeview.Columns["email"].Width = 240;
+                    owneremployeeview.Columns["contact"].Width = 160;
+                    owneremployeeview.Columns["position"].Width = 150;
+                    owneremployeeview.Columns["salary"].Width = 160;
+               
             }
         }
         private void txtsearch_TextChanged(object sender, EventArgs e)

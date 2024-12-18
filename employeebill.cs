@@ -30,14 +30,6 @@ namespace practiceslidebar
         float price;
             decimal grandt = 0;
         int qty,numberofitemsperpage=0,numberofitemprintedsofar,ii=0, quan, i;
-        void getinventory()
-        {
-            string query = "select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ";
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            inventory.DataSource = dt;
-        }
         public void interfaceadjustment()
         {
             inventory.Columns["name"].Width = 120;
@@ -49,11 +41,11 @@ namespace practiceslidebar
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            Image image = Image.FromFile("C:\\Users\\HP\\Downloads\\LOGO.png");
-            e.Graphics.DrawImage(image, 50, 20, image.Width, image.Height);
-            //  e.Graphics.DrawString("PATNI MEDICAL STORE ", new Font("Arial",15, FontStyle.Bold), Brushes.Black, new Point(85, 30));
-            e.Graphics.DrawString(" Sell Receipt ", new System.Drawing.Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(140,80));
-            e.Graphics.DrawString("Invoice# :  pms" + txtinnumber.Text , new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(10, 120));
+            Image image = Properties.Resources.logo2;
+            e.Graphics.DrawImage(image, 35, 20, image.Width, image.Height);
+              //e.Graphics.DrawString(" CHASE UP  ", new Font("Arial",15, FontStyle.Bold), Brushes.Black, new Point(140, 20));
+            e.Graphics.DrawString(" Sell Receipt  ", new System.Drawing.Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(130,80));
+            e.Graphics.DrawString("Invoice# : pms" + txtinnumber.Text , new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(10, 120));
             e.Graphics.DrawString("Inv Date/Time : "+ DateTime.Now.ToShortDateString()+"  "+DateTime.Now.ToShortTimeString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(10,145));
             e.Graphics.DrawString("Customer# :  " + txtcusid.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(10, 170));
             e.Graphics.DrawString("Customer Name :  " + txtcusname.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(10, 195));
@@ -160,7 +152,9 @@ namespace practiceslidebar
 
             private void employeeinvoice_Load(object sender, EventArgs e)
             {
-                getinventory();
+            getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
+            billitem.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 16, FontStyle.Bold);
+            billitem.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             txtinnumber.Text =i.ToString();
             interfaceadjustment();
                 PaperSize paperSize = new PaperSize("Custom", 410, 800); // 58mm = ~2.28 inches, 200 = ~2.28 * 100 (100th of an inch units)
@@ -233,16 +227,6 @@ namespace practiceslidebar
                 form_manager.messagebox.tittle.Text = "Error";
                 form_manager.messagebox.message.Text = "Add Items ..";
             }
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void guna2Button1_Click_2(object sender, EventArgs e)
@@ -380,14 +364,8 @@ namespace practiceslidebar
                         }
                     }
                     con.Close();
-                    txtcusname.Clear();
                     txtsearch.Clear();
                     txtcusname.Focus();
-                    //messagebox m = new messagebox();
-                    //m.Show();
-                    //form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
-                    //form_manager.messagebox.tittle.Text = "";
-                    //form_manager.messagebox.message.Text = "invoice saved successfully";
                     printPreviewDialog1.Document = printDocument1;
                     printPreviewDialog1.ShowDialog();
                     billitem.Rows.Clear();
@@ -404,6 +382,7 @@ namespace practiceslidebar
                 {
                     pdfDoc.Close();
                     memoryStream.Dispose();
+                    txtcusname.Clear();
                 }
             }
             else
@@ -433,22 +412,6 @@ namespace practiceslidebar
                 }
             }
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtgrandtotall_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtinnumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btncancel_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row  in billitem.Rows)
@@ -479,7 +442,8 @@ namespace practiceslidebar
             billitem.Rows.Clear();
             grandt = 0;
             txtgrandtotal.Text = "RS " +grandt.ToString();
-            getinventory();
+            getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
+
         }
 
         private void txtquan_TextChanged(object sender, EventArgs e)
@@ -533,7 +497,7 @@ namespace practiceslidebar
                 cmd1.Parameters.AddWithValue("@name", billitem.Rows[e.RowIndex].Cells[1].Value);
                 cmd1.ExecuteNonQuery();
                 con.Close();
-                getinventory();
+                getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
                 grandt -=  Convert.ToDecimal(billitem.Rows[e.RowIndex].Cells[3].Value);
                 txtgrandtotal .Text = "RS " +grandt.ToString();
                 billitem.Rows.RemoveAt(e.RowIndex);
@@ -553,7 +517,7 @@ namespace practiceslidebar
                     cmd.ExecuteNonQuery();
                     con.Close();
                     txtquan.Clear();
-                    getinventory();
+                    getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
                     inventory.ClearSelection();
                     txtsearch.Clear();
                     txtsearch.Focus();

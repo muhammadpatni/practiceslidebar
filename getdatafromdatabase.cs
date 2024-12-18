@@ -12,22 +12,42 @@ namespace practiceslidebar
 {
     static class getdatafromdatabase
     {
-        static public void getdata(string query,DataGridView dataGridView )
+        public static void getdata(string query, DataGridView dataGridView1)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            dataGridView.DataSource = dt;
+            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;"))
+            { 
+                con.Open();
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    // Step 3: Read Data Using SqlDataReader
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Step 4: Create a DataTable and define its schema
+                        DataTable dataTable = new DataTable();
+                        dataTable.Load(reader);
+                        dataGridView1.DataSource = dataTable;
+                    }
+                }           
+            }
         }
-        static public void getdata(string query, DataGridView dataGridView1 ,DataGridView dataGridView2)
+
+        public static void getdata(string query, DataGridView dataGridView1, DataGridView dataGridView2)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
-            SqlDataAdapter ad = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView2.DataSource=dt;
+            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;"))
+            {
+                try
+                {
+                    SqlDataAdapter ad = new SqlDataAdapter(query, con);
+                    DataTable dt = new DataTable();
+                    ad.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    dataGridView2.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
         }
     }
 }

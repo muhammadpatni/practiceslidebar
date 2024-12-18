@@ -43,7 +43,7 @@ namespace practiceslidebar
                 customerview.Columns["name"].Width = 280;
                 customerview .Columns["amount"].Width = 200;
                 customerview .Columns["date"].Width = 220;
-                customerview.Columns["invoice"].Width = 170;   
+                customerview.Columns["invoice"].Width = 160;   
             }
             else
             {
@@ -51,7 +51,7 @@ namespace practiceslidebar
                 customerview.Columns["name"].Width = 290;
                 customerview.Columns["amount"].Width = 230;
                 customerview.Columns["date"].Width = 230;
-                customerview.Columns["invoice"].Width = 180;
+                customerview.Columns["invoice"].Width = 170;
             }
         }
         private void employeecustomer_Load(object sender, EventArgs e)

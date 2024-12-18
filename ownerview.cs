@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using Guna.UI.WinForms;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,23 +21,55 @@ namespace practiceslidebar
             form_manager.ownerview = this;
         }
         public bool logic = true;
-        public void loadform(object Form)
+        void UpdateButtonStyles(GunaButton activeButton)
         {
+            GunaButton[] buttons = { btnonwer_dash, btnownwe_inventory, btnownwe_employee };
 
-
+            foreach (var button in buttons)
+            {
+                if (button == activeButton)
+                {
+                    button.BaseColor = Color.Snow;
+                    button.Radius = 24;
+                    button.ForeColor = Color.FromArgb(35, 40, 45);
+                    button.OnHoverBaseColor = Color.Snow;
+                    button.OnHoverForeColor = Color.FromArgb(35, 40, 45);
+                }
+                else
+                {
+                    button.BaseColor = Color.FromArgb(35, 40, 45);
+                    button.Radius = 0;
+                    button.ForeColor = Color.White;
+                    button.OnHoverBaseColor = Color.FromArgb(35, 40, 45);
+                    button.OnHoverForeColor = Color.White;
+                }
+            }
+        }
+        //public void loadform(object Form)
+        //{
+        //    if (this.panelmain.Controls.Count > 0)
+        //    {
+        //        this.panelmain.Controls.RemoveAt(0);
+        //    }
+        //    Form f = Form as Form;
+        //    f.TopLevel = false;
+        //    f.Dock = DockStyle.Fill;
+        //    this.panelmain.Controls.Add(f);
+        //    this.panelmain.Tag = f;
+        //    f.Show();
+        //}
+        public void loadform(Form form)
+        {
             if (this.panelmain.Controls.Count > 0)
             {
-                this.panelmain.Controls.RemoveAt(0);
+                this.panelmain.Controls.RemoveAt(0); // Remove the existing form
             }
-            Form f = Form as Form;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.panelmain.Controls.Add(f);
-            this.panelmain.Tag = f;
-            f.Show();
+            form.TopLevel = false; // Set the form as a child control
+            form.Dock = DockStyle.Fill; // Fill the panel with the form
+            this.panelmain.Controls.Add(form); // Add the form to the panel
+            this.panelmain.Tag = form; // Keep track of the current form
+            form.Show(); // Show the form
         }
-       
-
         private void btnlogout_Click(object sender, EventArgs e)
         {
             login l = new login();
@@ -48,92 +81,59 @@ namespace practiceslidebar
         {
             Application.Exit();
         }
-        void interfacedesign()
-        {
+    //    void interfacedesign()
+    //    {
+    //        var buttons = new[]
+    //        {
+    //    btnonwer_dash,
+    //    btnownwe_inventory,
+    //    btnownwe_employee
+    //};
 
-            if (btnonwer_dash.BaseColor == Color.Snow)
-            {
-                btnonwer_dash.OnHoverBaseColor = Color.Snow;
-                btnonwer_dash.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            }
-            else
-            {
-                btnonwer_dash.OnHoverBaseColor = Color.DimGray;
-                btnonwer_dash.OnHoverForeColor = Color.White;
-            }
-            if (btnownwe_inventory.BaseColor == Color.Snow)
-            {
-                btnownwe_inventory.OnHoverBaseColor = Color.Snow;
-                btnownwe_inventory.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            }
-            else
-            {
-                btnownwe_inventory.OnHoverBaseColor = Color.DimGray;
-                btnownwe_inventory.OnHoverForeColor = Color.White;
-            }
-            if (btnownwe_employee.BaseColor == Color.Snow)
-            {
-                btnownwe_employee.OnHoverBaseColor = Color.Snow;
-                btnownwe_employee.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            }
-            else
-            {
-                btnownwe_employee.OnHoverBaseColor = Color.DimGray;
-                btnownwe_employee.OnHoverForeColor = Color.White;
-            }
-        }
+    //        foreach (var button in buttons)
+    //        {
+    //            if (button.BaseColor == Color.Snow)
+    //            {
+    //                button.OnHoverBaseColor = Color.Snow;
+    //                button.OnHoverForeColor = Color.FromArgb(35, 40, 45);
+    //            }
+    //            else
+    //            {
+    //                button.OnHoverBaseColor = Color.DimGray;
+    //                button.OnHoverForeColor = Color.White;
+    //            }
+    //        }
+    //    }
+
         private void btnonwer_dash_Click(object sender, EventArgs e)
         {
-            panel5.Visible = true;
             panel7.Visible = false;
             panel8.Visible = false;
-            btnonwer_dash.BaseColor = Color.Snow;
-            btnonwer_dash.Radius = 24;
-            btnonwer_dash.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnownwe_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnownwe_inventory.Radius = 0;
-            btnownwe_inventory.ForeColor = Color.White;
-            btnownwe_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnownwe_employee.Radius = 0;
-            btnownwe_employee.ForeColor = Color.White;
-            interfacedesign();
+            UpdateButtonStyles(btnonwer_dash);
+           // interfacedesign();
             loadform(new Ownerdash());
+            panel5.Visible = true;
         }
 
         private void btnownwe_inventory_Click(object sender, EventArgs e)
         {
-            panel8.Visible = true;
             panel5.Visible = false;
             panel7.Visible = false;
-            btnownwe_inventory.BaseColor = Color.Snow;
-            btnownwe_inventory.Radius = 24;
-            btnownwe_inventory.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnonwer_dash.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnonwer_dash.Radius = 0;
-            btnonwer_dash.ForeColor = Color.White;
-            btnownwe_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnownwe_employee.Radius = 0;
-            btnownwe_employee.ForeColor = Color.White;
-            interfacedesign();
-            loadform(new ownerInventory());
+            UpdateButtonStyles(btnownwe_inventory);
+         //   interfacedesign();
+            loadform( new ownerInventory());
+            panel8.Visible = true;
         }
 
         private void btnownwe_employee_Click(object sender, EventArgs e)
         {
-            panel7.Visible = true;
+            
             panel5.Visible = false;
             panel8.Visible = false;
-            btnownwe_employee.BaseColor = Color.Snow;
-            btnownwe_employee.Radius = 24;
-            btnownwe_employee.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnownwe_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnownwe_inventory.Radius = 0;
-            btnownwe_inventory.ForeColor = Color.White;
-            btnonwer_dash.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnonwer_dash.Radius = 0;
-            btnonwer_dash.ForeColor = Color.White;
-            interfacedesign();
+            UpdateButtonStyles(btnownwe_employee);
+         //   interfacedesign();
             loadform(new Owner_Employees());
+            panel7.Visible = true;
         }
         private void btnmaximize_Click(object sender, EventArgs e)
         {
@@ -171,6 +171,11 @@ namespace practiceslidebar
         }
 
         private void paneltop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelmain_Paint(object sender, PaintEventArgs e)
         {
 
         }

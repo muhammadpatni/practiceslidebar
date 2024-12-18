@@ -255,7 +255,7 @@ namespace practiceslidebar
                     {
                         messagebox m = new messagebox();
                         m.Show();
-                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.messagepic.Image = Properties.Resources._checked;
                         form_manager.messagebox.tittle.Text = "";
                         form_manager.messagebox.message.Text = "data deleted successfully";
                         reset();
@@ -310,7 +310,7 @@ namespace practiceslidebar
                         {
                         messagebox m = new messagebox();
                         m.Show();
-                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.messagepic.Image = Properties.Resources._checked;
                         form_manager.messagebox.tittle.Text = "";
                         form_manager.messagebox.message.Text = "data updated successfully";
 
@@ -339,7 +339,7 @@ namespace practiceslidebar
                     {
                         messagebox m = new messagebox();
                         m.Show();
-                        form_manager.messagebox.messagepic.Image = Image.FromFile(@"C:\Users\HP\Downloads\red-check-mark-validation-tick-16234.png");
+                        form_manager.messagebox.messagepic.Image = Properties.Resources._checked;
                         form_manager.messagebox.tittle.Text = "";
                         form_manager.messagebox.message.Text = "data inserted successfully";
 
@@ -703,6 +703,16 @@ namespace practiceslidebar
                 }
 
             }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

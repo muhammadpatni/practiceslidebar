@@ -82,8 +82,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnfullinventory = new Guna.UI.WinForms.GunaButton();
             this.btnedit = new Guna.UI.WinForms.GunaButton();
-            this.btndelete = new Guna.UI.WinForms.GunaButton();
             this.btnadd = new Guna.UI.WinForms.GunaButton();
+            this.btndelete = new Guna.UI.WinForms.GunaButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ownerinventoryview = new System.Windows.Forms.DataGridView();
             this.panellll.SuspendLayout();
@@ -924,13 +924,14 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.btnfullinventory);
             this.panel4.Controls.Add(this.btnedit);
-            this.panel4.Controls.Add(this.btndelete);
             this.panel4.Controls.Add(this.btnadd);
+            this.panel4.Controls.Add(this.btndelete);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 527);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1063, 53);
             this.panel4.TabIndex = 57;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnfullinventory
             // 
@@ -992,36 +993,6 @@
             this.btnedit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
-            // btndelete
-            // 
-            this.btndelete.AnimationHoverSpeed = 0.07F;
-            this.btndelete.AnimationSpeed = 0.03F;
-            this.btndelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btndelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btndelete.BorderColor = System.Drawing.Color.White;
-            this.btndelete.BorderSize = 3;
-            this.btndelete.CausesValidation = false;
-            this.btndelete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btndelete.FocusedColor = System.Drawing.Color.Empty;
-            this.btndelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btndelete.ForeColor = System.Drawing.Color.White;
-            this.btndelete.Image = null;
-            this.btndelete.ImageOffsetX = 6;
-            this.btndelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btndelete.Location = new System.Drawing.Point(562, 8);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btndelete.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btndelete.OnHoverForeColor = System.Drawing.Color.White;
-            this.btndelete.OnHoverImage = null;
-            this.btndelete.OnPressedColor = System.Drawing.Color.Black;
-            this.btndelete.Size = new System.Drawing.Size(195, 42);
-            this.btndelete.TabIndex = 14;
-            this.btndelete.Text = "delete item";
-            this.btndelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
             // btnadd
             // 
             this.btnadd.AnimationHoverSpeed = 0.07F;
@@ -1051,6 +1022,36 @@
             this.btnadd.Text = "new item";
             this.btnadd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.AnimationHoverSpeed = 0.07F;
+            this.btndelete.AnimationSpeed = 0.03F;
+            this.btndelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btndelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btndelete.BorderColor = System.Drawing.Color.White;
+            this.btndelete.BorderSize = 3;
+            this.btndelete.CausesValidation = false;
+            this.btndelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btndelete.FocusedColor = System.Drawing.Color.Empty;
+            this.btndelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btndelete.ForeColor = System.Drawing.Color.White;
+            this.btndelete.Image = null;
+            this.btndelete.ImageOffsetX = 6;
+            this.btndelete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btndelete.Location = new System.Drawing.Point(562, 8);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btndelete.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btndelete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btndelete.OnHoverImage = null;
+            this.btndelete.OnPressedColor = System.Drawing.Color.Black;
+            this.btndelete.Size = new System.Drawing.Size(195, 42);
+            this.btndelete.TabIndex = 14;
+            this.btndelete.Text = "delete item";
+            this.btndelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // panel5
             // 
