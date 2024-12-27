@@ -36,8 +36,7 @@
             this.lbnumberofemployees = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbsaleprevmonth = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbsalesthismonth = new System.Windows.Forms.Label();
@@ -60,8 +59,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel7);
@@ -70,6 +69,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 298);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel5
             // 
@@ -140,36 +140,24 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.lbsaleprevmonth);
             this.panel3.Controls.Add(this.label7);
             this.panel3.ForeColor = System.Drawing.Color.Violet;
-            this.panel3.Location = new System.Drawing.Point(635, 165);
+            this.panel3.Location = new System.Drawing.Point(332, 165);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(244, 119);
             this.panel3.TabIndex = 51;
             // 
-            // label13
+            // lbsaleprevmonth
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(180, 65);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 28);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "RS";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(29, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 40);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "37";
+            this.lbsaleprevmonth.AutoSize = true;
+            this.lbsaleprevmonth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsaleprevmonth.ForeColor = System.Drawing.Color.White;
+            this.lbsaleprevmonth.Location = new System.Drawing.Point(80, 57);
+            this.lbsaleprevmonth.Name = "lbsaleprevmonth";
+            this.lbsaleprevmonth.Size = new System.Drawing.Size(59, 40);
+            this.lbsaleprevmonth.TabIndex = 1;
+            this.lbsaleprevmonth.Text = "37";
             // 
             // label7
             // 
@@ -188,7 +176,7 @@
             this.panel4.Controls.Add(this.lbsalesthismonth);
             this.panel4.Controls.Add(this.label9);
             this.panel4.ForeColor = System.Drawing.Color.Violet;
-            this.panel4.Location = new System.Drawing.Point(332, 165);
+            this.panel4.Location = new System.Drawing.Point(635, 165);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(244, 119);
             this.panel4.TabIndex = 52;
@@ -275,7 +263,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 13);
+            this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(228, 24);
             this.label1.TabIndex = 0;
@@ -320,8 +308,7 @@
         private System.Windows.Forms.Label lbnumberofemployees;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbsaleprevmonth;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbsalesthismonth;

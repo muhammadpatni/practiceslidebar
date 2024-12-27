@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace practiceslidebar
 {
@@ -26,11 +27,35 @@ namespace practiceslidebar
             GetNumberOfItemsOutOfStock();
             GetNumberOfEployees();
             GetTotalSalesThisMonth();
+            GetTotalSalesPreviousMonth();
         }
+        
+        private double GetSalesForMonth(int month)
+        {
+            double totalSales = 0;
+            string query = @"
+                SELECT SUM(amount) AS TotalSales
+                FROM customer
+                WHERE MONTH(date) = @Month AND YEAR(date) = YEAR(GETDATE())";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@Month", month);
+
+            con.Open();
+            object result = cmd.ExecuteScalar();
+            if (result != DBNull.Value)
+            {
+                totalSales = Convert.ToDouble(result);
+            }
+            con.Close();
+
+            return totalSales;
+        }
+
         void GetTotalSalesPreviousMonth()
         {
             double totalSales = 0;
-            string query = @"SELECT SUM(price) AS totalSales 
+            string query = @"SELECT SUM(amount) AS totalSales 
                      FROM customer 
                      WHERE DATEPART(MONTH, date) = DATEPART(MONTH, DATEADD(MONTH, -1, GETDATE())) 
                      AND DATEPART(YEAR, date) = DATEPART(YEAR, DATEADD(MONTH, -1, GETDATE()))";
@@ -41,7 +66,7 @@ namespace practiceslidebar
             {
                 totalSales = Convert.ToDouble(result);
             }
-            lblTotalSales.Text = "Rs " + totalSales.ToString();
+            lbsaleprevmonth.Text = "Rs " + totalSales.ToString();
             con.Close();
         }
 
@@ -94,5 +119,9 @@ namespace practiceslidebar
             con.Close();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
