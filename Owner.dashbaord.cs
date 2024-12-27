@@ -23,6 +23,44 @@ namespace practiceslidebar
         private void Ownerdash_Load(object sender, EventArgs e)
         {
             GetNumberOfItems();
+            GetNumberOfItemsOutOfStock();
+            GetNumberOfEployees();
+            GetTotalSalesThisMonth();
+        }
+        void GetTotalSalesPreviousMonth()
+        {
+            double totalSales = 0;
+            string query = @"SELECT SUM(price) AS totalSales 
+                     FROM customer 
+                     WHERE DATEPART(MONTH, date) = DATEPART(MONTH, DATEADD(MONTH, -1, GETDATE())) 
+                     AND DATEPART(YEAR, date) = DATEPART(YEAR, DATEADD(MONTH, -1, GETDATE()))";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            object result = cmd.ExecuteScalar();
+            if (result != DBNull.Value)
+            {
+                totalSales = Convert.ToDouble(result);
+            }
+            lblTotalSales.Text = "Rs " + totalSales.ToString();
+            con.Close();
+        }
+
+        void GetTotalSalesThisMonth()
+        {
+            double totalSales = 0;
+            string query = @"SELECT SUM(amount) AS totalSales 
+                     FROM customer 
+                     WHERE DATEPART(MONTH, date) = DATEPART(MONTH, GETDATE()) 
+                     AND DATEPART(YEAR, date) = DATEPART(YEAR, GETDATE())";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            object result = cmd.ExecuteScalar();
+            if (result != DBNull.Value)
+            {
+                totalSales = Convert.ToDouble(result);
+            }
+            lbsalesthismonth.Text = "Rs " + totalSales.ToString();
+            con.Close();
         }
 
         void GetNumberOfItems()
@@ -32,12 +70,29 @@ namespace practiceslidebar
             SqlCommand cmd = new SqlCommand(query,con);
             con.Open();
             numberOfItems = Convert.ToInt16(cmd.ExecuteScalar());
-            lbnumberofitems.Text=numberOfItems.ToString(); 
+            lbnumberofitems.Text=numberOfItems.ToString();
+            con.Close();
         }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        void GetNumberOfItemsOutOfStock()
         {
-
+            int GetNumberOfItemsOutOfStock = 0;
+            string query = "select count(*) from Inventory2 where quantity=0";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            GetNumberOfItemsOutOfStock = Convert.ToInt16(cmd.ExecuteScalar());
+            lbproductoutofstock.Text = GetNumberOfItemsOutOfStock.ToString();
+            con.Close();
         }
+        void GetNumberOfEployees()
+        {
+            int GetNumberOfemployee = 0;
+            string query = "select count(*) from employee";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            GetNumberOfemployee = Convert.ToInt16(cmd.ExecuteScalar());
+            lbnumberofemployees.Text = GetNumberOfemployee.ToString();
+            con.Close();
+        }
+
     }
 }

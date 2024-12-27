@@ -81,29 +81,6 @@ namespace practiceslidebar
         {
             Application.Exit();
         }
-    //    void interfacedesign()
-    //    {
-    //        var buttons = new[]
-    //        {
-    //    btnonwer_dash,
-    //    btnownwe_inventory,
-    //    btnownwe_employee
-    //};
-
-    //        foreach (var button in buttons)
-    //        {
-    //            if (button.BaseColor == Color.Snow)
-    //            {
-    //                button.OnHoverBaseColor = Color.Snow;
-    //                button.OnHoverForeColor = Color.FromArgb(35, 40, 45);
-    //            }
-    //            else
-    //            {
-    //                button.OnHoverBaseColor = Color.DimGray;
-    //                button.OnHoverForeColor = Color.White;
-    //            }
-    //        }
-    //    }
 
         private void btnonwer_dash_Click(object sender, EventArgs e)
         {
@@ -178,6 +155,16 @@ namespace practiceslidebar
         private void panelmain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ownerview_Load(object sender, EventArgs e)
+        {
+            panel7.Visible = false;
+            panel8.Visible = false;
+            UpdateButtonStyles(btnonwer_dash);
+            // interfacedesign();
+            loadform(new Ownerdash());
+            panel5.Visible = true;
         }
     }
 }

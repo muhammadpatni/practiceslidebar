@@ -40,22 +40,22 @@
             this.btnownwe_employee = new Guna.UI.WinForms.GunaButton();
             this.btnonwer_dash = new Guna.UI.WinForms.GunaButton();
             this.panellogo = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.paneltop = new System.Windows.Forms.Panel();
+            this.btnminimize = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnmaximize = new Guna.UI.WinForms.GunaButton();
+            this.btnclose = new Guna.UI.WinForms.GunaButton();
             this.panelmain = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnminimize = new Guna.UI.WinForms.GunaButton();
-            this.btnmaximize = new Guna.UI.WinForms.GunaButton();
-            this.btnclose = new Guna.UI.WinForms.GunaButton();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panellogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.paneltop.SuspendLayout();
             this.panelmain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelside
@@ -259,6 +259,18 @@
             this.panellogo.Size = new System.Drawing.Size(219, 190);
             this.panellogo.TabIndex = 8;
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = global::practiceslidebar.Properties.Resources.WhatsApp_Image_2024_08_12_at_4_18_17_PM;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(9, 8);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(196, 175);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 1;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // paneltop
             // 
             this.paneltop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -273,50 +285,6 @@
             this.paneltop.Size = new System.Drawing.Size(1058, 58);
             this.paneltop.TabIndex = 3;
             this.paneltop.Paint += new System.Windows.Forms.PaintEventHandler(this.paneltop_Paint);
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel1.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(333, 9);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(410, 44);
-            this.gunaLabel1.TabIndex = 2;
-            this.gunaLabel1.Text = "patni medical store";
-            // 
-            // panelmain
-            // 
-            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Controls.Add(this.label3);
-            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Location = new System.Drawing.Point(226, 58);
-            this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(1058, 589);
-            this.panelmain.TabIndex = 4;
-            this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(187, 239);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(775, 65);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Please Select Any Option From Menu";
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(219, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 647);
-            this.panel3.TabIndex = 35;
             // 
             // btnminimize
             // 
@@ -347,6 +315,19 @@
             this.btnminimize.TabIndex = 6;
             this.btnminimize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.Click += new System.EventHandler(this.btnminimize_Click);
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel1.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(333, 9);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(410, 44);
+            this.gunaLabel1.TabIndex = 2;
+            this.gunaLabel1.Text = "patni medical store";
             // 
             // btnmaximize
             // 
@@ -408,17 +389,36 @@
             this.btnclose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
-            // guna2CirclePictureBox1
+            // panelmain
             // 
-            this.guna2CirclePictureBox1.Image = global::practiceslidebar.Properties.Resources.WhatsApp_Image_2024_08_12_at_4_18_17_PM;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(9, 8);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(196, 175);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelmain.Controls.Add(this.label3);
+            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelmain.Location = new System.Drawing.Point(226, 58);
+            this.panelmain.Name = "panelmain";
+            this.panelmain.Size = new System.Drawing.Size(1058, 589);
+            this.panelmain.TabIndex = 4;
+            this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(187, 239);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(775, 65);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Please Select Any Option From Menu";
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(219, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(7, 647);
+            this.panel3.TabIndex = 35;
             // 
             // ownerview
             // 
@@ -436,15 +436,16 @@
             this.Name = "ownerview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ownerview";
+            this.Load += new System.EventHandler(this.ownerview_Load);
             this.panelside.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panellogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.paneltop.ResumeLayout(false);
             this.paneltop.PerformLayout();
             this.panelmain.ResumeLayout(false);
             this.panelmain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
