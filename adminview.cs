@@ -137,12 +137,16 @@ namespace practiceslidebar
             panel8.Visible = true;
             panel5.Visible = false;
             panel7.Visible = false;
+            panel4.Visible = false;
             btnadmin_stock.BaseColor = Color.Snow;
             btnadmin_stock.Radius = 24;
             btnadmin_stock.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_employee.Radius = 0;
             btnadmin_employee.ForeColor = Color.White;
+            btnadmin_expireproduct.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_expireproduct.Radius = 0;
+            btnadmin_expireproduct.ForeColor = Color.White;
             btnadmin_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_inventory.Radius = 0;
             btnadmin_inventory.ForeColor = Color.White;
@@ -155,12 +159,16 @@ namespace practiceslidebar
             panel7.Visible = true;
             panel5.Visible = false;
             panel8.Visible = false;
+            panel4.Visible = false;
             btnadmin_employee.BaseColor = Color.Snow;
             btnadmin_employee.Radius = 24;
             btnadmin_employee.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_stock.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_stock.Radius = 0;
             btnadmin_stock.ForeColor = Color.White;
+            btnadmin_expireproduct.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_expireproduct.Radius = 0;
+            btnadmin_expireproduct.ForeColor = Color.White;
             btnadmin_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_inventory.Radius = 0;
             btnadmin_inventory.ForeColor = Color.White;
@@ -168,43 +176,50 @@ namespace practiceslidebar
             loadform(new adminempolyee());
         }
 
+        private void btnadmin_expireproduct_Click(object sender, EventArgs e)
+        {
+            panel7.Visible = false;
+            panel5.Visible = false;
+            panel8.Visible = false;
+            panel4.Visible = true;
+            btnadmin_expireproduct.BaseColor = Color.Snow;
+            btnadmin_expireproduct.Radius = 24;
+            btnadmin_expireproduct.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_stock.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_stock.Radius = 0;
+            btnadmin_stock.ForeColor = Color.White;
+            btnadmin_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_inventory.Radius = 0;
+            btnadmin_employee.ForeColor = Color.White;
+            btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_inventory.Radius = 0;
+            btnadmin_employee.ForeColor = Color.White;
+            interfacedesign();
+            //loadform(new adminempolyee());
+        }
+
+
         private void btnadmin_inventory_Click(object sender, EventArgs e)
         {
             panel5.Visible = true;
             panel7.Visible = false;
             panel8.Visible = false;
+            panel4.Visible = false;
             btnadmin_inventory.BaseColor = Color.Snow;
             btnadmin_inventory.Radius = 24;
             btnadmin_inventory.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_employee.Radius = 0;
             btnadmin_employee.ForeColor = Color.White;
+            btnadmin_expireproduct.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnadmin_expireproduct.Radius = 0;
+            btnadmin_expireproduct.ForeColor = Color.White;
             btnadmin_stock.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_stock.Radius = 0;
             btnadmin_stock.ForeColor = Color.White;
             interfacedesign();
-
             loadform(new admininventory());
         }
 
-        private void panelmain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panellogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void adminview_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

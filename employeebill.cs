@@ -98,7 +98,7 @@ namespace practiceslidebar
             e.Graphics.DrawString("No responsibility after delivery.", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0, y + 160));
             e.Graphics.DrawString("THANKS", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(330, y + 160));
             e.Graphics.DrawString("------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(0, y + 180));
-            e.Graphics.DrawString("Software By MUHAMMAD PATNI 0316-2406968 Muhammad.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(0, y + 200));
+          //  e.Graphics.DrawString("Software By MUHAMMAD PATNI 0316-2406968 Muhammad.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(0, y + 200));
             e.Graphics.DrawString("SHOP PTCL        32435482        32446329", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0, y + 240));
 
             numberofitemprintedsofar = numberofitemsperpage=ii=0;

@@ -33,12 +33,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.btnadmin_stock = new Guna.UI.WinForms.GunaButton();
-            this.btnadmin_employee = new Guna.UI.WinForms.GunaButton();
             this.btnadmin_inventory = new Guna.UI.WinForms.GunaButton();
             this.panellogo = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnadmin_employee = new Guna.UI.WinForms.GunaButton();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panelmain = new System.Windows.Forms.Panel();
+            this.btnadmin_expireproduct = new Guna.UI.WinForms.GunaButton();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnclose = new Guna.UI.WinForms.GunaButton();
@@ -46,9 +51,6 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnminimize = new Guna.UI.WinForms.GunaButton();
             this.paneltop = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -114,16 +116,38 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.btnadmin_employee);
             this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.btnadmin_expireproduct);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.btnadmin_stock);
-            this.panel1.Controls.Add(this.btnadmin_employee);
             this.panel1.Controls.Add(this.btnadmin_inventory);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 190);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 144);
+            this.panel1.Size = new System.Drawing.Size(219, 192);
             this.panel1.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Snow;
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(22, 48);
+            this.panel5.TabIndex = 37;
+            this.panel5.Visible = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Snow;
+            this.panel8.ForeColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(0, 48);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(22, 48);
+            this.panel8.TabIndex = 39;
+            this.panel8.Visible = false;
             // 
             // btnadmin_stock
             // 
@@ -154,36 +178,6 @@
             this.btnadmin_stock.Text = "   PRODUCT OUT OF STOCK";
             this.btnadmin_stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnadmin_stock.Click += new System.EventHandler(this.btnadmin_stock_Click);
-            // 
-            // btnadmin_employee
-            // 
-            this.btnadmin_employee.AnimationHoverSpeed = 0.07F;
-            this.btnadmin_employee.AnimationSpeed = 0.03F;
-            this.btnadmin_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnadmin_employee.BorderColor = System.Drawing.Color.Black;
-            this.btnadmin_employee.CausesValidation = false;
-            this.btnadmin_employee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnadmin_employee.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnadmin_employee.FocusedColor = System.Drawing.Color.Empty;
-            this.btnadmin_employee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadmin_employee.ForeColor = System.Drawing.Color.White;
-            this.btnadmin_employee.Image = null;
-            this.btnadmin_employee.ImageOffsetX = 6;
-            this.btnadmin_employee.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnadmin_employee.Location = new System.Drawing.Point(0, 96);
-            this.btnadmin_employee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnadmin_employee.Name = "btnadmin_employee";
-            this.btnadmin_employee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnadmin_employee.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnadmin_employee.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnadmin_employee.OnHoverImage = null;
-            this.btnadmin_employee.OnPressedColor = System.Drawing.Color.Black;
-            this.btnadmin_employee.Size = new System.Drawing.Size(214, 48);
-            this.btnadmin_employee.TabIndex = 6;
-            this.btnadmin_employee.Text = "EMPLOYEES DETAILS";
-            this.btnadmin_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnadmin_employee.Click += new System.EventHandler(this.btnadmin_employee_Click);
             // 
             // btnadmin_inventory
             // 
@@ -224,7 +218,6 @@
             this.panellogo.Name = "panellogo";
             this.panellogo.Size = new System.Drawing.Size(219, 190);
             this.panellogo.TabIndex = 8;
-            this.panellogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panellogo_Paint);
             // 
             // guna2CirclePictureBox1
             // 
@@ -238,6 +231,46 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // btnadmin_employee
+            // 
+            this.btnadmin_employee.AnimationHoverSpeed = 0.07F;
+            this.btnadmin_employee.AnimationSpeed = 0.03F;
+            this.btnadmin_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_employee.BorderColor = System.Drawing.Color.Black;
+            this.btnadmin_employee.CausesValidation = false;
+            this.btnadmin_employee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadmin_employee.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnadmin_employee.FocusedColor = System.Drawing.Color.Empty;
+            this.btnadmin_employee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadmin_employee.ForeColor = System.Drawing.Color.White;
+            this.btnadmin_employee.Image = null;
+            this.btnadmin_employee.ImageOffsetX = 6;
+            this.btnadmin_employee.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnadmin_employee.Location = new System.Drawing.Point(0, 144);
+            this.btnadmin_employee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnadmin_employee.Name = "btnadmin_employee";
+            this.btnadmin_employee.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_employee.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnadmin_employee.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnadmin_employee.OnHoverImage = null;
+            this.btnadmin_employee.OnPressedColor = System.Drawing.Color.Black;
+            this.btnadmin_employee.Size = new System.Drawing.Size(214, 48);
+            this.btnadmin_employee.TabIndex = 6;
+            this.btnadmin_employee.Text = "EMPLOYEES DETAILS";
+            this.btnadmin_employee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnadmin_employee.Click += new System.EventHandler(this.btnadmin_employee_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Snow;
+            this.panel7.ForeColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(0, 144);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(22, 48);
+            this.panel7.TabIndex = 38;
+            this.panel7.Visible = false;
+            // 
             // panelmain
             // 
             this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -248,7 +281,47 @@
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(1058, 580);
             this.panelmain.TabIndex = 5;
-            this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
+            // 
+            // btnadmin_expireproduct
+            // 
+            this.btnadmin_expireproduct.AnimationHoverSpeed = 0.07F;
+            this.btnadmin_expireproduct.AnimationSpeed = 0.03F;
+            this.btnadmin_expireproduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_expireproduct.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_expireproduct.BorderColor = System.Drawing.Color.Black;
+            this.btnadmin_expireproduct.CausesValidation = false;
+            this.btnadmin_expireproduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadmin_expireproduct.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnadmin_expireproduct.FocusedColor = System.Drawing.Color.Empty;
+            this.btnadmin_expireproduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadmin_expireproduct.ForeColor = System.Drawing.Color.White;
+            this.btnadmin_expireproduct.Image = null;
+            this.btnadmin_expireproduct.ImageOffsetX = 6;
+            this.btnadmin_expireproduct.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnadmin_expireproduct.Location = new System.Drawing.Point(0, 96);
+            this.btnadmin_expireproduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnadmin_expireproduct.Name = "btnadmin_expireproduct";
+            this.btnadmin_expireproduct.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnadmin_expireproduct.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnadmin_expireproduct.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnadmin_expireproduct.OnHoverImage = null;
+            this.btnadmin_expireproduct.OnPressedColor = System.Drawing.Color.Black;
+            this.btnadmin_expireproduct.Size = new System.Drawing.Size(214, 48);
+            this.btnadmin_expireproduct.TabIndex = 11;
+            this.btnadmin_expireproduct.Text = "EXPIRE PRODUCTS";
+            this.btnadmin_expireproduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnadmin_expireproduct.Click += new System.EventHandler(this.btnadmin_expireproduct_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Snow;
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(0, 96);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(22, 48);
+            this.panel4.TabIndex = 39;
+            this.panel4.Visible = false;
+
             // 
             // label3
             // 
@@ -260,7 +333,6 @@
             this.label3.Size = new System.Drawing.Size(826, 55);
             this.label3.TabIndex = 33;
             this.label3.Text = "Please Select Any Option From Menu";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -387,36 +459,6 @@
             this.paneltop.Size = new System.Drawing.Size(1058, 67);
             this.paneltop.TabIndex = 4;
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Snow;
-            this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(0, 96);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(22, 48);
-            this.panel7.TabIndex = 38;
-            this.panel7.Visible = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Snow;
-            this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(22, 48);
-            this.panel5.TabIndex = 37;
-            this.panel5.Visible = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Snow;
-            this.panel8.ForeColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(0, 48);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(22, 48);
-            this.panel8.TabIndex = 39;
-            this.panel8.Visible = false;
-            // 
             // adminview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,7 +473,6 @@
             this.Name = "adminview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adminview";
-            this.Load += new System.EventHandler(this.adminview_Load);
             this.panelside.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -466,5 +507,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
+        private Guna.UI.WinForms.GunaButton btnadmin_expireproduct;
+        private System.Windows.Forms.Panel panel4;
     }
 }

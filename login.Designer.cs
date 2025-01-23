@@ -38,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panellogo = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelmain = new System.Windows.Forms.Panel();
@@ -47,7 +46,6 @@
             this.paneltop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelside.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelmain.SuspendLayout();
@@ -185,22 +183,11 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 415);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(175, 29);
             this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "muhammadpatni";
             // 
             // panellogo
             // 
@@ -273,8 +260,6 @@
             this.panel3.PerformLayout();
             this.panelside.ResumeLayout(false);
             this.panelside.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panellogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panelmain.ResumeLayout(false);
@@ -289,7 +274,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.Panel panelside;
         private System.Windows.Forms.Panel panellogo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelmain;
         private Guna.UI.WinForms.GunaButton btnclose;
         private System.Windows.Forms.Panel panel2;
