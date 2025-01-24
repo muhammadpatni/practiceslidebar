@@ -1,6 +1,6 @@
 ﻿namespace practiceslidebar
 {
-    partial class adminoutofstock
+    partial class adminexpireproducts
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelfullinventory = new Guna.UI2.WinForms.Guna2Panel();
-            this.inventoryoutofstock = new System.Windows.Forms.DataGridView();
+            this.expireproducts = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -42,63 +42,63 @@
             this.search = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panelfullinventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryoutofstock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expireproducts)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelfullinventory
             // 
             this.panelfullinventory.BackColor = System.Drawing.Color.White;
-            this.panelfullinventory.Controls.Add(this.inventoryoutofstock);
+            this.panelfullinventory.Controls.Add(this.expireproducts);
             this.panelfullinventory.Controls.Add(this.panel2);
             this.panelfullinventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelfullinventory.Location = new System.Drawing.Point(0, 0);
             this.panelfullinventory.Name = "panelfullinventory";
             this.panelfullinventory.Size = new System.Drawing.Size(1047, 541);
-            this.panelfullinventory.TabIndex = 28;
+            this.panelfullinventory.TabIndex = 29;
             // 
-            // inventoryoutofstock
+            // expireproducts
             // 
-            this.inventoryoutofstock.AllowUserToAddRows = false;
-            this.inventoryoutofstock.AllowUserToDeleteRows = false;
-            this.inventoryoutofstock.BackgroundColor = System.Drawing.Color.White;
-            this.inventoryoutofstock.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.inventoryoutofstock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inventoryoutofstock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.inventoryoutofstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.inventoryoutofstock.DefaultCellStyle = dataGridViewCellStyle2;
-            this.inventoryoutofstock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inventoryoutofstock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.inventoryoutofstock.Location = new System.Drawing.Point(0, 0);
-            this.inventoryoutofstock.Margin = new System.Windows.Forms.Padding(10);
-            this.inventoryoutofstock.MultiSelect = false;
-            this.inventoryoutofstock.Name = "inventoryoutofstock";
-            this.inventoryoutofstock.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inventoryoutofstock.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.inventoryoutofstock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.inventoryoutofstock.Size = new System.Drawing.Size(1047, 471);
-            this.inventoryoutofstock.TabIndex = 60;
+            this.expireproducts.AllowUserToAddRows = false;
+            this.expireproducts.AllowUserToDeleteRows = false;
+            this.expireproducts.BackgroundColor = System.Drawing.Color.White;
+            this.expireproducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.expireproducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.expireproducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.expireproducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.expireproducts.DefaultCellStyle = dataGridViewCellStyle14;
+            this.expireproducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.expireproducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.expireproducts.Location = new System.Drawing.Point(0, 0);
+            this.expireproducts.Margin = new System.Windows.Forms.Padding(10);
+            this.expireproducts.MultiSelect = false;
+            this.expireproducts.Name = "expireproducts";
+            this.expireproducts.ReadOnly = true;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.expireproducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.expireproducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.expireproducts.Size = new System.Drawing.Size(1047, 471);
+            this.expireproducts.TabIndex = 60;
             // 
             // panel2
             // 
@@ -244,7 +244,7 @@
             this.label15.TabIndex = 33;
             this.label15.Text = "Search";
             // 
-            // adminoutofstock
+            // adminexpireproducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -252,11 +252,11 @@
             this.ClientSize = new System.Drawing.Size(1047, 541);
             this.Controls.Add(this.panelfullinventory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "adminoutofstock";
-            this.Text = "adminoutofstock";
-            this.Load += new System.EventHandler(this.adminoutofstock_Load);
+            this.Name = "adminexpireproducts";
+            this.Text = "adminexpireproducts";
+            this.Load += new System.EventHandler(this.adminexpireproducts_Load);
             this.panelfullinventory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryoutofstock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expireproducts)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -266,6 +266,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel panelfullinventory;
+        private System.Windows.Forms.DataGridView expireproducts;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
@@ -274,6 +275,5 @@
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2TextBox search;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView inventoryoutofstock;
     }
 }

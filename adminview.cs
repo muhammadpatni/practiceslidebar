@@ -59,6 +59,10 @@ namespace practiceslidebar
                 {
                     form_manager.adminoutofstock.interfaceadjustment();
                 }
+                if (form_manager.adminexpireproducts != null)
+                {
+                    form_manager.adminexpireproducts.interfaceadjustment();
+                }
                 isvalid1 = false;
                 WindowState = FormWindowState.Maximized; 
             }
@@ -78,6 +82,10 @@ namespace practiceslidebar
                 if (form_manager.adminoutofstock != null)
                 {
                     form_manager.adminoutofstock.interfaceadjustment();
+                }
+                if (form_manager.adminexpireproducts != null)
+                {
+                    form_manager.adminexpireproducts.interfaceadjustment();
                 }
                 isvalid = false;
                 isvalid1 = true;
@@ -130,6 +138,16 @@ namespace practiceslidebar
             {
                 btnadmin_stock.OnHoverBaseColor = Color.DimGray;
                 btnadmin_stock.OnHoverForeColor = Color.White;
+            }
+            if (btnadmin_expireproduct.BaseColor == Color.Snow)
+            {
+                btnadmin_expireproduct.OnHoverBaseColor = Color.Snow;
+                btnadmin_expireproduct.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnadmin_expireproduct.OnHoverBaseColor = Color.DimGray;
+
             }
         }
         private void btnadmin_stock_Click(object sender, EventArgs e)
@@ -190,12 +208,12 @@ namespace practiceslidebar
             btnadmin_stock.ForeColor = Color.White;
             btnadmin_inventory.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnadmin_inventory.Radius = 0;
-            btnadmin_employee.ForeColor = Color.White;
+            btnadmin_inventory.ForeColor = Color.White;
             btnadmin_employee.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
-            btnadmin_inventory.Radius = 0;
+            btnadmin_employee.Radius = 0;
             btnadmin_employee.ForeColor = Color.White;
             interfacedesign();
-            //loadform(new adminempolyee());
+            loadform(new adminexpireproducts());
         }
 
 

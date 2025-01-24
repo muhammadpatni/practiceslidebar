@@ -78,6 +78,7 @@
             this.ok.TabIndex = 3;
             this.ok.Text = "OKAY";
             this.ok.Click += new System.EventHandler(this.ok_Click);
+            this.ok.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ok_KeyDown);
             // 
             // messagepic
             // 
@@ -89,7 +90,6 @@
             this.messagepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.messagepic.TabIndex = 4;
             this.messagepic.TabStop = false;
-            this.messagepic.Click += new System.EventHandler(this.messagepic_Click);
             // 
             // messagebox
             // 
@@ -107,7 +107,6 @@
             this.Name = "messagebox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "messagebox";
-            this.Load += new System.EventHandler(this.messagebox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.messagepic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

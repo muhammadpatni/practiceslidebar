@@ -139,6 +139,12 @@
     <Compile Include="adminempolyee.Designer.cs">
       <DependentUpon>adminempolyee.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminexpireproducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminexpireproducts.Designer.cs">
+      <DependentUpon>adminexpireproducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="admininventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminempolyee.resx">
       <DependentUpon>adminempolyee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminexpireproducts.resx">
+      <DependentUpon>adminexpireproducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admininventory.resx">
       <DependentUpon>admininventory.cs</DependentUpon>

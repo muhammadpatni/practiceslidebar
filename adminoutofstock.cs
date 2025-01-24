@@ -107,5 +107,6 @@ namespace practiceslidebar
                 inventoryoutofstock.DataSource = null;
             }
         }
+
     }
 }

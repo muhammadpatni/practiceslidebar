@@ -18,19 +18,17 @@ namespace practiceslidebar
             form_manager.messagebox = this; 
         }
 
-        private void messagebox_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void messagepic_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ok_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void ok_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Hide();
+            }
         }
     }
 }
