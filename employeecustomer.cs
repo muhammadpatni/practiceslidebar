@@ -26,7 +26,7 @@ namespace practiceslidebar
 
         void getinventory()
         {
-            getdatafromdatabase.getdata("select id ,name, amount,date from customer", customerview);
+            getdatafromdatabase.getdata("select id,invoice#,name, amount,date from customer", customerview);
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
             buttonColumn.HeaderText = "Option";        
             buttonColumn.Name = "invoice";            
@@ -40,7 +40,8 @@ namespace practiceslidebar
             if (form_manager.employeeview.logic)
             {
                 customerview.Columns["id"].Width = 130;
-                customerview.Columns["name"].Width = 280;
+                customerview.Columns["invoice#"].Width = 120;
+                customerview.Columns["name"].Width = 160;
                 customerview .Columns["amount"].Width = 200;
                 customerview .Columns["date"].Width = 220;
                 customerview.Columns["invoice"].Width = 160;   
@@ -48,7 +49,8 @@ namespace practiceslidebar
             else
             {
                 customerview.Columns["id"].Width = 150;
-                customerview.Columns["name"].Width = 290;
+                customerview.Columns["invoice#"].Width = 140;
+                customerview.Columns["name"].Width = 150;
                 customerview.Columns["amount"].Width = 230;
                 customerview.Columns["date"].Width = 230;
                 customerview.Columns["invoice"].Width = 170;
@@ -129,7 +131,7 @@ namespace practiceslidebar
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-            string query = "select id ,name, amount,date from customer where cast (id as varchar) like  @id +'%'";
+            string query = "select id ,invoice#,name, amount,date from customer where cast (id as varchar) like  @id +'%'";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(query, con);
             dataAdapter.SelectCommand.Parameters.AddWithValue("@id", txtsearch.Text.Trim());
             DataTable dataTable = new DataTable();

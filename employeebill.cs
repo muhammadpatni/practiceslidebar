@@ -98,7 +98,7 @@ namespace practiceslidebar
             e.Graphics.DrawString("No responsibility after delivery.", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0, y + 160));
             e.Graphics.DrawString("THANKS", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(330, y + 160));
             e.Graphics.DrawString("------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(0, y + 180));
-          //  e.Graphics.DrawString("Software By MUHAMMAD PATNI 0316-2406968 Muhammad.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(0, y + 200));
+            e.Graphics.DrawString("Software By MUHAMMAD PATNI 0316-2406968 Muhammad.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(0, y + 200));
             e.Graphics.DrawString("SHOP PTCL        32435482        32446329", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0, y + 240));
 
             numberofitemprintedsofar = numberofitemsperpage=ii=0;
@@ -162,11 +162,7 @@ namespace practiceslidebar
                 printDocument1.DefaultPageSettings.Margins = new Margins(0, 0, 0,0);
             }
 
-        private void txtcusname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
             string query = "select  name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' and name like @name +'%'";
@@ -343,7 +339,8 @@ namespace practiceslidebar
 
                     // Save the PDF to the database
                     SavePDFToDatabase(pdfBytes);
-                   
+                    printPreviewDialog1.Document = printDocument1;
+                    printPreviewDialog1.ShowDialog();
                     SqlCommand cmd = new SqlCommand("select max(id) as id from customer", con);
                     con.Open();
                     SqlDataReader sdr = cmd.ExecuteReader();
@@ -366,8 +363,6 @@ namespace practiceslidebar
                     con.Close();
                     txtsearch.Clear();
                     txtcusname.Focus();
-                    printPreviewDialog1.Document = printDocument1;
-                    printPreviewDialog1.ShowDialog();
                     billitem.Rows.Clear();
                     txtcusname.Focus();
                     grandt = 0;
@@ -399,13 +394,14 @@ namespace practiceslidebar
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO customer (id,name,amount,invoice,date) VALUES (@id,@name,@amount,@invoice,@date)";
+                string query = "INSERT INTO customer (id,invoice#,name,amount,invoice,date) VALUES (@id,@invoice#,@name,@amount,@invoice,@date)";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.Add("@invoice", System.Data.SqlDbType.VarBinary).Value = pdfBytes;
                     cmd.Parameters.AddWithValue("@id",int.Parse(txtcusid.Text));
                     cmd.Parameters.AddWithValue("@name",txtcusname.Text);
                     cmd.Parameters.AddWithValue("@amount",grandt);
+                    cmd.Parameters.AddWithValue("@invoice#",int.Parse(txtinnumber.Text));
                     cmd.Parameters.AddWithValue("@date",DateTime.Now);
 
                     cmd.ExecuteNonQuery();

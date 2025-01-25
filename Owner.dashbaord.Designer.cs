@@ -50,16 +50,22 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbexpireproducts = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
@@ -70,7 +76,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 298);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
@@ -262,6 +267,44 @@
             this.guna2Elipse5.BorderRadius = 35;
             this.guna2Elipse5.TargetControl = this.panel4;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel5.Controls.Add(this.lbexpireproducts);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.ForeColor = System.Drawing.Color.Violet;
+            this.panel5.Location = new System.Drawing.Point(31, 165);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(244, 119);
+            this.panel5.TabIndex = 54;
+            // 
+            // lbexpireproducts
+            // 
+            this.lbexpireproducts.AutoSize = true;
+            this.lbexpireproducts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbexpireproducts.ForeColor = System.Drawing.Color.White;
+            this.lbexpireproducts.Location = new System.Drawing.Point(91, 57);
+            this.lbexpireproducts.Name = "lbexpireproducts";
+            this.lbexpireproducts.Size = new System.Drawing.Size(59, 40);
+            this.lbexpireproducts.TabIndex = 1;
+            this.lbexpireproducts.Text = "37";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(40, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Expire Products";
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.BorderRadius = 35;
+            this.guna2Elipse6.TargetControl = this.panel5;
+            // 
             // Ownerdash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +328,8 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -312,5 +357,9 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lbexpireproducts;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
     }
 }

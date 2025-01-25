@@ -113,7 +113,6 @@
             this.txtcusname.Name = "txtcusname";
             this.txtcusname.Size = new System.Drawing.Size(153, 22);
             this.txtcusname.TabIndex = 2;
-            this.txtcusname.TextChanged += new System.EventHandler(this.txtcusname_TextChanged);
             this.txtcusname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcusname_KeyDown);
             // 
             // txtcusid

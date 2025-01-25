@@ -28,6 +28,7 @@ namespace practiceslidebar
             GetNumberOfEployees();
             GetTotalSalesThisMonth();
             GetTotalSalesPreviousMonth();
+            GetExpireProducts();
         }
         
         private double GetSalesForMonth(int month)
@@ -119,14 +120,16 @@ namespace practiceslidebar
             con.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        void GetExpireProducts()
         {
-
+            int GetExpireProducts = 0;
+            string query = "select count(*) from Inventory2 where expirydate < GETDATE()";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            GetExpireProducts = Convert.ToInt16(cmd.ExecuteScalar());
+            lbexpireproducts.Text = GetExpireProducts.ToString();
+            con.Close();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
