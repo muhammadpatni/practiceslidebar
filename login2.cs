@@ -22,11 +22,6 @@ namespace practiceslidebar
             form_manager.employeelogin = this;
         }
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
-        private void showpassword_CheckedChanged(object sender, EventArgs e)
-        {
-
-           
-        }
 
         public void changeuser( string ptemp)
         {
@@ -107,10 +102,6 @@ namespace practiceslidebar
             
         }
 
-        private void txtpassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void login2_Load(object sender, EventArgs e)
         {
@@ -136,10 +127,6 @@ namespace practiceslidebar
             }
         }
 
-        private void txtpassword_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtpassword_KeyDown(object sender, KeyEventArgs e)
         {
