@@ -55,6 +55,11 @@ namespace practiceslidebar
                 {
                     form_manager.employeecustomer.interfaceadjustment();
                 }
+                if (form_manager.employeebill != null)
+                {
+                    form_manager.employeebill.interfaceadjustmaxmin();
+                }
+
                 WindowState = FormWindowState.Maximized;
                 
             }
@@ -65,6 +70,11 @@ namespace practiceslidebar
                 {
                     form_manager.employeecustomer.interfaceadjustment();
                 }
+                if (form_manager.employeebill != null)
+                {
+                    form_manager.employeebill.interfaceadjustmaxmin();
+                }
+
                 WindowState = FormWindowState.Normal;
                 
             }

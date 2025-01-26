@@ -4,16 +4,11 @@ using System.Drawing.Printing;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
-using System.Xml.Linq;
-using Microsoft.VisualBasic.ApplicationServices;
-using Microsoft.VisualBasic.Logging;
-using System.Resources;
 using System.IO;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
 using Image = System.Drawing.Image;
 using Font = System.Drawing.Font;
-using System.Numerics;
 
 namespace practiceslidebar
 {
@@ -32,12 +27,62 @@ namespace practiceslidebar
         int qty,numberofitemsperpage=0,numberofitemprintedsofar,ii=0, quan, i;
         public void interfaceadjustment()
         {
-            inventory.Columns["name"].Width = 120;
-            inventory.Columns["quantity"].Width = 80;
-            inventory.Columns["category"].Width = 140;
-            inventory.Columns["unitprice"].Width = 80;
-            inventory.Columns["manufacturer"].Width = 120;
-            inventory.Columns["status"].Width = 120;
+            if (form_manager.employeeview.logic)
+            {
+                inventory.Columns["name"].Width = 120;
+                inventory.Columns["quantity"].Width = 80;
+                inventory.Columns["category"].Width = 140;
+                inventory.Columns["unitprice"].Width = 80;
+                inventory.Columns["manufacturer"].Width = 120;
+                inventory.Columns["status"].Width = 120;
+            }
+            else
+            {
+                inventory.Columns["name"].Width = 140;
+                inventory.Columns["quantity"].Width = 90;
+                inventory.Columns["category"].Width = 150;
+                inventory.Columns["unitprice"].Width = 90;
+                inventory.Columns["manufacturer"].Width = 130;
+                inventory.Columns["status"].Width = 120;
+            }
+        }
+
+        public void interfaceadjustmaxmin()
+        {
+            if (!form_manager.employeeview.logic)
+            {
+                panel5.Size = new Size(303, 188);
+                panel5.Location = new Point(12, 22);
+
+                panel4.Size = new Size(805, 188);
+                panel4.Location = new Point(321,22);
+
+                panel2.Size = new Size(1115, 390);
+                panel2.Location = new Point(12, 230);
+
+                billitem.Size = new Size(645, 360);
+
+                interfaceadjustment();
+
+
+            }
+            else
+            {
+
+                panel5.Size = new Size(303, 174);
+                panel5.Location = new Point(12, 12);
+
+                panel4.Size = new Size(730, 174);
+                panel4.Location = new Point(321,12);
+
+                panel2.Size = new Size(1039, 307);
+                panel2.Location = new Point(12, 192);
+
+                billitem.Size = new Size(645, 280);
+
+                interfaceadjustment();
+
+            }
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -58,10 +103,7 @@ namespace practiceslidebar
             int y = 275;
             for(int i=numberofitemprintedsofar;i<billitem.Rows.Count;i++)    
             {
-                numberofitemsperpage++;
-                if(numberofitemsperpage<=7)
-                {
-                    numberofitemprintedsofar++;
+                   numberofitemprintedsofar++;
                     if (numberofitemprintedsofar<= billitem.Rows.Count)
                     {
                         e.Graphics.DrawString(billitem.Rows[i].Cells["itemname"].Value.ToString(), new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(0, y));
@@ -78,13 +120,7 @@ namespace practiceslidebar
                     {
                         e.HasMorePages = false;
                     }
-                }
-                else
-                {
-                    numberofitemsperpage = 0;
-                    e.HasMorePages = true;
-                    return;
-                }
+           
             }
             e.Graphics.DrawString("------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(0,y-10));
             e.Graphics.DrawString("# OF ITEMS : "+ii.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0,y+20)); 
@@ -101,7 +137,7 @@ namespace practiceslidebar
             e.Graphics.DrawString("Software By MUHAMMAD PATNI 0316-2406968 Muhammad.", new Font("Arial", 10, FontStyle.Regular), Brushes.Black, new Point(0, y + 200));
             e.Graphics.DrawString("SHOP PTCL        32435482        32446329", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0, y + 240));
 
-            numberofitemprintedsofar = numberofitemsperpage=ii=0;
+            numberofitemprintedsofar=ii=0;
 
         }
         void order()
@@ -156,8 +192,9 @@ namespace practiceslidebar
             billitem.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 16, FontStyle.Bold);
             billitem.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             txtinnumber.Text =i.ToString();
-            interfaceadjustment();
-                PaperSize paperSize = new PaperSize("Custom", 410, 800); // 58mm = ~2.28 inches, 200 = ~2.28 * 100 (100th of an inch units)
+            //interfaceadjustment();
+            interfaceadjustmaxmin();
+            PaperSize paperSize = new PaperSize("Custom", 410, 800); // 58mm = ~2.28 inches, 200 = ~2.28 * 100 (100th of an inch units)
                 printDocument1.DefaultPageSettings.PaperSize = paperSize;
                 printDocument1.DefaultPageSettings.Margins = new Margins(0, 0, 0,0);
             }
@@ -388,6 +425,7 @@ namespace practiceslidebar
                 form_manager.messagebox.message.Text = "Add Items ..";
             }
         }
+
         private void SavePDFToDatabase(byte[] pdfBytes)
         {
             string connectionString = "Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;"; // Update this with your actual connection string
