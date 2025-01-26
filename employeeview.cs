@@ -178,11 +178,6 @@ namespace practiceslidebar
             interfacedesign();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnemployeeclaim_Click(object sender, EventArgs e)
         {
             loadform(new employeeclaim());
@@ -201,33 +196,14 @@ namespace practiceslidebar
             interfacedesign();
         }
 
-        private void gunaLabel2_Click(object sender, EventArgs e)
+        private void employeeview_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelmain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2CirclePictureBox2_Click(object sender, EventArgs e)
-        {
+            loadform(new employeebill());
+            panel5.Visible = true;
+            btnemployeebill.BaseColor = Color.Snow;
+            btnemployeebill.Radius = 24;
+            btnemployeebill.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            interfacedesign();
 
         }
     }
