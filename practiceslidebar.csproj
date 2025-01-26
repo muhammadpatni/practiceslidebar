@@ -169,6 +169,12 @@
     <Compile Include="employeebill.Designer.cs">
       <DependentUpon>employeebill.cs</DependentUpon>
     </Compile>
+    <Compile Include="employeeclaim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeclaim.Designer.cs">
+      <DependentUpon>employeeclaim.cs</DependentUpon>
+    </Compile>
     <Compile Include="employeecustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     <EmbeddedResource Include="employeebill.resx">
       <DependentUpon>employeebill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="employeeclaim.resx">
+      <DependentUpon>employeeclaim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="employeecustomer.resx">
       <DependentUpon>employeecustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +368,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.1jpg-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />

@@ -62,6 +62,9 @@ namespace practiceslidebar
 
                 billitem.Size = new Size(645, 360);
 
+                label7.Location = new Point(799, 153);
+                txtgrandtotal.Location = new Point(794, 179);
+
                 interfaceadjustment();
 
 
@@ -79,6 +82,9 @@ namespace practiceslidebar
                 panel2.Location = new Point(12, 192);
 
                 billitem.Size = new Size(645, 280);
+
+                label7.Location = new Point(759, 103);
+                txtgrandtotal.Location = new Point(754, 129);
 
                 interfaceadjustment();
 

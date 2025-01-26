@@ -107,11 +107,22 @@ namespace practiceslidebar
                 btnemployeecustomer.OnHoverBaseColor = Color.DimGray;
                 btnemployeecustomer.OnHoverForeColor = Color.White;
             }
+            if (btnemployeeclaim.BaseColor == Color.Snow)
+            {
+                btnemployeeclaim.OnHoverBaseColor = Color.Snow;
+                btnemployeeclaim.OnHoverForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            }
+            else
+            {
+                btnemployeeclaim.OnHoverBaseColor = Color.DimGray;
+                btnemployeeclaim.OnHoverForeColor = Color.White;
+            }
         }
         private void btnadmin_inventory_Click(object sender, EventArgs e)
         {
             loadform(new employeebill());
             panel8.Visible = false;
+            panel4.Visible=false;
             panel5.Visible = true;
             btnemployeebill.BaseColor = Color.Snow;
             btnemployeebill.Radius = 24;
@@ -119,7 +130,11 @@ namespace practiceslidebar
             btnemployeecustomer.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnemployeecustomer.Radius = 0;
             btnemployeecustomer.ForeColor = Color.White;
+            btnemployeeclaim.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeeclaim.Radius = 0;
+            btnemployeeclaim.ForeColor = Color.White;
             interfacedesign();
+           
             SqlCommand cmd = new SqlCommand("select max(id) as id from customer", con);
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
@@ -150,16 +165,68 @@ namespace practiceslidebar
             loadform(new employeecustomer());
             panel8.Visible = true;
             panel5.Visible = false;
+            panel4.Visible = false;
             btnemployeecustomer.BaseColor = Color.Snow;
             btnemployeecustomer.Radius = 24;
             btnemployeecustomer.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnemployeebill.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
             btnemployeebill.Radius = 0;
             btnemployeebill.ForeColor = Color.White;
+            btnemployeeclaim.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeeclaim.Radius = 0;
+            btnemployeeclaim.ForeColor = Color.White;
             interfacedesign();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnemployeeclaim_Click(object sender, EventArgs e)
+        {
+            loadform(new employeeclaim());
+            panel8.Visible = false;
+            panel5.Visible = false;
+            panel4.Visible = true;
+            btnemployeeclaim.BaseColor = Color.Snow;
+            btnemployeeclaim.Radius = 24;
+            btnemployeeclaim.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeebill.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeebill.Radius = 0;
+            btnemployeebill.ForeColor = Color.White;
+            btnemployeecustomer.BaseColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            btnemployeecustomer.Radius = 0;
+            btnemployeecustomer.ForeColor = Color.White;
+            interfacedesign();
+        }
+
+        private void gunaLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelmain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2CirclePictureBox2_Click(object sender, EventArgs e)
         {
 
         }
