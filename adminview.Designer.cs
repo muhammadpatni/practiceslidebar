@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminview));
             this.panelside = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnlogout = new Guna.UI.WinForms.GunaButton();
+            this.panelname = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbname = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnadmin_employee = new Guna.UI.WinForms.GunaButton();
@@ -46,13 +52,16 @@
             this.panelmain = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnclose = new Guna.UI.WinForms.GunaButton();
-            this.btnmaximize = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.btnminimize = new Guna.UI.WinForms.GunaButton();
             this.paneltop = new System.Windows.Forms.Panel();
+            this.btnminimize = new Guna.UI.WinForms.GunaButton();
+            this.btnmaximize = new Guna.UI.WinForms.GunaButton();
+            this.btnclose = new Guna.UI.WinForms.GunaButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            this.panelname.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -75,12 +84,47 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel);
+            this.panel2.Controls.Add(this.guna2CirclePictureBox2);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnlogout);
+            this.panel2.Controls.Add(this.panelname);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 547);
+            this.panel2.Location = new System.Drawing.Point(0, 503);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(219, 100);
+            this.panel2.Size = new System.Drawing.Size(219, 144);
             this.panel2.TabIndex = 10;
+            // 
+            // panel
+            // 
+            this.panel.BackColor = System.Drawing.Color.White;
+            this.panel.Location = new System.Drawing.Point(197, 27);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(25, 34);
+            this.panel.TabIndex = 35;
+            // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.Image = global::practiceslidebar.Properties.Resources.icons8_admin_48;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(4, 15);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(61, 60);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox2.TabIndex = 41;
+            this.guna2CirclePictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(109, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 21);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Admin";
             // 
             // btnlogout
             // 
@@ -88,29 +132,50 @@
             this.btnlogout.AnimationSpeed = 0.03F;
             this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnlogout.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnlogout.BorderColor = System.Drawing.Color.White;
+            this.btnlogout.BorderColor = System.Drawing.Color.Transparent;
             this.btnlogout.BorderSize = 3;
             this.btnlogout.CausesValidation = false;
+            this.btnlogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnlogout.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnlogout.FocusedColor = System.Drawing.Color.Empty;
-            this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.Image = null;
-            this.btnlogout.ImageOffsetX = 6;
+            this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.btnlogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(65)))), ((int)(((byte)(83)))));
+            this.btnlogout.Image = global::practiceslidebar.Properties.Resources.logout_removebg_preview;
+            this.btnlogout.ImageOffsetX = 12;
             this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnlogout.Location = new System.Drawing.Point(19, 39);
+            this.btnlogout.Location = new System.Drawing.Point(27, 109);
             this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnlogout.Name = "btnlogout";
-            this.btnlogout.OnHoverBaseColor = System.Drawing.Color.DarkGray;
-            this.btnlogout.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btnlogout.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnlogout.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnlogout.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnlogout.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(65)))), ((int)(((byte)(83)))));
             this.btnlogout.OnHoverImage = null;
             this.btnlogout.OnPressedColor = System.Drawing.Color.Black;
-            this.btnlogout.Size = new System.Drawing.Size(158, 49);
+            this.btnlogout.Size = new System.Drawing.Size(174, 30);
             this.btnlogout.TabIndex = 9;
             this.btnlogout.Text = "Logout";
             this.btnlogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            // 
+            // panelname
+            // 
+            this.panelname.BackColor = System.Drawing.Color.White;
+            this.panelname.Controls.Add(this.lbname);
+            this.panelname.Location = new System.Drawing.Point(65, 27);
+            this.panelname.Name = "panelname";
+            this.panelname.Size = new System.Drawing.Size(154, 35);
+            this.panelname.TabIndex = 40;
+            // 
+            // lbname
+            // 
+            this.lbname.AutoSize = true;
+            this.lbname.Font = new System.Drawing.Font("Microsoft Tai Le", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.lbname.Location = new System.Drawing.Point(8, 9);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(115, 16);
+            this.lbname.TabIndex = 36;
+            this.lbname.Text = "Sophia Rodriguez";
             // 
             // panel1
             // 
@@ -341,66 +406,6 @@
             this.panel3.Size = new System.Drawing.Size(7, 647);
             this.panel3.TabIndex = 6;
             // 
-            // btnclose
-            // 
-            this.btnclose.AnimationHoverSpeed = 0.07F;
-            this.btnclose.AnimationSpeed = 0.03F;
-            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnclose.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnclose.BorderColor = System.Drawing.Color.Black;
-            this.btnclose.CausesValidation = false;
-            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnclose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnclose.FocusedColor = System.Drawing.Color.Empty;
-            this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Image = ((System.Drawing.Image)(resources.GetObject("btnclose.Image")));
-            this.btnclose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnclose.ImageOffsetX = 6;
-            this.btnclose.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnclose.Location = new System.Drawing.Point(1025, 0);
-            this.btnclose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnclose.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnclose.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnclose.OnHoverImage = null;
-            this.btnclose.OnPressedColor = System.Drawing.Color.Black;
-            this.btnclose.Size = new System.Drawing.Size(33, 67);
-            this.btnclose.TabIndex = 5;
-            this.btnclose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            // 
-            // btnmaximize
-            // 
-            this.btnmaximize.AnimationHoverSpeed = 0.07F;
-            this.btnmaximize.AnimationSpeed = 0.03F;
-            this.btnmaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnmaximize.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnmaximize.BorderColor = System.Drawing.Color.Black;
-            this.btnmaximize.CausesValidation = false;
-            this.btnmaximize.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnmaximize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnmaximize.FocusedColor = System.Drawing.Color.Empty;
-            this.btnmaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnmaximize.ForeColor = System.Drawing.Color.White;
-            this.btnmaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximize.Image")));
-            this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnmaximize.ImageOffsetX = 6;
-            this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnmaximize.Location = new System.Drawing.Point(992, 0);
-            this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnmaximize.Name = "btnmaximize";
-            this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnmaximize.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnmaximize.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnmaximize.OnHoverImage = null;
-            this.btnmaximize.OnPressedColor = System.Drawing.Color.Black;
-            this.btnmaximize.Size = new System.Drawing.Size(33, 67);
-            this.btnmaximize.TabIndex = 7;
-            this.btnmaximize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnmaximize.Click += new System.EventHandler(this.btnmaximize_Click);
-            // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
@@ -413,6 +418,20 @@
             this.gunaLabel1.Size = new System.Drawing.Size(410, 44);
             this.gunaLabel1.TabIndex = 2;
             this.gunaLabel1.Text = "patni medical store";
+            // 
+            // paneltop
+            // 
+            this.paneltop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.paneltop.Controls.Add(this.btnminimize);
+            this.paneltop.Controls.Add(this.gunaLabel1);
+            this.paneltop.Controls.Add(this.btnmaximize);
+            this.paneltop.Controls.Add(this.btnclose);
+            this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneltop.Location = new System.Drawing.Point(226, 0);
+            this.paneltop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.paneltop.Name = "paneltop";
+            this.paneltop.Size = new System.Drawing.Size(1058, 67);
+            this.paneltop.TabIndex = 4;
             // 
             // btnminimize
             // 
@@ -444,19 +463,70 @@
             this.btnminimize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.Click += new System.EventHandler(this.btnminimize_Click);
             // 
-            // paneltop
+            // btnmaximize
             // 
-            this.paneltop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.paneltop.Controls.Add(this.btnminimize);
-            this.paneltop.Controls.Add(this.gunaLabel1);
-            this.paneltop.Controls.Add(this.btnmaximize);
-            this.paneltop.Controls.Add(this.btnclose);
-            this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltop.Location = new System.Drawing.Point(226, 0);
-            this.paneltop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(1058, 67);
-            this.paneltop.TabIndex = 4;
+            this.btnmaximize.AnimationHoverSpeed = 0.07F;
+            this.btnmaximize.AnimationSpeed = 0.03F;
+            this.btnmaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnmaximize.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnmaximize.BorderColor = System.Drawing.Color.Black;
+            this.btnmaximize.CausesValidation = false;
+            this.btnmaximize.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnmaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnmaximize.FocusedColor = System.Drawing.Color.Empty;
+            this.btnmaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnmaximize.ForeColor = System.Drawing.Color.White;
+            this.btnmaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximize.Image")));
+            this.btnmaximize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnmaximize.ImageOffsetX = 6;
+            this.btnmaximize.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnmaximize.Location = new System.Drawing.Point(992, 0);
+            this.btnmaximize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnmaximize.Name = "btnmaximize";
+            this.btnmaximize.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnmaximize.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnmaximize.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnmaximize.OnHoverImage = null;
+            this.btnmaximize.OnPressedColor = System.Drawing.Color.Black;
+            this.btnmaximize.Size = new System.Drawing.Size(33, 67);
+            this.btnmaximize.TabIndex = 7;
+            this.btnmaximize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnmaximize.Click += new System.EventHandler(this.btnmaximize_Click);
+            // 
+            // btnclose
+            // 
+            this.btnclose.AnimationHoverSpeed = 0.07F;
+            this.btnclose.AnimationSpeed = 0.03F;
+            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnclose.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnclose.BorderColor = System.Drawing.Color.Black;
+            this.btnclose.CausesValidation = false;
+            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnclose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnclose.FocusedColor = System.Drawing.Color.Empty;
+            this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Image = ((System.Drawing.Image)(resources.GetObject("btnclose.Image")));
+            this.btnclose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnclose.ImageOffsetX = 6;
+            this.btnclose.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnclose.Location = new System.Drawing.Point(1025, 0);
+            this.btnclose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnclose.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnclose.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnclose.OnHoverImage = null;
+            this.btnclose.OnPressedColor = System.Drawing.Color.Black;
+            this.btnclose.Size = new System.Drawing.Size(33, 67);
+            this.btnclose.TabIndex = 5;
+            this.btnclose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 40;
+            this.guna2Elipse1.TargetControl = this.panelname;
             // 
             // adminview
             // 
@@ -475,6 +545,10 @@
             this.Load += new System.EventHandler(this.adminview_Load);
             this.panelside.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            this.panelname.ResumeLayout(false);
+            this.panelname.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panellogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
@@ -509,5 +583,11 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI.WinForms.GunaButton btnadmin_expireproduct;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Panel panelname;
+        private System.Windows.Forms.Label lbname;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Panel panel;
     }
 }

@@ -32,12 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employeeview));
             this.panelside = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -46,25 +44,27 @@
             this.btnemployeebill = new Guna.UI.WinForms.GunaButton();
             this.btnemployeecustomer = new Guna.UI.WinForms.GunaButton();
             this.panellogo = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.paneltop = new System.Windows.Forms.Panel();
-            this.btnminimize = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.btnmaximize = new Guna.UI.WinForms.GunaButton();
-            this.btnclose = new Guna.UI.WinForms.GunaButton();
             this.panelmain = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnminimize = new Guna.UI.WinForms.GunaButton();
+            this.btnmaximize = new Guna.UI.WinForms.GunaButton();
+            this.btnclose = new Guna.UI.WinForms.GunaButton();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnlogout = new Guna.UI.WinForms.GunaButton();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panellogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.paneltop.SuspendLayout();
             this.panelmain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelside
@@ -92,18 +92,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 137);
             this.panel2.TabIndex = 10;
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.Image = global::practiceslidebar.Properties.Resources.employee_1jpg_removebg_preview;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(3, 20);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(61, 47);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox2.TabIndex = 38;
-            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // guna2Panel2
             // 
@@ -143,36 +131,6 @@
             this.label4.Size = new System.Drawing.Size(115, 16);
             this.label4.TabIndex = 36;
             this.label4.Text = "Sophia Rodriguez";
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.AnimationHoverSpeed = 0.07F;
-            this.btnlogout.AnimationSpeed = 0.03F;
-            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnlogout.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnlogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btnlogout.CausesValidation = false;
-            this.btnlogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlogout.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnlogout.FocusedColor = System.Drawing.Color.Empty;
-            this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.btnlogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(65)))), ((int)(((byte)(83)))));
-            this.btnlogout.Image = global::practiceslidebar.Properties.Resources.logout_removebg_preview;
-            this.btnlogout.ImageOffsetX = 12;
-            this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnlogout.Location = new System.Drawing.Point(24, 100);
-            this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.btnlogout.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnlogout.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(65)))), ((int)(((byte)(83)))));
-            this.btnlogout.OnHoverImage = null;
-            this.btnlogout.OnPressedColor = System.Drawing.Color.Black;
-            this.btnlogout.Size = new System.Drawing.Size(174, 30);
-            this.btnlogout.TabIndex = 9;
-            this.btnlogout.Text = "Log Out";
-            this.btnlogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // panel1
             // 
@@ -319,18 +277,6 @@
             this.panellogo.Size = new System.Drawing.Size(220, 190);
             this.panellogo.TabIndex = 8;
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(10, 9);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(196, 175);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
@@ -352,6 +298,46 @@
             this.paneltop.Name = "paneltop";
             this.paneltop.Size = new System.Drawing.Size(1057, 67);
             this.paneltop.TabIndex = 8;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel1.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(333, 9);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(410, 44);
+            this.gunaLabel1.TabIndex = 2;
+            this.gunaLabel1.Text = "patni medical store";
+            // 
+            // panelmain
+            // 
+            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelmain.Controls.Add(this.label3);
+            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelmain.Location = new System.Drawing.Point(227, 67);
+            this.panelmain.Name = "panelmain";
+            this.panelmain.Size = new System.Drawing.Size(1057, 580);
+            this.panelmain.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(123, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(826, 55);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Please Select Any Option From Menu";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 40;
+            this.guna2Elipse1.TargetControl = this.guna2Panel1;
             // 
             // btnminimize
             // 
@@ -382,19 +368,6 @@
             this.btnminimize.TabIndex = 6;
             this.btnminimize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnminimize.Click += new System.EventHandler(this.btnminimize_Click);
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel1.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(333, 9);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(410, 44);
-            this.gunaLabel1.TabIndex = 2;
-            this.gunaLabel1.Text = "patni medical store";
             // 
             // btnmaximize
             // 
@@ -456,32 +429,59 @@
             this.btnclose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
-            // panelmain
+            // guna2CirclePictureBox2
             // 
-            this.panelmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Controls.Add(this.label3);
-            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelmain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelmain.Location = new System.Drawing.Point(227, 67);
-            this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(1057, 580);
-            this.panelmain.TabIndex = 9;
+            this.guna2CirclePictureBox2.Image = global::practiceslidebar.Properties.Resources.employee_1jpg_removebg_preview;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(3, 20);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(61, 47);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox2.TabIndex = 38;
+            this.guna2CirclePictureBox2.TabStop = false;
             // 
-            // label3
+            // btnlogout
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(123, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(826, 55);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Please Select Any Option From Menu";
+            this.btnlogout.AnimationHoverSpeed = 0.07F;
+            this.btnlogout.AnimationSpeed = 0.03F;
+            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnlogout.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnlogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnlogout.CausesValidation = false;
+            this.btnlogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlogout.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnlogout.FocusedColor = System.Drawing.Color.Empty;
+            this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.btnlogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(65)))), ((int)(((byte)(83)))));
+            this.btnlogout.Image = global::practiceslidebar.Properties.Resources.logout_removebg_preview;
+            this.btnlogout.ImageOffsetX = 12;
+            this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnlogout.Location = new System.Drawing.Point(24, 100);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnlogout.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnlogout.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(65)))), ((int)(((byte)(83)))));
+            this.btnlogout.OnHoverImage = null;
+            this.btnlogout.OnPressedColor = System.Drawing.Color.Black;
+            this.btnlogout.Size = new System.Drawing.Size(174, 30);
+            this.btnlogout.TabIndex = 9;
+            this.btnlogout.Text = "Log Out";
+            this.btnlogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
-            // guna2Elipse1
+            // guna2CirclePictureBox1
             // 
-            this.guna2Elipse1.BorderRadius = 40;
-            this.guna2Elipse1.TargetControl = this.guna2Panel1;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(10, 9);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(196, 175);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // employeeview
             // 
@@ -501,16 +501,16 @@
             this.panelside.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panellogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.paneltop.ResumeLayout(false);
             this.paneltop.PerformLayout();
             this.panelmain.ResumeLayout(false);
             this.panelmain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

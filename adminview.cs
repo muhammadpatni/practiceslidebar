@@ -224,6 +224,7 @@ namespace practiceslidebar
             btnadmin_inventory.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
             interfacedesign();
             loadform(new admininventory());
+            lbname.Text = form_manager.employeelogin.name;
         }
 
         private void btnadmin_inventory_Click(object sender, EventArgs e)
