@@ -15,7 +15,7 @@ namespace practiceslidebar
 {
     public partial class login2 : Form
     {
-        string temp;
+      public  string temp,name;
         public login2()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace practiceslidebar
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
-                {
+                {   name = dt.Rows[0]["Name"].ToString();
                     ownerview o = new ownerview();
                     o.Show();
                     form_manager.mainforminstance.Hide();
@@ -63,6 +63,7 @@ namespace practiceslidebar
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
+                    name = dt.Rows[0]["Name"].ToString();
                     adminview o = new adminview();
                     o.Show();
                     form_manager.mainforminstance.Hide();
@@ -82,6 +83,7 @@ namespace practiceslidebar
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
+                    name = dt.Rows[0]["Name"].ToString();
                     employeeview o = new employeeview();
                     o.Show();
                     form_manager.mainforminstance.Hide();

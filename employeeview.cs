@@ -198,13 +198,15 @@ namespace practiceslidebar
 
         private void employeeview_Load(object sender, EventArgs e)
         {
+           
             loadform(new employeebill());
             panel5.Visible = true;
             btnemployeebill.BaseColor = Color.Snow;
             btnemployeebill.Radius = 24;
             btnemployeebill.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
             interfacedesign();
-
+          label4.Text=form_manager.employeelogin.name;
         }
+
     }
 }

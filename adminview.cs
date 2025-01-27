@@ -216,6 +216,15 @@ namespace practiceslidebar
             loadform(new adminexpireproducts());
         }
 
+        private void adminview_Load(object sender, EventArgs e)
+        {
+            panel5.Visible = true;
+            btnadmin_inventory.BaseColor = Color.Snow;
+            btnadmin_inventory.Radius = 24;
+            btnadmin_inventory.ForeColor = System.Drawing.Color.FromArgb(35, 40, 45);
+            interfacedesign();
+            loadform(new admininventory());
+        }
 
         private void btnadmin_inventory_Click(object sender, EventArgs e)
         {

@@ -472,6 +472,7 @@
             this.Name = "adminview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adminview";
+            this.Load += new System.EventHandler(this.adminview_Load);
             this.panelside.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
