@@ -58,6 +58,7 @@
             this.btnmaximize = new Guna.UI.WinForms.GunaButton();
             this.btnclose = new Guna.UI.WinForms.GunaButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
@@ -72,8 +73,9 @@
             // panelside
             // 
             this.panelside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panelside.Controls.Add(this.panel2);
             this.panelside.Controls.Add(this.panel1);
+            this.panelside.Controls.Add(this.guna2Panel1);
+            this.panelside.Controls.Add(this.panel2);
             this.panelside.Controls.Add(this.panellogo);
             this.panelside.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelside.Location = new System.Drawing.Point(0, 0);
@@ -188,10 +190,10 @@
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.btnadmin_stock);
             this.panel1.Controls.Add(this.btnadmin_inventory);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 190);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 209);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 192);
+            this.panel1.Size = new System.Drawing.Size(219, 294);
             this.panel1.TabIndex = 1;
             // 
             // panel7
@@ -528,6 +530,14 @@
             this.guna2Elipse1.BorderRadius = 40;
             this.guna2Elipse1.TargetControl = this.panelname;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 190);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(219, 19);
+            this.guna2Panel1.TabIndex = 11;
+            // 
             // adminview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,5 +599,6 @@
         private System.Windows.Forms.Label lbname;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel panel;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

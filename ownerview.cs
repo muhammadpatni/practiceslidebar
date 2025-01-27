@@ -45,19 +45,7 @@ namespace practiceslidebar
                 }
             }
         }
-        //public void loadform(object Form)
-        //{
-        //    if (this.panelmain.Controls.Count > 0)
-        //    {
-        //        this.panelmain.Controls.RemoveAt(0);
-        //    }
-        //    Form f = Form as Form;
-        //    f.TopLevel = false;
-        //    f.Dock = DockStyle.Fill;
-        //    this.panelmain.Controls.Add(f);
-        //    this.panelmain.Tag = f;
-        //    f.Show();
-        //}
+      
         public void loadform(Form form)
         {
             if (this.panelmain.Controls.Count > 0)
@@ -87,7 +75,6 @@ namespace practiceslidebar
             panel7.Visible = false;
             panel8.Visible = false;
             UpdateButtonStyles(btnonwer_dash);
-           // interfacedesign();
             loadform(new Ownerdash());
             panel5.Visible = true;
         }
@@ -97,7 +84,6 @@ namespace practiceslidebar
             panel5.Visible = false;
             panel7.Visible = false;
             UpdateButtonStyles(btnownwe_inventory);
-         //   interfacedesign();
             loadform( new ownerInventory());
             panel8.Visible = true;
         }
@@ -108,7 +94,6 @@ namespace practiceslidebar
             panel5.Visible = false;
             panel8.Visible = false;
             UpdateButtonStyles(btnownwe_employee);
-         //   interfacedesign();
             loadform(new Owner_Employees());
             panel7.Visible = true;
         }
@@ -146,25 +131,19 @@ namespace practiceslidebar
         {
                 WindowState = FormWindowState.Minimized;
         }
-
-        private void paneltop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelmain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void ownerview_Load(object sender, EventArgs e)
         {
             panel7.Visible = false;
             panel8.Visible = false;
             UpdateButtonStyles(btnonwer_dash);
-            // interfacedesign();
             loadform(new Ownerdash());
             panel5.Visible = true;
+            lbname.Text = form_manager.employeelogin.name;
+        }
+
+        private void panelmain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

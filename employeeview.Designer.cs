@@ -56,6 +56,8 @@
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnlogout = new Guna.UI.WinForms.GunaButton();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelside.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -65,13 +67,14 @@
             this.panelmain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelside
             // 
             this.panelside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelside.Controls.Add(this.guna2Panel3);
             this.panelside.Controls.Add(this.panel2);
-            this.panelside.Controls.Add(this.panel1);
             this.panelside.Controls.Add(this.panellogo);
             this.panelside.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelside.Location = new System.Drawing.Point(0, 0);
@@ -141,10 +144,10 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.btnemployeebill);
             this.panel1.Controls.Add(this.btnemployeecustomer);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 190);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 144);
+            this.panel1.Size = new System.Drawing.Size(220, 301);
             this.panel1.TabIndex = 1;
             // 
             // panel4
@@ -483,6 +486,24 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Controls.Add(this.panel1);
+            this.guna2Panel3.Controls.Add(this.guna2Panel4);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 190);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(220, 320);
+            this.guna2Panel3.TabIndex = 34;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(220, 19);
+            this.guna2Panel4.TabIndex = 1;
+            // 
             // employeeview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,6 +532,7 @@
             this.panelmain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -543,5 +565,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label4;
         private Guna.UI.WinForms.GunaButton btnlogout;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
     }
 }
