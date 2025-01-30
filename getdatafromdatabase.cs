@@ -12,7 +12,7 @@ namespace practiceslidebar
 {
     static class getdatafromdatabase
     {
-        public static async Task getdata(string query, DataGridView dataGridView1)
+        public static async Task getdata (string query, DataGridView dataGridView1)
         {
             using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;"))
             {
@@ -30,20 +30,22 @@ namespace practiceslidebar
                 }
             }
         }
-
         public static async Task getdata(string query, DataGridView dataGridView1, DataGridView dataGridView2)
         {
             using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;"))
             {
                 try
                 {
-                    await con.OpenAsync(); // Open connection asynchronously
-                    SqlDataAdapter ad = new SqlDataAdapter(query, con);
-                    DataTable dt = new DataTable();
-                    await Task.Run(() => ad.Fill(dt)); // Run the fill operation in a separate thread
-                                                       // Use Invoke to update DataGridViews on the UI thread
-                    dataGridView1.Invoke((MethodInvoker)(() => dataGridView1.DataSource = dt));
-                    dataGridView2.Invoke((MethodInvoker)(() => dataGridView2.DataSource = dt));
+                    await con.OpenAsync(); // Asynchronous connection open
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                    DataTable dataTable = new DataTable();
+
+                    // Run the Fill operation in a separate thread
+                    await Task.Run(() => adapter.Fill(dataTable));
+
+                    // Update the DataGridView on the UI thread
+                    dataGridView1.Invoke((MethodInvoker)(() => dataGridView1.DataSource = dataTable));
+                    dataGridView2.Invoke((MethodInvoker)(() => dataGridView2.DataSource = dataTable));
                 }
                 catch (Exception ex)
                 {

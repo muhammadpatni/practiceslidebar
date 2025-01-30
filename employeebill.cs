@@ -192,13 +192,31 @@ namespace practiceslidebar
             }
         }
 
-            private void employeeinvoice_Load(object sender, EventArgs e)
+            private async void employeeinvoice_Load(object sender, EventArgs e)
             {
-            getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
+          await  getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
             billitem.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 16, FontStyle.Bold);
             billitem.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            txtinnumber.Text =i.ToString();
-            //interfaceadjustment();
+            SqlCommand cmd = new SqlCommand("select max(id) as id from customer", con);
+            con.Open();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            if (sdr.Read())
+            {
+                if (sdr["id"] == DBNull.Value)
+                {
+                    i = 1;
+                    txtcusid.Text = i.ToString();
+                    txtinnumber.Text = i.ToString();
+                }
+                else
+                {
+                    i = Convert.ToInt32(sdr["id"]) + 1;
+
+                    txtcusid.Text = i.ToString();
+                    txtinnumber.Text = i.ToString();
+                }
+            }
+            con.Close();
             interfaceadjustmaxmin();
             PaperSize paperSize = new PaperSize("Custom", 410, 800); // 58mm = ~2.28 inches, 200 = ~2.28 * 100 (100th of an inch units)
                 printDocument1.DefaultPageSettings.PaperSize = paperSize;
@@ -452,7 +470,7 @@ namespace practiceslidebar
                 }
             }
         }
-        private void btncancel_Click(object sender, EventArgs e)
+        private async void btncancel_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row  in billitem.Rows)
             {
@@ -482,7 +500,7 @@ namespace practiceslidebar
             billitem.Rows.Clear();
             grandt = 0;
             txtgrandtotal.Text = "RS " +grandt.ToString();
-            getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
+           await getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
 
         }
 
@@ -517,7 +535,7 @@ namespace practiceslidebar
             float amount =  price* quantity;
             txtamount.Text=amount.ToString();
         }
-        private void billitem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void billitem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
             if (e.ColumnIndex == billitem.Columns["delete"].Index && e.RowIndex >= 0)
@@ -537,13 +555,13 @@ namespace practiceslidebar
                 cmd1.Parameters.AddWithValue("@name", billitem.Rows[e.RowIndex].Cells[1].Value);
                 cmd1.ExecuteNonQuery();
                 con.Close();
-                getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
+               await getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
                 grandt -=  Convert.ToDecimal(billitem.Rows[e.RowIndex].Cells[3].Value);
                 txtgrandtotal .Text = "RS " +grandt.ToString();
                 billitem.Rows.RemoveAt(e.RowIndex);
             }
         }
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        private async void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
             if (txtcusname.Text != string.Empty)
             {
@@ -557,7 +575,7 @@ namespace practiceslidebar
                     cmd.ExecuteNonQuery();
                     con.Close();
                     txtquan.Clear();
-                    getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
+                    await getdatafromdatabase.getdata("select name,quantity,category,unitprice,manufacturer,status from Inventory2 where status!='out of stock' ", inventory);
                     inventory.ClearSelection();
                     txtsearch.Clear();
                     txtsearch.Focus();

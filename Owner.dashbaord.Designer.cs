@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbexpireproducts = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbsaleprevmonth = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,17 +56,18 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lbexpireproducts = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,8 +81,41 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 298);
+            this.panel1.Size = new System.Drawing.Size(865, 270);
             this.panel1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel5.Controls.Add(this.lbexpireproducts);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.ForeColor = System.Drawing.Color.Violet;
+            this.panel5.Location = new System.Drawing.Point(22, 152);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(230, 107);
+            this.panel5.TabIndex = 54;
+            // 
+            // lbexpireproducts
+            // 
+            this.lbexpireproducts.AutoSize = true;
+            this.lbexpireproducts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbexpireproducts.ForeColor = System.Drawing.Color.White;
+            this.lbexpireproducts.Location = new System.Drawing.Point(91, 57);
+            this.lbexpireproducts.Name = "lbexpireproducts";
+            this.lbexpireproducts.Size = new System.Drawing.Size(59, 40);
+            this.lbexpireproducts.TabIndex = 1;
+            this.lbexpireproducts.Text = "37";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(34, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Expire Products";
             // 
             // panel3
             // 
@@ -83,9 +123,9 @@
             this.panel3.Controls.Add(this.lbsaleprevmonth);
             this.panel3.Controls.Add(this.label7);
             this.panel3.ForeColor = System.Drawing.Color.Violet;
-            this.panel3.Location = new System.Drawing.Point(332, 165);
+            this.panel3.Location = new System.Drawing.Point(324, 152);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(244, 119);
+            this.panel3.Size = new System.Drawing.Size(230, 107);
             this.panel3.TabIndex = 51;
             // 
             // lbsaleprevmonth
@@ -104,7 +144,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(7, 13);
+            this.label7.Location = new System.Drawing.Point(0, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(234, 29);
             this.label7.TabIndex = 0;
@@ -116,9 +156,9 @@
             this.panel2.Controls.Add(this.lbnumberofemployees);
             this.panel2.Controls.Add(this.label5);
             this.panel2.ForeColor = System.Drawing.Color.Violet;
-            this.panel2.Location = new System.Drawing.Point(635, 14);
+            this.panel2.Location = new System.Drawing.Point(626, 14);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(244, 119);
+            this.panel2.Size = new System.Drawing.Size(230, 107);
             this.panel2.TabIndex = 50;
             // 
             // lbnumberofemployees
@@ -137,7 +177,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 11);
+            this.label5.Location = new System.Drawing.Point(2, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(231, 29);
             this.label5.TabIndex = 0;
@@ -149,9 +189,9 @@
             this.panel4.Controls.Add(this.lbsalesthismonth);
             this.panel4.Controls.Add(this.label9);
             this.panel4.ForeColor = System.Drawing.Color.Violet;
-            this.panel4.Location = new System.Drawing.Point(635, 165);
+            this.panel4.Location = new System.Drawing.Point(627, 152);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(244, 119);
+            this.panel4.Size = new System.Drawing.Size(230, 107);
             this.panel4.TabIndex = 52;
             // 
             // lbsalesthismonth
@@ -170,7 +210,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(11, 12);
+            this.label9.Location = new System.Drawing.Point(4, 11);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(226, 29);
             this.label9.TabIndex = 0;
@@ -182,9 +222,9 @@
             this.panel6.Controls.Add(this.lbproductoutofstock);
             this.panel6.Controls.Add(this.label3);
             this.panel6.ForeColor = System.Drawing.Color.Violet;
-            this.panel6.Location = new System.Drawing.Point(332, 14);
+            this.panel6.Location = new System.Drawing.Point(323, 14);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(244, 119);
+            this.panel6.Size = new System.Drawing.Size(230, 107);
             this.panel6.TabIndex = 53;
             // 
             // lbproductoutofstock
@@ -203,7 +243,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 12);
+            this.label3.Location = new System.Drawing.Point(9, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(218, 29);
             this.label3.TabIndex = 0;
@@ -215,9 +255,9 @@
             this.panel7.Controls.Add(this.lbnumberofitems);
             this.panel7.Controls.Add(this.label1);
             this.panel7.ForeColor = System.Drawing.Color.Violet;
-            this.panel7.Location = new System.Drawing.Point(31, 14);
+            this.panel7.Location = new System.Drawing.Point(22, 14);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(244, 119);
+            this.panel7.Size = new System.Drawing.Size(230, 107);
             this.panel7.TabIndex = 49;
             // 
             // lbnumberofitems
@@ -225,7 +265,7 @@
             this.lbnumberofitems.AutoSize = true;
             this.lbnumberofitems.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnumberofitems.ForeColor = System.Drawing.Color.White;
-            this.lbnumberofitems.Location = new System.Drawing.Point(91, 57);
+            this.lbnumberofitems.Location = new System.Drawing.Point(77, 57);
             this.lbnumberofitems.Name = "lbnumberofitems";
             this.lbnumberofitems.Size = new System.Drawing.Size(59, 40);
             this.lbnumberofitems.TabIndex = 1;
@@ -236,7 +276,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(7, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 29);
             this.label1.TabIndex = 0;
@@ -267,50 +307,60 @@
             this.guna2Elipse5.BorderRadius = 35;
             this.guna2Elipse5.TargetControl = this.panel4;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel5.Controls.Add(this.lbexpireproducts);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.ForeColor = System.Drawing.Color.Violet;
-            this.panel5.Location = new System.Drawing.Point(31, 165);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(244, 119);
-            this.panel5.TabIndex = 54;
-            // 
-            // lbexpireproducts
-            // 
-            this.lbexpireproducts.AutoSize = true;
-            this.lbexpireproducts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbexpireproducts.ForeColor = System.Drawing.Color.White;
-            this.lbexpireproducts.Location = new System.Drawing.Point(91, 57);
-            this.lbexpireproducts.Name = "lbexpireproducts";
-            this.lbexpireproducts.Size = new System.Drawing.Size(59, 40);
-            this.lbexpireproducts.TabIndex = 1;
-            this.lbexpireproducts.Text = "37";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(40, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 29);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Expire Products";
-            // 
             // guna2Elipse6
             // 
             this.guna2Elipse6.BorderRadius = 35;
             this.guna2Elipse6.TargetControl = this.panel5;
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.chart1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chart1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Right;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(422, 270);
+            this.chart1.Name = "chart1";
+            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Color = System.Drawing.Color.DarkOrchid;
+            series2.Legend = "Legend1";
+            series2.Name = "sale";
+            series2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(389, 287);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 557);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(811, 32);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel2.Location = new System.Drawing.Point(811, 270);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(54, 319);
+            this.guna2Panel2.TabIndex = 3;
             // 
             // Ownerdash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(933, 589);
+            this.ClientSize = new System.Drawing.Size(865, 589);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -318,6 +368,8 @@
             this.Text = "Owner";
             this.Load += new System.EventHandler(this.Ownerdash_Load);
             this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -328,8 +380,7 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,5 +412,8 @@
         private System.Windows.Forms.Label lbexpireproducts;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

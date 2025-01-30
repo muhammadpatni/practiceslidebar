@@ -111,6 +111,10 @@ namespace practiceslidebar
                 {
                     form_manager.Owner_Employees.interfaceadjustment();
                 }
+                if (form_manager.Ownerdash != null)
+                { 
+                   form_manager.Ownerdash.interfaceadjusment();
+                }
             }
             else 
             {
@@ -123,6 +127,10 @@ namespace practiceslidebar
                 if (form_manager.Owner_Employees != null)
                 {
                     form_manager.Owner_Employees.interfaceadjustment();
+                }
+                if (form_manager.Ownerdash != null)
+                {
+                    form_manager.Ownerdash.interfaceadjusment();
                 }
             }
         }
@@ -141,9 +149,5 @@ namespace practiceslidebar
             lbname.Text = form_manager.employeelogin.name;
         }
 
-        private void panelmain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

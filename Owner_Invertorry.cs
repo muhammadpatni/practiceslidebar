@@ -103,9 +103,9 @@ namespace practiceslidebar
             }
         }
 
-        private void ownerInventory_Load_1(object sender, EventArgs e)
+        private async void ownerInventory_Load_1(object sender, EventArgs e)
         {
-            getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2", ownerinventoryview);
+          await getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2", ownerinventoryview);
             ownerinventoryview.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
             ownerinventoryview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             interfaceadjustment();

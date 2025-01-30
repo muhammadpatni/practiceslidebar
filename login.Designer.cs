@@ -129,7 +129,6 @@
             this.panelside.Name = "panelside";
             this.panelside.Size = new System.Drawing.Size(175, 444);
             this.panelside.TabIndex = 1;
-            this.panelside.Paint += new System.Windows.Forms.PaintEventHandler(this.panelside_Paint);
             // 
             // combouser
             // 
@@ -219,7 +218,6 @@
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(457, 444);
             this.panelmain.TabIndex = 2;
-            this.panelmain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmain_Paint);
             // 
             // label3
             // 
@@ -231,7 +229,6 @@
             this.label3.Size = new System.Drawing.Size(326, 25);
             this.label3.TabIndex = 32;
             this.label3.Text = "Please select user from user box\r\n";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 

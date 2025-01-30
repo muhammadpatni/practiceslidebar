@@ -23,6 +23,8 @@ namespace practiceslidebar
         public static employeeview employeeview { get; set; }
         public static adminoutofstock adminoutofstock { get; set; }      
         public static adminexpireproducts adminexpireproducts { get; set; }
+        public static Ownerdash Ownerdash { get; set; }
+
      
 
 

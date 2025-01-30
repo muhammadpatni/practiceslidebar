@@ -35,19 +35,6 @@ namespace practiceslidebar
             this.panelmain.Tag = f;
             f.Show();
         }
-        private void login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void employee_Click(object sender, EventArgs e)
-        {
-           
-       
-          
-        }
-       
-       
 
         private void btnclose_Click(object sender, EventArgs e)
         {
@@ -98,25 +85,6 @@ namespace practiceslidebar
 
         }
 
-        private void panelside_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelmain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 }

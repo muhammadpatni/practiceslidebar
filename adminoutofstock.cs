@@ -78,9 +78,9 @@ namespace practiceslidebar
             combosort.SelectedIndex = -1;
         }
 
-        private void adminoutofstock_Load(object sender, EventArgs e)
+        private async void adminoutofstock_Load(object sender, EventArgs e)
         {
-            getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where quantity=0;", inventoryoutofstock);
+         await getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 where quantity=0;", inventoryoutofstock);
             interfaceadjustment();
         }
 

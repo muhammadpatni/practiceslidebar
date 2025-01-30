@@ -24,49 +24,55 @@ namespace practiceslidebar
         }
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-7TMAKUL\\SQLEXPRESS;Initial Catalog=medical;Integrated Security=True;");
 
-        void getinventory()
+        public async Task getinventory()
         {
-            getdatafromdatabase.getdata("select id,invoice#,name, amount,date from customer", customerview);
-            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
-            buttonColumn.HeaderText = "Option";        
-            buttonColumn.Name = "invoice";            
-            buttonColumn.Text = "invoice";             
-            buttonColumn.UseColumnTextForButtonValue = true;
-            buttonColumn.FlatStyle=FlatStyle.Flat;
+            // Asynchronous data fetch
+            await getdatafromdatabase.getdata("SELECT id, invoice#, name, amount, date FROM customer", customerview);
+
+            // Add the button column after the data has been loaded
+            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
+            {
+                HeaderText = "Option",
+                Name = "invoice",
+                Text = "invoice",
+                UseColumnTextForButtonValue = true,
+                FlatStyle = FlatStyle.Flat
+            };
+
             customerview.Columns.Add(buttonColumn);
         }
+
         public void interfaceadjustment()
         {
             if (form_manager.employeeview.logic)
             {
-                customerview.Columns["id"].Width = 130;
-                customerview.Columns["invoice#"].Width = 120;
-                customerview.Columns["name"].Width = 160;
-                customerview .Columns["amount"].Width = 200;
-                customerview .Columns["date"].Width = 220;
-                customerview.Columns["invoice"].Width = 160;   
+                if (customerview != null)
+                {
+                    customerview.Columns["id"].Width = 130;
+                    customerview.Columns["invoice#"].Width = 120;
+                    customerview.Columns["name"].Width = 160;
+                    customerview.Columns["amount"].Width = 200;
+                    customerview.Columns["date"].Width = 220;
+                    customerview.Columns["invoice"].Width = 160;
+                }
             }
             else
-            {
-                customerview.Columns["id"].Width = 150;
-                customerview.Columns["invoice#"].Width = 140;
-                customerview.Columns["name"].Width = 150;
-                customerview.Columns["amount"].Width = 230;
-                customerview.Columns["date"].Width = 230;
-                customerview.Columns["invoice"].Width = 170;
+            {    if (customerview != null)
+                {
+                    customerview.Columns["id"].Width = 150;
+                    customerview.Columns["invoice#"].Width = 140;
+                    customerview.Columns["name"].Width = 150;
+                    customerview.Columns["amount"].Width = 230;
+                    customerview.Columns["date"].Width = 230;
+                    customerview.Columns["invoice"].Width = 170;
+                }
             }
         }
-        private void employeecustomer_Load(object sender, EventArgs e)
+        private async void employeecustomer_Load(object sender, EventArgs e)
         {
-           getinventory();
+          await getinventory();
             interfaceadjustment();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void customerview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == customerview.Columns["invoice"].Index && e.RowIndex >= 0)
@@ -119,11 +125,6 @@ namespace practiceslidebar
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnreset_Click(object sender, EventArgs e)
         {
             txtsearch.Clear();
@@ -156,7 +157,6 @@ namespace practiceslidebar
                 form_manager.messagebox.tittle.Text = "";
                 form_manager.messagebox.message.Text = "no record found";
                 customerview.DataSource = null;
-                //customerview.Columns.Remove("invoice");
             }
 
         }

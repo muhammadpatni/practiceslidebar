@@ -80,20 +80,20 @@ namespace practiceslidebar
                 fullinventoryview.Columns["password"].Width = 130;
             }
         }
-        private void adminempolyee_Load(object sender, EventArgs e)
+        private async void adminempolyee_Load(object sender, EventArgs e)
         {
             if (form_manager.adminview.isvalid1)
             {
                 panel5.Size = new Size(1063, 400);
             }
-
+           
             if (form_manager.adminview.isvalid)
             {
                 panel5.Size = new Size(1063, 550);
             }
 
             ppp.Visible = false;
-            getdatafromdatabase.getdata("select id,name,email,contact,position,salary,username,password from employee where position!='owner'; ", ownerinventoryview, fullinventoryview);
+        await getdatafromdatabase.getdata("select id,name,email,contact,position,salary,username,password from employee where position!='owner'; ", ownerinventoryview, fullinventoryview);
             interfaceadjustment();
             reset();
             paneleditor.Visible = false;
@@ -440,7 +440,7 @@ namespace practiceslidebar
 
         }
 
-        private void btneditoroperator_Click(object sender, EventArgs e)
+        private async void btneditoroperator_Click(object sender, EventArgs e)
         {
                 if (btneditoroperator.Text == "Delete")
                 {
@@ -537,7 +537,7 @@ namespace practiceslidebar
                 }
                 con.Close();
             }
-            getdatafromdatabase.getdata("select id,name,email,contact,position,salary,username,password from employee where position!='owner'; ", ownerinventoryview, fullinventoryview);
+           await getdatafromdatabase.getdata("select id,name,email,contact,position,salary,username,password from employee where position!='owner'; ", ownerinventoryview, fullinventoryview);
         }
         private bool is_valid()
         {

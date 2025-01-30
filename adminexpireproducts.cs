@@ -55,9 +55,9 @@ namespace practiceslidebar
             }
         }
 
-        private void adminexpireproducts_Load(object sender, EventArgs e)
+        private async void adminexpireproducts_Load(object sender, EventArgs e)
         {
-            getdatafromdatabase.getdata("SELECT id, name, quantity, category, unitprice, manufacturer, daterecieved, expirydate, status FROM Inventory2 WHERE expirydate < GETDATE()", expireproducts);
+         await  getdatafromdatabase.getdata("SELECT id, name, quantity, category, unitprice, manufacturer, daterecieved, expirydate, status FROM Inventory2 WHERE expirydate < GETDATE()", expireproducts);
             interfaceadjustment();
         }
 

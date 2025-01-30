@@ -88,7 +88,7 @@ namespace practiceslidebar
             expirydate.Value = DateTime.Now;
         }
 
-        private void admininventory_Load(object sender, EventArgs e)
+        private async void admininventory_Load(object sender, EventArgs e)
         {
             if (form_manager.adminview.isvalid1)
             {
@@ -101,7 +101,7 @@ namespace practiceslidebar
             }
 
             ppp.Visible = false;
-            getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ", ownerinventoryview, fullinventoryview);
+          await getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ", ownerinventoryview, fullinventoryview);
             interfaceadjustment();
             reset();
             paneleditor.Visible = false;
@@ -215,7 +215,7 @@ namespace practiceslidebar
 
 
 
-        private void btneditoroperator_Click(object sender, EventArgs e)
+        private async void btneditoroperator_Click(object sender, EventArgs e)
         {
             if (btneditoroperator.Text == "Delete")
             {
@@ -348,7 +348,7 @@ namespace practiceslidebar
                 }
                 con.Close();
              }
-            getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ", ownerinventoryview, fullinventoryview);
+       await getdatafromdatabase.getdata("select id,name,quantity,category,unitprice,manufacturer,daterecieved,expirydate,status from Inventory2 ", ownerinventoryview, fullinventoryview);
 
         }
 

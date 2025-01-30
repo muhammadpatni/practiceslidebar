@@ -80,6 +80,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtsearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnfullinventory = new Guna.UI.WinForms.GunaButton();
             this.btnedit = new Guna.UI.WinForms.GunaButton();
             this.btnadd = new Guna.UI.WinForms.GunaButton();
@@ -922,6 +923,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.guna2Panel2);
             this.panel4.Controls.Add(this.btnfullinventory);
             this.panel4.Controls.Add(this.btnedit);
             this.panel4.Controls.Add(this.btnadd);
@@ -932,6 +934,15 @@
             this.panel4.Size = new System.Drawing.Size(1063, 53);
             this.panel4.TabIndex = 57;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 47);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1063, 6);
+            this.guna2Panel2.TabIndex = 63;
             // 
             // btnfullinventory
             // 
@@ -949,7 +960,7 @@
             this.btnfullinventory.Image = null;
             this.btnfullinventory.ImageOffsetX = 6;
             this.btnfullinventory.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnfullinventory.Location = new System.Drawing.Point(829, 8);
+            this.btnfullinventory.Location = new System.Drawing.Point(829, 3);
             this.btnfullinventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnfullinventory.Name = "btnfullinventory";
             this.btnfullinventory.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -979,7 +990,7 @@
             this.btnedit.Image = null;
             this.btnedit.ImageOffsetX = 6;
             this.btnedit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnedit.Location = new System.Drawing.Point(281, 8);
+            this.btnedit.Location = new System.Drawing.Point(281, 3);
             this.btnedit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnedit.Name = "btnedit";
             this.btnedit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -1009,7 +1020,7 @@
             this.btnadd.Image = null;
             this.btnadd.ImageOffsetX = 6;
             this.btnadd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnadd.Location = new System.Drawing.Point(13, 8);
+            this.btnadd.Location = new System.Drawing.Point(13, 3);
             this.btnadd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnadd.Name = "btnadd";
             this.btnadd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -1039,7 +1050,7 @@
             this.btndelete.Image = null;
             this.btndelete.ImageOffsetX = 6;
             this.btndelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btndelete.Location = new System.Drawing.Point(562, 8);
+            this.btndelete.Location = new System.Drawing.Point(562, 3);
             this.btndelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btndelete.Name = "btndelete";
             this.btndelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -1187,5 +1198,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView fullinventoryview;
         private System.Windows.Forms.DataGridView ownerinventoryview;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

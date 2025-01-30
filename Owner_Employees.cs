@@ -20,9 +20,9 @@ namespace practiceslidebar
             form_manager.Owner_Employees=this;
         }
 
-        private void Owner_Employees_Load(object sender, EventArgs e)
+        private async void Owner_Employees_Load(object sender, EventArgs e)
         {
-            getdatafromdatabase.getdata("select id,name,email,contact,position,salary from employee where position !='owner'; ", owneremployeeview);
+           await getdatafromdatabase.getdata("select id,name,email,contact,position,salary from employee where position !='owner'; ", owneremployeeview);
             owneremployeeview.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
             owneremployeeview.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             interfaceadjustment();
@@ -102,7 +102,6 @@ namespace practiceslidebar
         {
             txtsearch.Clear();
             combosort.SelectedIndex = -1;
-
         }
 
     }
